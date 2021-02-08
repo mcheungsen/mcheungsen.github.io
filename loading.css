@@ -1,6 +1,6 @@
 .lds-ripple {
     position: relative;
-    padding: auto;
+    padding: 50px;
   }
   .lds-ripple div {
     position: absolute;
@@ -14,8 +14,8 @@
   }
   @keyframes lds-ripple {
     0% {
-      top: 36px;
-      left: 36px;
+      top: 200px;
+      left: 200px;
       width: 0;
       height: 0;
       opacity: 1;
@@ -29,13 +29,21 @@
     }
   }
 
-  #loading{
-      display: flex;
-      justify-content: center;
+  @media screen and (max-width: 1000px){
+
   }
 
-  #loading h1{
-      padding-left:6%;
-      color : #fcf;
+  @media screen and (min-width:1001px){
+    #loading{
+        display: flex;
+        justify-content: center;
+    }
+  
   }
+  #loading h1{
+    padding-left:3%;
+    font-family: Verdana, Geneva, sans-serif;
+    color : #fcf;
+    font-size: 35px;
+}
 
