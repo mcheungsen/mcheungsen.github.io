@@ -50,12 +50,12 @@ body{
 }
 
 /* SECTION IMAGES AVEC LIEN */
-section{
+main{
     text-align: center;
     padding-top: 20px;
 }
 
-section img{
+main img{
     width: 98%;
 
 }
@@ -92,7 +92,7 @@ section img{
   }
 
   /* la déco */
-  section{
+  main{
     margin:24px;
     font-size:21px;
     display: flex;
