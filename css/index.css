@@ -10,10 +10,10 @@ main{
     font-size:21px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 main .a-img{
-    width: 98%;
     max-width: 100%;
     margin: 0 5px 0 5px;
     height:auto;
@@ -51,6 +51,8 @@ main .a-img{
   .a-img-txt{
     position: relative;
     text-decoration:none;
+    width: 48%;
+    margin-bottom: 25px;
   }
 
   .a-img{
