@@ -1,3 +1,7 @@
 header{
   background-image: url(../img/nav_info.jpg);
 }
+
+header h1{
+    color: var(--clair);
+}
