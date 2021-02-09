@@ -29,25 +29,12 @@
     }
   }
 
-  @media screen and (max-width: 1000px){
-
-  }
-
-  @media screen and (min-width:1001px){
-    #loading{
+  #loading{
         display: flex;
         justify-content: center;
     }
-  
-  }
-  #loading h1{
-    padding-left:3%;
-    font-family: Verdana, Geneva, sans-serif;
-    color : #fcf;
-    font-size: 35px;
-}
 
 /*LOADING texte au centre uwu*/
-.load{
-  text-align: center;
+#load{
+  color: var(--clair);
 }

@@ -2,6 +2,8 @@ header{
   background-image: url(../img/nav_info.jpg);
 }
 
-header h1{
+header h1, header h2{
     color: var(--clair);
+    text-align: right;
+    margin-right: 10vh;
 }

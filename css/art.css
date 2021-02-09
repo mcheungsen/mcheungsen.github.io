@@ -1,3 +1,10 @@
 header{
-    background-image: url(../img/nav_art.jpg);
+    background-image: url(../img/back.jpg);
+    text-align: right;
+  }
+
+  header h2, header h1{
+      color: var(--background-color);
+      text-align: right;
+      margin-right: 10vh;
   }

@@ -5,7 +5,6 @@ header{
 
 /* SECTION IMAGES AVEC LIEN */
 main{
-    text-align: center;
     padding-top: 20px;
     margin:24px;
     font-size:21px;
@@ -25,20 +24,20 @@ main .a-img{
 /* L EFFET HOVER SUR IMAGE */
   /* le texte */
   .a-txt{
-    display:none;
+    display: none;
     overflow: hidden;
     position: absolute;
-    text-align: center;
     z-index: 1;
-    margin : 25% 0 0 25%;
-    font-size: 50pt;
+    text-align: right;
+    margin : 25% 25% 25% 25%;
+    font-size: 40pt;
     color: rgba(255, 255, 255, 0.705);
     letter-spacing: 10pt;
   }
   
  .a-img-txt:hover > p{
      transition:all 1s;
-     display: inline-block;
+     display: initial;
  }
   
   .a-img-txt:hover > img{
