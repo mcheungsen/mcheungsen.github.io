@@ -47,3 +47,7 @@
     font-size: 35px;
 }
 
+/*LOADING texte au centre uwu*/
+.load{
+  text-align: center;
+}

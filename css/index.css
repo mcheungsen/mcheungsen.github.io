@@ -1,0 +1,49 @@
+/* SECTION IMAGES AVEC LIEN */
+main{
+    text-align: center;
+    padding-top: 20px;
+    margin:24px;
+    font-size:21px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main .a-img{
+    width: 98%;
+    max-width: 100%;
+    margin: 0 5px 0 5px;
+    height:auto;
+
+}
+
+
+/* L EFFET HOVER SUR IMAGE */
+  /* le texte */
+  .a-txt{
+    display:none;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    margin : 25% 0 0 25%;
+    font-size: 50pt;
+    color: rgba(255, 255, 255, 0.705);
+    letter-spacing: 10pt;
+  }
+  
+ .a-img-txt:hover > p{
+     transition:all 1s;
+     display: inline-block;
+ }
+  
+  .a-img-txt:hover > img{
+    transition:all 1s;
+    filter: blur(3px);
+    opacity: 0.5;
+    overflow: hidden;;
+}
+
+  .a-img-txt{
+    position: relative;
+    text-decoration:none;
+  }
