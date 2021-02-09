@@ -24,6 +24,7 @@ main .a-img{
 /* L EFFET HOVER SUR IMAGE */
   /* le texte */
   .a-txt{
+    
     display: none;
     overflow: hidden;
     position: absolute;
@@ -44,10 +45,14 @@ main .a-img{
     transition:all 1s;
     filter: blur(3px);
     opacity: 0.5;
-    overflow: hidden;;
+    overflow: hidden;
 }
 
   .a-img-txt{
     position: relative;
     text-decoration:none;
+  }
+
+  .a-img{
+    transition-duration: 0.5s;
   }
