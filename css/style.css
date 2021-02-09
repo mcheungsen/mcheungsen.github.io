@@ -14,7 +14,6 @@ html{
 /*HEADER*/
 /*Parallaxe Image Fond <3 */
 header{
-    background-image: url(img/background.jpg);
 
     background-attachment: fixed;
     background-position: center;
@@ -26,6 +25,7 @@ header{
 
 /*textes Header*/
 header h1{
+  text-align: right;
   letter-spacing: 8pt;
   font-size: 50px;
   color: var(--background-color);
