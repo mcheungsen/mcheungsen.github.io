@@ -7,7 +7,6 @@ header{
 main{
     padding-top: 20px;
     margin:24px;
-    font-size:21px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -31,7 +30,7 @@ main .a-img{
     z-index: 1;
     text-align: right;
     margin : 25% 25% 25% 25%;
-    font-size: 40pt;
+    font-size: 3vw;
     color: rgba(255, 255, 255, 0.705);
     letter-spacing: 10pt;
   }

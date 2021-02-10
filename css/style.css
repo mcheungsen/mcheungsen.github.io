@@ -40,7 +40,7 @@ header h1{
   text-align: center;
   letter-spacing: 8pt;
   padding-top: 30vh;
-  font-size: 50px;
+  font-size: 4vw;
 }
 
 #myName{
@@ -50,7 +50,7 @@ header h1{
 header h2{
   text-align: center;
   letter-spacing: 8pt;
-  font-size: 30px;
+  font-size: 3vw;
   color: var(--clair);
 }
 
