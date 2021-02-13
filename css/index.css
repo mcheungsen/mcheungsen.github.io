@@ -30,6 +30,7 @@ main .a-img{
     z-index: 1;
     text-align: left;
     font-size: 3vw;
+    font-weight: 700;
     color: rgba(255, 255, 255, 0.705);
     letter-spacing: 10pt;
     padding: 10% 10% 0% 10%;
