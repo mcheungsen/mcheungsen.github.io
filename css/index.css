@@ -28,11 +28,11 @@ main .a-img{
     overflow: hidden;
     position: absolute;
     z-index: 1;
-    text-align: right;
-    margin : 25% 25% 25% 25%;
+    text-align: left;
     font-size: 3vw;
     color: rgba(255, 255, 255, 0.705);
     letter-spacing: 10pt;
+    padding: 10% 10% 0% 10%;
   }
   
  .a-img-txt:hover > p{
@@ -50,10 +50,17 @@ main .a-img{
   .a-img-txt{
     position: relative;
     text-decoration:none;
-    width: 48%;
     margin-bottom: 25px;
+    width: 48%;
   }
 
   .a-img{
     transition-duration: 0.5s;
+  }
+
+  @media screen and (max-width: 900px){
+    .a-img-txt{
+      width: 100%;
+    }
+
   }
