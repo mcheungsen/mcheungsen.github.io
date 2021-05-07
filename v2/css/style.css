@@ -1,0 +1,72 @@
+:root{
+    background-color: black;
+}
+
+* {
+    margin: 0;
+}
+
+::selection{
+    background-color: rgba(84, 205, 221, 0.486);
+}
+
+/*
+HEADER
+*/
+.fullname-title{
+    font-size: 25px;
+    padding-top: 50vh;
+}
+
+.pseudo-title{
+    font-size: 100px;
+}
+
+
+header{
+    background-image: url(../img/back.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Times New Roman', serif;
+}
+
+.pseudo-title, .fullname-title {
+    padding-left: 100px;
+    opacity: 1;
+}
+
+/*
+BODY
+*/
+body{
+    color: rgb(233, 233, 233);
+    text-align: center;
+}
+
+section {
+    padding-top: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition : all 500ms ease-in;
+}
+
+.js-section-animate {
+    opacity: 1;
+}
+
+h2{
+    font-size: 80px;
+}
+
+p{
+    padding-top : 60px;
+    padding-left: 25px;
+}
+
+
+
