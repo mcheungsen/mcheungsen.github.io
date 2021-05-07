@@ -6,7 +6,7 @@ for (var i = 0;  i<$sections.length ; i++){
         handler: function(direction){
           $(this.element).toggleClass('js-section-animate');  
         },
-        offset: '50%',  
+        offset: '65%',  
       });
 }
 
