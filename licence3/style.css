@@ -15,4 +15,26 @@
 
 body{
     display: flex;
+    font-family:  'Lucida Sans Unicode', monospace;
+}
+
+#menu{
+    width: 80%;
+}
+
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover{
+    color: rgb(73, 73, 73);
 }
