@@ -79,6 +79,7 @@ HOVER IMG
     text-decoration:none;
     transition-duration: 0.2s;
     width: 300px;
+    margin: 0 10px;
 }
 
 .img-hover:hover{
