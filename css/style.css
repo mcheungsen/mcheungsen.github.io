@@ -1,107 +1,69 @@
-/* THEME COULEURS*/
+
 :root{
-    --main-bg-color: #e0dbe7fa;
-    --background-color:#221c2e;
-    --gris-violet : #352f44;
-    --clair:#fcf;
+    background-color: black;
 }
 
-/*Pour faciliter le responsive a dit Mano*/
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
+* {
+    margin: 0;
 }
 
-/*Pas de bord dégolasse*/
-*{
-  margin: 0;
-  padding: 0;
+::selection{
+    background-color: rgba(84, 205, 221, 0.486);
 }
 
-/* BACKGROUND */
-html{
-    background-color: var(--background-color);
+/*
+HEADER
+*/
+.fullname-title{
+    font-size: 25px;
+    padding-top: 50vh;
 }
 
-/*HEADER*/
-/*Parallaxe Image Fond <3 */
+.pseudo-title{
+    font-size: 100px;
+}
+
+
 header{
-
+    background-image: url(../img/back.jpg);
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
+    font-family: 'Times New Roman', serif;
 }
 
-/*textes Header*/
-header h1{
-  text-align: center;
-  letter-spacing: 8pt;
-  padding-top: 30vh;
-  font-size: 4vw;
+.pseudo-title, .fullname-title {
+    opacity: 1;
 }
 
-#myName{
-  color: var(--background-color);
-}
-
-header h2{
-  text-align: center;
-  letter-spacing: 8pt;
-  font-size: 3vw;
-  color: var(--clair);
-}
-
-/*BOUTONN HOME*/
-#home {
-  letter-spacing: 15px;
-  text-align: center;
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.733);
-  position: fixed;
-  left: 5%;
-  top: 5%;
-  border-radius: 5pt;
-  z-index: 10;
-}
-
-header a {
-  text-decoration: none;
-  letter-spacing: 10px;
-  color: rgba(255, 255, 255, 0.815);
-  font-size: 20pt;
-}
-
-#home:hover{
-  transition:all 1s;
-  background-color: rgba(165, 165, 165, 0.657);
-}
-
-/* BODY */
-/*Le jouli texte*/
+/*
+BODY
+*/
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--main-bg-color);
+    color: rgb(233, 233, 233);
     text-align: center;
-    font-size: 1vw;
 }
 
-main{
-  padding: 5vh 0 5vh 0;
+section {
+    padding-top: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition : all 500ms ease-in;
 }
 
-
-/* FOOTER */
-
-footer{
-background-color: #16131b;
-padding: 2vh 0 2vh 0;
+.js-section-animate {
+    opacity: 1;
 }
 
-#copyright{
-  font-size: 10pt;
-  text-align: center;
-  color: var(--main-bg-color);
+h2{
+    font-size: 80px;
+}
+
+p{
+    padding-top : 60px;
+    padding-left: 25px;
 }
