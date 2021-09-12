@@ -1,3 +1,4 @@
+
 :root{
     background-color: black;
 }
@@ -31,11 +32,9 @@ header{
     background-repeat: no-repeat;
     height: 100vh;
     font-family: 'Times New Roman', serif;
-    text-align: center;
 }
 
 .pseudo-title, .fullname-title {
-    padding-left: 100px;
     opacity: 1;
 }
 
@@ -44,15 +43,14 @@ BODY
 */
 body{
     color: rgb(233, 233, 233);
-    text-align: left;
+    text-align: center;
 }
 
 section {
     padding-top: 100px;
-    padding-left: 20vw;
     height: 100vh;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     opacity: 0;
     transition : all 500ms ease-in;
 }
@@ -61,14 +59,11 @@ section {
     opacity: 1;
 }
 
-.section-titre{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 3vw;
+h2{
+    font-size: 80px;
 }
 
-.section-body{
-    padding: 25px;
+p{
+    padding-top : 60px;
+    padding-left: 25px;
 }
-
-
-
