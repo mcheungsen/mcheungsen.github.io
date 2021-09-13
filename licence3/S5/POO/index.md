@@ -2,7 +2,7 @@
 
 [Retour Licence 3](https://mcheungsen.github.io/licence3/ "Licence 3")
 
-http://www.reveillere.fr/
+[Site Web Prof](http://www.reveillere.fr/)
 
 ---
 
