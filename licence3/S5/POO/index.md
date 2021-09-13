@@ -48,8 +48,10 @@ class Rectangle {
 	*/
 	Rectangle(double largeur, double hauteur){
 		/*
-		Du point de vu d'un objet, le mot clef this sert à pointer vers soi-même donc this.largeur est ma largeur. largeur sans this pointe vers le paramètre de la fonction.
-		this permet de faire la différence entre les attributs de l'objet et les paramètres de la méthode/constructeur si ils ont les mêmes noms.
+		Du point de vu d'un objet, le mot clef this sert à pointer vers soi-même donc this.largeur est ma largeur. 
+        largeur sans this pointe vers le paramètre de la fonction.
+		this permet de faire la différence entre les attributs de l'objet et les paramètres de la 
+        méthode/constructeur si ils ont les mêmes noms.
 		*/
 		this.largeur = largeur;
 		this.hauteur = hauteur;
