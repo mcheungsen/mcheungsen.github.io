@@ -53,3 +53,14 @@ Le processeur va donc vérifier avec chaque instruction s'il y a le droit d'exé
 S'il n'y a pas le droit : exception levée. Le noyau récupère la main et va gérer ce problème. (kill le processus)
 
 Lorsqu'une interruption se produit, le processeur change son mode utilisateur en mode noyau.
+
+### Requête de privilèges
+Les processus n'ont pas d'accès direct à l'hardware. Cependant, on souhaite avoir accès à celui-ci dans plusieurs cas.
+
+*Afficher une chaine de caractère dans un terminal, lire un caractère depuis le clavier, créer un nouveau processus*
+
+Un requête de privilèges est faites pour demander la permission au kernel d'exécuter temporairement des instructions.
+
+Un processus enregistre le numéro de la fonction à utiliser dans un registre et lance une interruption. `syscal` Le noyau va check ce numéro, et exécuter la fonction correspondante s'il n'y a pas de problème.
+
+Il existe des centaines de "systemm call".
