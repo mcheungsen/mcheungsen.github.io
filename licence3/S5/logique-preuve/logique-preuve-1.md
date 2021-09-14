@@ -18,7 +18,7 @@ Une proposition est un énoncé susceptible d'être démontré ou réfuté, pour
 ### Logique minimale
 Formules atomiques et implication comme seul connecteur.
 
-$(P \rightarrow Q \rightarrow R)\rightarrow(Q\rightarrow P \rightarrow R)$ 
+$$(P \rightarrow Q \rightarrow R)\rightarrow(Q\rightarrow P \rightarrow R)$$
 
 ### Logiques propositionnelles
 On ajoute $\bot, \neg, \wedge, \vee, \iff $
