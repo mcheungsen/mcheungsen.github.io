@@ -7,3 +7,4 @@
 ---
 
 ## [Introduction](logique-preuve-1.md)
+vocabulaire de la logique, propositions, séquents, vérités, preuves
