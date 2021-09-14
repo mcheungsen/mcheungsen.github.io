@@ -21,16 +21,16 @@ Formules atomiques et implication comme seul connecteur.
 $$(P \rightarrow Q \rightarrow R)\rightarrow(Q\rightarrow P \rightarrow R)$$
 
 ### Logiques propositionnelles
-On ajoute $\bot, \neg, \wedge, \vee, \iff $
+On ajoute $$\bot, \neg, \wedge, \vee, \iff $$
 
-$P \vee \bot \rightarrow P$
+$$P \vee \bot \rightarrow P$$
 
 ### Séquents
 **Séquent** : Structure composée :
-- d'un **contexte** formé d'un ensemble $\Gamma$ de propositions appelés **prémisses** ou **hypothèses**
-- d'une proposition $A$ appelée **conclusion** du séquent
+- d'un **contexte** formé d'un ensemble $$\Gamma$$ de propositions appelés **prémisses** ou **hypothèses**
+- d'une proposition $$A$$ appelée **conclusion** du séquent
 
-$H$<sub>1</sub>$, H$<sub>2</sub>$, ... , H$<sub>n</sub> $\vdash A$
+$$H$$<sub>1</sub>$$, H$$<sub>2</sub>$$, ... , H$$<sub>n</sub> $$\vdash A$$
 
 ### Validité d'un séquent
 Un séquent est valide si, chaque fois que toutes les hypothèses sont vraies, alors la conclusion est vraie.
@@ -45,14 +45,14 @@ Une preuve est adaptée selon le public.
 **Preuve formelle** : On détaille suffisamment pour que la vérification de la preuve puisse être systématisée au point d'être confiée à une machine.
 
 ## Vérité et Preuve
-Comment convaincre de la validité d'un séquent $\Gamma \vdash A $ ?
+Comment convaincre de la validité d'un séquent $$\Gamma \vdash A $$ ?
 
-**Approche sémantique** : Définir la valeur de vérité de toute proposition, puis vérifier que chaque fois que toutes les hypothèses dans $\Gamma$ sont vraies, alors $A$ est vraie.
+**Approche sémantique** : Définir la valeur de vérité de toute proposition, puis vérifier que chaque fois que toutes les hypothèses dans $$\Gamma$$ sont vraies, alors $$A$$ est vraie.
 
 Vérification automatisable pour certaines logiques.
 Les calculs cachent le contenu intuitif. Grande complexité
 
-**Approche Syntaxique** : Définir ce qu'est une preuve de $\Gamma \vdash A$. On définit un langage pour les preuves, avec ses règles de correction, comme les langages de programmation. Une preuve devient un objet informatique, comme un programme.
+**Approche Syntaxique** : Définir ce qu'est une preuve de $$\Gamma \vdash A$$. On définit un langage pour les preuves, avec ses règles de correction, comme les langages de programmation. Une preuve devient un objet informatique, comme un programme.
 
 Souvent incomplète. Permet de mieux comprendre le rôle des connecteurs et quentificateurs. Familiarité avec la programmation
 
