@@ -65,4 +65,4 @@ Un requête de privilèges est faites pour demander la permission au kernel d'ex
 
 Un processus enregistre le numéro de la fonction à utiliser dans un registre et lance une interruption. `syscal` Le noyau va check ce numéro, et exécuter la fonction correspondante s'il n'y a pas de problème.
 
-Il existe des centaines de "systemm call".
+Il existe des centaines de "system call".
