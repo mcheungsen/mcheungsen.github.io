@@ -1,5 +1,3 @@
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 # Logique et Preuve
 
 
@@ -58,3 +56,5 @@ Les calculs cachent le contenu intuitif. Grande complexité
 
 Souvent incomplète. Permet de mieux comprendre le rôle des connecteurs et quentificateurs. Familiarité avec la programmation
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
