@@ -108,3 +108,17 @@ off_t lseek(int fildes, off_t offset, int whence);
 Le retour ne peut être négatif. Il s'agit de la position absolue du pointeur
 
 *Exemple : `lseek(fd, 2, SEEK_CUR)` va avancer de 2 positions depuis la position actuelle.*
+
+Taille du fichier : `lseek(fd, 0, SEEK_END)`
+
+## Duplication de file descriptor
+```c
+int dup(init fildes);
+int dup2(int src_fd, int dst_fd);
+```
+
+## API standrad de C
+Les appels système d'API standard sont plus rapide :
+Utilisation d'un tampon buffer qui anticipe et prépare les futures lectures.
+
+`fwrite` : Accumule les écritures dans le buffer. L'écriture se fait lorsque le buffer est plein ou avec le dernier fwrite.
