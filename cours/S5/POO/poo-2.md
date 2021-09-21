@@ -54,7 +54,6 @@ Class Rectangle extends Figure{
 
 Un `Rectangle` est forcément une `Figure`. Mais une `Figure` n'est pas forcément un `Rectangle`.
 
-Tous les classes héritent de la classe `Object`.
 
 ## Redéfinition et Surcharge
 
@@ -77,6 +76,26 @@ Redéfinition : Même signature, même type de retour (sauf si covalance), même
 
 **Covalance** : Varie de la même manière.
 Par exemple, une méthode ayant comme retour une `Figure`, pourra avoir en retour un `Cercle` ou un `Rectangle`. Il y a une covalance.
+
+## Héritage de Object
+
+Tous les classes héritent de la classe `Object`.
+
+```java
+String toString();
+boolean Equals(Objetc o);
+```
+
+Ainsi, on peut redéfinir les méthodes de la classe `Object`.
+
+```java
+boolean Equals(Object o){
+    if(o.getClass() != getClass()){
+        return false;
+    }
+    return true;
+}
+```
 
 ## Polymorphisme
 **Late Binding** : Ligature Dynamique
