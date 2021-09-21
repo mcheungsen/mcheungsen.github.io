@@ -4,6 +4,8 @@
 
 [Site web Prof](https://www.labri.fr/perso/duchon/Enseignements/L-et-P/)
 
+### [LaTeX Codes](latex.md)
+
 ---
 
 ## [Introduction](logique-preuve-1.md)
