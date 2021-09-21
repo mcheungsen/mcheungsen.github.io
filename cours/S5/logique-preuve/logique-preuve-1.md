@@ -1,7 +1,7 @@
 # Logique et Preuve
 
 
-[Retour Licence 3](https://mcheungsen.github.io/licence3/ "Licence 3")
+[Retour Licence 3](https://mcheungsen.github.io/cours/ "Licence 3")
 
 [Retour Logique et Preuve](index.md)
 

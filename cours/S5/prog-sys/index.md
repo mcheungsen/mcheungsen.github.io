@@ -1,6 +1,6 @@
 # Programmation Système
 
-[Retour Licence 3](https://mcheungsen.github.io/licence3/ "Licence 3")
+[Retour Licence 3](https://mcheungsen.github.io/cours/ "Licence 3")
 
 [Site Web Prof](https://gforgeron.gitlab.io/progsys/)
 

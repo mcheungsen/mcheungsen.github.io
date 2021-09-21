@@ -1,6 +1,6 @@
 # Sensibilisation à l'écologie et à l'impact du numérique
 
-[Retour Licence 3](https://mcheungsen.github.io/licence3/ "Licence 3")
+[Retour Licence 3](https://mcheungsen.github.io/cours/ "Licence 3")
 
 ---
 
