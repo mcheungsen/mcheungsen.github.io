@@ -12,4 +12,4 @@
 vocabulaire de la logique, propositions, séquents, vérités, preuves
 
 ## [Incomplétude de la logique minimale](logique-preuve-2.md)
-logique minimale, 
+logique minimale, arbre, Règle d'hypothèse, règle du Modus Ponens, règle de l'implication
