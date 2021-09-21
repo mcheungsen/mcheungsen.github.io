@@ -30,7 +30,7 @@ $$P \vee \bot \rightarrow P$$
 - d'un **contexte** formé d'un ensemble $$\Gamma$$ de propositions appelés **prémisses** ou **hypothèses**
 - d'une proposition $$A$$ appelée **conclusion** du séquent
 
-$$H$$<sub>1</sub>$$, H$$<sub>2</sub>$$, ... , H$$<sub>n</sub> $$\vdash A$$
+ $$H$$ <sub>1</sub>$$, H$$<sub>2</sub>$$, ... , H$$<sub>n</sub> $$\vdash A$$
 
 ### Validité d'un séquent
 Un séquent est valide si, chaque fois que toutes les hypothèses sont vraies, alors la conclusion est vraie.
