@@ -104,7 +104,7 @@ Conséquences : Il existe maintenant des séquents dont aucune valuation ne sati
 $$P \rightarrow Q, P, Q \rightarrow \bot \vdash R $$ 
 est valide
 
-## Le principe d'explosiion *sequiter*
+## Le principe d'explosion *sequiter*
 *Du faux il découle du vrai*
 
 Elimination de la contradiction
