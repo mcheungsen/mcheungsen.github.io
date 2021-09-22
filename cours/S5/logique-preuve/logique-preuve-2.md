@@ -50,7 +50,7 @@ $$\frac{\Gamma \vdash A \rightarrow B; \Gamma \vdash A}{\Gamma \vdash B}mp$$
 
 ## Règle d'introduction de l'implication
 
-$$\frac{\Gamma, P \vdash Q}{\Gamma \vdash P \rightarrow Q}$$
+$$\frac{\Gamma, P \vdash Q}{\Gamma \vdash P \rightarrow Q}{init}$$
 
 ## Cohérence de la logique minimale
 Si un séquent $$\Gamma \vdash A$$ admet une preuve en logique minimale, alors ce séquent est valide.
