@@ -8,7 +8,7 @@
 ## Pattern Matching
 
 Voici un code simple en utilisant Elixir Shell :
-```Elixir shell
+```shell
 iex> a = 1
 1
 iex> a + 3
@@ -20,7 +20,7 @@ Or, ici le signe `=` n'est pas un assignement, mais plutôt une assertion. Il s'
 
 Dans le cas du code simple au dessus, la partie gauche est une variable, et la partie droite un integer. Elixir peut donc rendre ce matching vrai en liant la variable `a` à la valeur `1`.
 
-```Elixir shell
+```shell
 iex> a = 1
 1
 iex> 1 = a
