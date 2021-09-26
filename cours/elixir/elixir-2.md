@@ -14,6 +14,7 @@ iex> a = 1
 iex> a + 3
 4
 ```
+
 Nous pouvons penser que l'on assigne la valeur `1` à la variable `a`.
 Or, ici le signe `=` n'est pas un assignement, mais plutôt une assertion. Il s'agit d'un **match operator**.
 
