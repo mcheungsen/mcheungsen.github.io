@@ -3,4 +3,8 @@
 
 ---
 
-## [Introduction](elixir-1.md)
+### [Introduction](elixir-1.md)
+
+## Partie I - Programmation conventionnelle
+
+### [Pattern Matching](elixir-2.md)
