@@ -47,3 +47,5 @@ tâche 1.1 -> tâche 2 -> tâche 1.2 -> tache 3.1 etc.... C'est une division des
 **Asynchrone** : C'est lorsque je veux traiter quelque chose. je demande au process de l'executer. et il s'executera, dans un temps qu'il souhaite. Lorsque je fais ma demande de traitement. Il ne va pas forcément le faire juste après. d'où le fait que ce soit asynchrone.
 
 **Parrallélisme** : Execution de plusieurs tâches sous plusieurs cores. Afin d'effectuer le plus de tâches en moins de temps.
+
+[Cours suivant - Pattern Matching](elixir-2.md)
