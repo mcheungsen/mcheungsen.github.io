@@ -4,15 +4,29 @@
 
 [Retour POO](index.md)
 
-## Les classes abstraites
-Dans une hiérarchie de classes, les classes abstraites servent de point de départ pour des classes concrètes, souvent en regroupant des méthodes et des attributs communs, et en définissant des modèles de comportement.
+## Exceptions
+Parfois, les tests ne suffisent pas. On souhaite récupérer des erreurs et retourner une exception. L'utilisateur peut faire des erreurs par lui-même.
+
+*Ouvrir un fichier qui n'existe pas, effectuer une division par 0*
+
+Il est possible de créer une exception qui décrit l'erreur afin de la lever.
 
 ```java
-Abstract class Figure{
-    int x, y;
-
-    abstract void draw();
+try{
+    //corps du code
+} catch(NullPointerException e){
+    //traitement de l'exception
+} catch(ClassException e){
+    //traitement de l'exception
 }
 ```
 
-A partir du moment où une méthode est abstraite, la classe est abstraite.
+**Unchecked exceptions** : Pas besoin de vérifier si elles sont levées, pas besoin de les écrire. L'exception est levée automatiquement (*Nullpointer / out of bounds / ...*).
+
+### Création d'une exception
+
+```java
+Class MonException extends Exception{
+    
+}
+```

@@ -10,7 +10,7 @@
 Objets, langage java, classes, types primitifs
 
 ## [Héritage](poo-2.md)
-Accessibilité, Héritage, Rédefinition, Surcharge, Polymorphisme
+Accessibilité, Héritage, Rédefinition, Surcharge, Polymorphisme, classes abstraites
 
-## [Classes abstraites](poo-3.md)
-classe abstraite, méthodes abstraites
+## [Exceptions](poo-3.md)
+création d'exceptions, utilisation

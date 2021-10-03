@@ -14,6 +14,11 @@
 *default* : Accessible par les classes se situant dans le même package
 
 ## Héritage
+L'héritage est utilisé pour :
+- factoriser du code
+- la réutilisation: identifier une classe plus générique, dériver et spécialiser
+- Imposer du code
+
 Exprimer des similitudes, pour éviter de "dupliquer" les attributs / méthodes...
 
 Un rectangle et un cercle ont en commun, les coordonnées x et y, la couleur, la méthode `draw()`... Afin d'éviter cette duplication, on créé une **classe-mère** `Figure` qui comporte les similitudes.
@@ -103,3 +108,16 @@ boolean Equals(Object o){
 Manipuler un objet sans connaitre son type.
 
 *Manipuler une Figure sans savoir si c'est un Rectangle ou un Cercle*
+
+## Les classes abstraites
+Dans une hiérarchie de classes, les classes abstraites servent de point de départ pour des classes concrètes, souvent en regroupant des méthodes et des attributs communs, et en définissant des modèles de comportement.
+
+```java
+Abstract class Figure{
+    int x, y;
+
+    abstract void draw();
+}
+```
+
+A partir du moment où une méthode est abstraite, la classe est abstraite.
