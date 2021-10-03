@@ -57,3 +57,47 @@ L'espace d'adressage est dupliqué, et est indépendant.
 Retours :
 - Côté père : PID du fils
 - Côté fils : 0
+
+```c
+pid_t wait(int * start_loc);
+```
+
+Attend que l'enfant termine son processus pour exécuter le processus suivant.
+
+Version plus puissante :
+```c
+pid_t waitpid( pid_t pid, int * start_loc, int options);
+```
+
+## Transformation de processus
+
+Un processus peut être reboot et executer un nouveau programme.
+
+Famille de fonctions `exec` :
+```c
+int execlp( char * file, char * arg[], ..., NULL);
+```
+`l` : Liste arguments
+
+`p` : path
+
+```c
+int execvp( const char * file, char * constargv[]);
+```
+`l` : vecteur d'arguments
+`p` : path
+
+## Communication entre les processus : Pipe `|`
+
+`ls | grep pattern`
+
+Le résultat de `ls` est redirigé vers `grep pattern`. On attend que `ls` soit terminé. Il n'y a donc pas de parrallélisme. Ordonné en FIFO *(First In First Out)*
+
+```c
+int pipe(int fildes[2]);
+```
+`fildes[0]` : reading
+`fildes[1]` : writing
+
+Pas de lseek
+
