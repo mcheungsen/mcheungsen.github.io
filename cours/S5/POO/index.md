@@ -14,3 +14,6 @@ Accessibilité, Héritage, Rédefinition, Surcharge, Polymorphisme, classes abst
 
 ## [Exceptions](poo-3.md)
 création d'exceptions, utilisation
+
+## [Interfaces](poo-4.md)
+interfaces, implémentation par des classes, utilisation, extension
