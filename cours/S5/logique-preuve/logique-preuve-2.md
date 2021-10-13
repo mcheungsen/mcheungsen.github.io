@@ -62,58 +62,15 @@ Si non valide : pas de preuve
 ### Vérification d'une preuve
 Vérifier que chaque noeud est une invocation correcte, ne reste pas d'obligation de preuve non prouvées.
 
-## Notion de règle dérivée
-Seulement 3 règles pour la logique minimale.
+## Présentation linéaire d'une preuve
+$$P\rightarrow Q, Q \rightarrow R, P \vdash Q$$
 
-Pourtant il y a d'autres règles que l'on souhaiterai utiliser correspondant à des schémas de raisonnement.
 
-**Règle Dérivée** :
-
-$$\frac{\Gamma \vdash A \rightarrow B \rightarrow C; \Gamma \vdash A; \Gamma \vdash B}{\Gamma \vdash C}mp'$$
-
-$$\frac{\Gamma \vdash A1 \rightarrow A2 \rightarrow ... \rightarrow An \rightarrow B; \Gamma \vdash A1 ... \Gamma \vdash An}{\Gamma \vdash B}mp'$$
-
-Simplification de l'écriture des preuves. Règle qui n'apporte rien du point de vue de la prouvabilité, mais qui permet de remplacer plusieurs étapes d'application des règles de base. S'apparente à l'utilisation de fonctions en programmation.
-
-## Règle dérivée : L'Affaiblissement
-$$\dfrac{\Gamma \vdash A}{\Gamma, \Delta \vdash A}{aff}$$
-
-Si l'on peut prouver un séquent $$\Gamma \vdash A$$, on peut prouver sa conclsion en ajoutantt un ensemble arbitraire d'hypothèses.
-
-Si on a prouvé $$\Gamma \vdash A$$ dans une branche et qu'on se retrouve devant un séquent de la forme $$\Gamma, \Delta \vdash A$$ dans une autre branche, on peut affaiblir.
-
-## Justification des règles dérivées
-On peut se passer des règles dérivées durant la construction de la preuve.
-
-Pas une règle dérivée : Exhiber un séquent non prouvable qu'on pourrait prouver en utilisant cette règle.
-
-Extension de la logique minimale :
-- Implication
-- négation
-- contradiction
-
-Contradiction : bottom. Une proposition toujours fausse.
-
-$$\bot \rightarrow P, P \rightarrow \bot \rightarrow Q ...$$
-
-Pour toute valuation $$v, v(\bot) = f$$
-
-Conséquences : Il existe maintenant des séquents dont aucune valuation ne satisfait toutes les hypothèses
-. Le séquent est dit contradictoire, il est automatiquement valide.
-
-$$P \rightarrow Q, P, Q \rightarrow \bot \vdash R $$ 
-est valide
-
-## Le principe d'explosion *sequiter*
-*Du faux il découle du vrai*
-
-Elimination de la contradiction
-$$ \dfrac{\Gamma \vdash \bot}{\Gamma \vdash A}{e} $$
-
-**Nouvelle façon de prouver un séquent** : Montrer que ses hypothèses entrainent une contradiction
-
-Grâce à la règle d'explosion, nous pouvons implanter un premier raisonnement par l'absurde.
-
+>1. Supposons $$P \rightarrow Q$$
+>2. Supposons $$Q \rightarrow R$$
+>3. Supposons P
+>4. Q [mp, 1, 3]
+>5. R [mp, 2, 4]
 
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

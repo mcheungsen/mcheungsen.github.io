@@ -1,4 +1,4 @@
-# Ecologie - Vue générale
+# Ecologie - Effondrement de la biodiversité
 
 [Retour Licence 3](https://mcheungsen.github.io/cours/ "Licence 3")
 
@@ -6,58 +6,38 @@
 
 ---
 
-## Vue Générale sur l'impact environnemental du numérique
+## Effondrement de la biodiversité
+**Biodiversité** : Variété des formes de vie sur la terre.
 
-**Numérique** : Education, Recherche, Loisir, Agriculture, S    anté, ...
+- 2,3 millions d'espèces décrites : 1 900 000 animales, 400 000 végétales
+- 50 à 100 millions d'espèces estimées
 
-### Impacts sur le réchauffement climatique
+Importance de la biodiversité :
+- Matériaux
+- Nourriture
+- Médecine
+- Culturelle
 
-Empreinte carbone moyenne d'un français : 10,8 tCO2e
+**"Services":**
+Atténuation du changement climaique, Purification eau et air, Pollinisation, Fertilisation des sols.
 
-**Parts du numérique** : 
-- Terminaux : PC, écrans, smartphones, pads, TV, imprimantes, consoles
-- Réseaux : Internet, box, wifi, routeur
-- Data-centers : Serveurs
+**IPBES : Intergovernmental Science-Policy on Biodiversity and Ecosystem Services**
 
-## Cycle de vie
-Matières premières - Fabrication - Transport - Distribution - utilisation :
-- valorisation - fabrication - ...
-- Fin de vie
+Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques. Créé en 2012, 124 pays membres
 
+1 espèce sur 8 est menacée.
 
-- Sujet complexe
-- Notion d'ordre de grandeur
-- Facilement manipulable
-- Pas de choix parfait
+Dégradation des milieux naturels. 90 % de la biomasse de grande faune terrestre est du bétail. La biomasse de mammifères sauvages a diminué de 82% 
 
-## Impacts directs du numérique sur l'environnement
-Le cycle de vie en numérique est simplifié :
-Fabrication - Utilisation - Fin de vie
+#### Causes
+- Changement d'usage des terres et des mers
+- Pillage des ressources naturelles
+- Effet domino du changement climatique
+- Pollution des eaux, sols, air
+- Envahissement par des espèces exotiques
 
-**Ressources/métaux** : >40 métaux
+## Conclusion
 
-**Energies primaires** : 3,3% de l'energie primaire avec +9%/an. La consommation d'energie double tous les 8 ans.
+Climat, Biodiversité, ressources, etc. : tout est lié
 
-Energie contenue dans les ressources naturelles : bois - charbon - gaz naturel - pétrole - vent - ...
-
-**Gaz à effet de serre** : ~4% des émissions mondiales: +8%/an
-
-**DEEE - Déchets d'équipements électriques et électroniques** : 27% recyclé avec un taux de collecte de 45%. Smartphone : 16%
-
-**Autres pollutions** : 
-- Aspects écologiques : Destruction des éco-systèmes, pollution des sols, besoin de plus en plus d'énergie et d'eau.
-- Aspects éthico-géopolotique : travail des enfants (RDC Cobalt), appropriation des terres, conflits d'accès à l'eau, conflits armés
-
-## Impacts indirects
-**Attendu** : Dématérialisation, substitution
-
-**Observé : Nouveaux usages et effets rebons**
-- Covoiturage : plus de km parcourus
-- Télétravail : plus d'achats de matériel et de chauffage
-- vente via internet : changement modes de vie
-- Utilisation de la vidéo en ligne : changement modes de vie
-- 5G : plus d'achat de matériel, plus de données
-
-Impacts sur la santé : sédentarité, addiction, troubles du développement
-
-Imapcts sociétaux ; Nouveaux métiers, nouveaux loisirs, obsolescence, mobilité, dépendance à des outils
+Ne pas retarder l'action 
