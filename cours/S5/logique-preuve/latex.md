@@ -39,10 +39,16 @@ Ajouter $$ au lieu de $
 |ou|$$\vee$$|\vee|
 |racine carrée|$$\sqrt 3 + 1 $$|\sqrt3 +1|
 |Compris dans|$$\subset$$|\subset|
+|Pour tous|$$\forall$$|\forall|
+|Il Existe|$$\exists$$|exists|
 
 ----
+test$$ 3^{33}$$
 
-Indice : <sub>1</sub> `<sub>1</sub>`
+|Nom| |html|LaTeX|
+|---|-|----|-----|
+|Indice|$$5_1$$|`<sub>1</sub>`|5_1|
+|Exposant|$$5^1$$||5^1|
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
