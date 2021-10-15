@@ -38,6 +38,8 @@ Ajouter $$ au lieu de $
 |et|$$\wedge$$|\wedge|
 |ou|$$\vee$$|\vee|
 |racine carrée|$$\sqrt 3 + 1 $$|\sqrt3 +1|
+|Compris dans|$$\subset$$|\subset|
+
 ----
 
 Indice : <sub>1</sub> `<sub>1</sub>`
