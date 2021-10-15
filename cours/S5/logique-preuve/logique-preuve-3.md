@@ -66,3 +66,6 @@ $$ \dfrac{\Gamma \vdash \bot}{\Gamma \vdash A}{e} $$
 Grâce à la règle d'explosion, nous pouvons implanter un premier raisonnement par l'absurde.
 
 ## Négation
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
