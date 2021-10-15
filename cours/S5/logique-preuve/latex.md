@@ -31,6 +31,13 @@ Ajouter $$ au lieu de $
 |Gamma|$$\Gamma$$|\Gamma|
 |gamma|$$\gamma$$|\gamma|
 
+|Nom| |Code|
+|---|-|----|
+|Appartient à|$$\in$$|\in|
+|N'appartient pas|$$\notin$$|\notin|
+|et|$$\wedge$$|\wedge|
+|ou|$$\vee$$|\vee|
+|racine carrée|$$\sqrt 3 + 1 $$|\sqrt3 +1|
 ----
 
 Indice : <sub>1</sub> `<sub>1</sub>`
