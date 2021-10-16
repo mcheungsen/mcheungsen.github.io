@@ -17,3 +17,5 @@ création d'exceptions, utilisation
 
 ## [Interfaces](poo-4.md)
 interfaces, implémentation par des classes, utilisation, extension
+
+## [Collections](poo-5.md)
