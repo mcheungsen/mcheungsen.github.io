@@ -15,7 +15,7 @@ vocabulaire de la logique, propositions, séquents, vérités, preuves
 logique minimale, arbre, Règle d'hypothèse, règle du Modus Ponens, règle de l'implication
 
 ## [Règles dérivées et extension de la logique minimale](logique-preuve-3.md)
-
+Affaiblissement, Contradiction, Négation, Modus Ponens généralisé, Explosion, Expansion de la négation, ...
 
 ## [Incomplétude de la logique minimale](logique-preuve-4.md)
 Peirce, sous-formule, incomplétudes
