@@ -67,3 +67,6 @@ Sous-formules de $$(P \rightarrow Q)\rightarrow R \rightarrow S$$ sont :
 **Corollaire** : Dans une preuve sans coupures de la logique minimale, toutes les formules qui apparaissent sont des sous-formules du séquent à la racine de l'arbre.
 
 *Preuve : réucurrence sur la taille de l'arbre*
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
