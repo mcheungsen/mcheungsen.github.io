@@ -21,11 +21,12 @@ Ajouter $$ au lieu de $
 |Implication|$$\rightarrow$$|\rightarrow|
 |Bottom / Contradiction|$$\bot$$|\bot
 |Negation|$$\neg$$|\neg|
+|Negation|$$\sim$$|\sim|
 |ET|$$\wedge$$|\wedge|
 |OU|$$\vee$$|\vee|
 |Double implication|$$\iff$$|\iff|
 |Séquent|$$\vdash$$|\vdash|
-
+|Fraction|$$\frac{a}{b}{c}$$|\frac{a}{b}{c}|
 |Nom| |Code|
 |---|-|----|
 |Gamma|$$\Gamma$$|\Gamma|
@@ -43,7 +44,6 @@ Ajouter $$ au lieu de $
 |Il Existe|$$\exists$$|exists|
 
 ----
-test$$ 3^{33}$$
 
 |Nom| |html|LaTeX|
 |---|-|----|-----|
