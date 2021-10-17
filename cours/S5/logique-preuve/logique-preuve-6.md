@@ -65,8 +65,9 @@ $$\frac{\Gamma \vdash A \wedge B}{\Gamma \vdash B \wedge A}$$
 $$\frac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C}{\wedge '_e}$$
 
 ## Disjonction $$\vee$$
+
  |A|B| |$$A \vee B$$|
- |-|-|-|--------------|
+ |-|-|-|------------|
  |v|v||v|
  |v|f||v|
  |f|v||v|

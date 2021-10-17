@@ -24,3 +24,4 @@ Affaiblissement, Contradiction, Négation, Modus Ponens généralisé, Explosion
 Peirce, sous-formule, incomplétudes
 
 ## [Logique intuitionniste, Conjonction et Disjonction](logique-preuve-6.md)
+Conjonction, Disjonction, logique propositionnelle intuitionniste, elimination, introduction, notations de jugements
