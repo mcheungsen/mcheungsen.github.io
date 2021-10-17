@@ -31,7 +31,7 @@ $$\sim A$$
  est un raccourci pour $$(A \rightarrow B) \wedge (B \rightarrow A)$$
  ("A est équivalent à B").
 
- ## Conjonction ^
+ ## Conjonction
 
  |A|B| |$$A \wedge B$$|
  |-|-|-|--------------|
