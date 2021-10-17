@@ -23,13 +23,9 @@ Si A et B sont deux formules,
  - $$A \vee B $$ 
  est une formule ("A ou B")
 
-$$\sim A$$
- est un raccourci pour
- $$A \rightarrow \bot$$
+$$\sim A$$ est un raccourci pour $$A \rightarrow \bot$$
 
- $$(A \leftrightarrow B)$$ 
- est un raccourci pour $$(A \rightarrow B) \wedge (B \rightarrow A)$$
- ("A est équivalent à B").
+ $$(A \leftrightarrow B)$$ est un raccourci pour $$(A \rightarrow B) \wedge (B \rightarrow A)$$ ("A est équivalent à B").
 
  ## Conjonction
 
