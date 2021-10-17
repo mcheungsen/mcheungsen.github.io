@@ -65,13 +65,6 @@ $$\frac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C}{\wedge '_e}$$
 
 ## Disjonction v
 
- |A|B| |$$A \vee B$$|
- |-|-|-|------------|
- |v|v||v|
- |v|f||v|
- |f|v||v|
- |f|f||f|
-
  $$A \vee B$$
  est fausse si A et B sont toutes les deux fausses.
 
