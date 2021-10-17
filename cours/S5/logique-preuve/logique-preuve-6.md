@@ -31,8 +31,7 @@ $$\sim A$$
  est un raccourci pour $$(A \rightarrow B) \wedge (B \rightarrow A)$$
  ("A est équivalent à B").
 
- ## Conjonction $$\wedge$$
-
+ ## Conjonction ^
  |A|B| |$$A \wedge B$$|
  |-|-|-|--------------|
  |v|v||v|
@@ -64,7 +63,7 @@ $$\frac{\Gamma \vdash A \wedge B}{\Gamma \vdash B \wedge A}$$
 **Elimination alternative :**
 $$\frac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C}{\wedge '_e}$$
 
-## Disjonction $$\vee$$
+## Disjonction v
 
  |A|B| |$$A \vee B$$|
  |-|-|-|------------|
