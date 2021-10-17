@@ -128,7 +128,7 @@ Le séquent $$\Gamma \vdash A$$ est valide
 $$\Gamma \models A$$
 
 Le séquent est prouvable en logique intuitionniste
-$$Gamma \vdash J A$$
+$$\Gamma \vdash J A$$
 
 Le séquent $$\vdash A \leftrightarrow A$$ est prouvable en logique intuitionniste
 $$A \equiv j B$$
