@@ -32,7 +32,7 @@ $$\sim A$$
  ("A est équivalent à B").
 
  ## Conjonction ^
- 
+
  |A|B| |$$A \wedge B$$|
  |-|-|-|--------------|
  |v|v||v|
@@ -44,9 +44,11 @@ $$\sim A$$
  est vraie seulement si A et B sont vraies.
 
  ### Règle D'introduction
+
  $$\frac{\Gamma \vdash A; \Gamma \vdash B}{\Gamma \vdash A \wedge B}{\wedge _i}$$
 
 ### Règle d'élimination
+
 Il faut une règle pour exploiter une hypothèse de la forme 
 $$A \wedge B$$
 
@@ -58,6 +60,7 @@ $$\frac{\Gamma \vdash A \wedge B; \Gamma, A, B\vdash C}{\Gamma \vdash C}{\wedge 
 *exemple $$P \rightarrow (Q \wedge R) \vdash (P \rightarrow Q) \wedge ( P \rightarrow R)$$*
 
 ### Règles dérivées
+
 **Commutativité :**
 $$\frac{\Gamma \vdash A \wedge B}{\Gamma \vdash B \wedge A}$$
 
@@ -77,6 +80,7 @@ $$\frac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C}{\wedge '_e}$$
  est fausse si A et B sont toutes les deux fausses.
 
  ### Règle d'introduction
+
  Deux façons pour prouver $$A \vee B$$ : 
  - En prouvant A
  - En prouvant B
@@ -86,6 +90,7 @@ $$\frac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C}{\wedge '_e}$$
  $$\frac{\Gamma \vdash B}{\Gamma \vdash A \vee B}{V _{i,2}}$$
 
  ### Règle d'élimination
+
  Etre capable de prouver un formule de la forme $$A \vee B$$ ou qu'on en ait comme hypothèse
 
  **Raisonnement par cas :** Deux cas possibles, A ou B. Si dans chaque cas on arrive à prouver C alors on peut en déduire C.
@@ -111,12 +116,14 @@ Ces deux séquents sont invalides, et ne peuvent pas être prouvés.
 **La solution est de commencer par une élimination.**
 
 ## Logique propositionnelle intuitionniste
+
 - Règle d'hypothèse, Elimination de la contradiction $$\bot_e$$
 - Règle sur l'implication : Modus Ponens $$mp$$, introduction de l'implication $$\rightarrow_i$$
 - Règle sur la conjonction : Elimination $$\wedge_e$$, introduction $$\wedge_i$$
 - Règle sur la disjonction : élimination, deux règles d'introduction $$\vee_{i,1} \vee_{i,2}$$
 
 ## Notations de jugements
+
 Le séquent $$\Gamma \vdash A$$ est valide
 $$\Gamma \models A$$
 
