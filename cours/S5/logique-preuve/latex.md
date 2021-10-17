@@ -26,7 +26,10 @@ Ajouter $$ au lieu de $
 |OU|$$\vee$$|\vee|
 |Double implication|$$\iff$$|\iff|
 |Séquent|$$\vdash$$|\vdash|
+|Equivalent|$$\equiv$$|\equiv|
+|Models|$$\models$$|\models|
 |Fraction|$$\frac{a}{b}{c}$$|\frac{a}{b}{c}|
+
 |Nom| |Code|
 |---|-|----|
 |Gamma|$$\Gamma$$|\Gamma|
