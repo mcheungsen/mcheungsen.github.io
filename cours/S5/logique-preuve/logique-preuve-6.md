@@ -36,8 +36,7 @@ $$\sim A$$ est un raccourci pour $$A \rightarrow \bot$$
  |f|v||f|
  |f|f||f|
 
- $$A \wedge B$$ 
- est vraie seulement si A et B sont vraies.
+ $$A \wedge B$$ est vraie seulement si A et B sont vraies.
 
  ### Règle D'introduction
 
