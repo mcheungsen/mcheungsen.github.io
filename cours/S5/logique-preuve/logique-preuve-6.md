@@ -27,20 +27,20 @@ $$\sim A$$ est un raccourci pour $$A \rightarrow \bot$$
 
  $$(A \leftrightarrow B)$$ est un raccourci pour $$(A \rightarrow B) \wedge (B \rightarrow A)$$ ("A est équivalent à B").
 
- ## Conjonction
+## Conjonction
 
- |A|B| |$$A \wedge B$$|
- |-|-|-|--------------|
- |v|v||v|
- |v|f||f|
- |f|v||f|
- |f|f||f|
+|A|B| |$$A \wedge B$$|
+|-|-|-|--------------|
+|v|v||v|
+|v|f||f|
+|f|v||f|
+|f|f||f|
 
- $$A \wedge B$$ est vraie seulement si A et B sont vraies.
+$$A \wedge B$$ est vraie seulement si A et B sont vraies.
 
- ### Règle D'introduction
+### Règle D'introduction
 
- $$\frac{\Gamma \vdash A; \Gamma \vdash B}{\Gamma \vdash A \wedge B}{\wedge _i}$$
+$$\frac{\Gamma \vdash A; \Gamma \vdash B}{\Gamma \vdash A \wedge B}{\wedge _i}$$
 
 ### Règle d'élimination
 
@@ -64,37 +64,37 @@ $$\frac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C}{\wedge '_e}$$
 
 ## Disjonction v
 
- |A|B| |$$A \vee B$$|
- |-|-|-|------------|
- |v|v||v|
- |v|f||v|
- |f|v||v|
- |f|f||f|
+|A|B| |$$A \vee B$$|
+|-|-|-|------------|
+|v|v||v|
+|v|f||v|
+|f|v||v|
+|f|f||f|
 
- $$A \vee B$$
- est fausse si A et B sont toutes les deux fausses.
+$$A \vee B$$
+est fausse si A et B sont toutes les deux fausses.
 
- ### Règle d'introduction
+### Règle d'introduction
 
- Deux façons pour prouver $$A \vee B$$ : 
- - En prouvant A
- - En prouvant B
+Deux façons pour prouver $$A \vee B$$ : 
+- En prouvant A
+- En prouvant B
 
- $$\frac{\Gamma \vdash A}{\Gamma \vdash A \vee B}{V _{i,1}}$$
+$$\frac{\Gamma \vdash A}{\Gamma \vdash A \vee B}{V _{i,1}}$$
 
- $$\frac{\Gamma \vdash B}{\Gamma \vdash A \vee B}{V _{i,2}}$$
+ $\frac{\Gamma \vdash B}{\Gamma \vdash A \vee B}{V _{i,2}}$$
 
- ### Règle d'élimination
+### Règle d'élimination
 
- Etre capable de prouver un formule de la forme $$A \vee B$$ ou qu'on en ait comme hypothèse
+Etre capable de prouver un formule de la forme $$A \vee B$$ ou qu'on en ait comme hypothèse
 
- **Raisonnement par cas :** Deux cas possibles, A ou B. Si dans chaque cas on arrive à prouver C alors on peut en déduire C.
+**Raisonnement par cas :** Deux cas possibles, A ou B. Si dans chaque cas on arrive à prouver C alors on peut en déduire C.
 
- $$\frac{\Gamma \vdash A \vee B; \Gamma, A \vdash C; \Gamma, B \vdash C}{\Gamma \vdash C}{V _e}$$
+$$\frac{\Gamma \vdash A \vee B; \Gamma, A \vdash C; \Gamma, B \vdash C}{\Gamma \vdash C}{V _e}$$
 
- *Exemple : $$P \rightarrow R, Q \rightarrow R \vdash (P \vee Q) \rightarrow R$$*
+*Exemple : $$P \rightarrow R, Q \rightarrow R \vdash (P \vee Q) \rightarrow R$$*
 
- ## Remarques sur la recherche de preuves
+## Remarques sur la recherche de preuves
 
 **Conjonction :** Pas trop de pièges à éviter
 
