@@ -14,8 +14,8 @@ vocabulaire de la logique, propositions, séquents, vérités, preuves
 ## [Logique Minimale](logique-preuve-2.md)
 logique minimale, arbre, Règle d'hypothèse, règle du Modus Ponens, règle de l'implication
 
-## ~~[Cours sur l'utilisation de Coq](logique-preuve-3.md)~~
-//TO DO
+## [Cours sur l'utilisation de Coq](logique-preuve-3.md)
+automatisation, principe d'uèn assitant de preuves, commandes, syntaxes
 
 ## [Règles dérivées et extension de la logique minimale](logique-preuve-4.md)
 Affaiblissement, Contradiction, Négation, Modus Ponens généralisé, Explosion, Expansion de la négation, ...
