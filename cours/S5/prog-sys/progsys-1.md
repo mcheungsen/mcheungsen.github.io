@@ -10,7 +10,7 @@
 Il n'est pas nécessaire d'avoir un OS pour que le PC puisse fonctionner.
 
 L'utilisateur utilise un OC principalement pour faire abstraction des Hardware et la factorisation du code.
-La manipulation des fichiers est plus simple, et une interface graphique est fournie pour siplifier l'utilisateur.
+La manipulation des fichiers est plus simple, et une interface graphique est fournie pour simplifier l'utilisateur.
 
 Un OS est composé de :
 - drivers
@@ -37,7 +37,7 @@ Responsable de l'initialisation des harware, de leur configuration, et du démar
 *Clavier (touche = interruption), souris (Déplacement, clic), timers*
 
 ## Time Sharing
-**Le time sharing** permet d'aviter que les processus s'exécutent à l'infini. Le kernel/noyau met donc en place un timer ($\approx$ 10ms) déclenchant les interruptions.
+**Le time sharing** permet d'éviter que les processus s'exécutent à l'infini. Le kernel/noyau met donc en place un timer ($$\approx$$ 10ms) déclenchant les interruptions.
 
 Le noyau empile et dépile les données du processus. Il peut faire alterner des programmes en cours d'exécution.
 
@@ -66,3 +66,6 @@ Un requête de privilèges est faites pour demander la permission au kernel d'ex
 Un processus enregistre le numéro de la fonction à utiliser dans un registre et lance une interruption. `syscal` Le noyau va check ce numéro, et exécuter la fonction correspondante s'il n'y a pas de problème.
 
 Il existe des centaines de "system call".
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

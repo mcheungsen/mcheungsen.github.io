@@ -10,7 +10,7 @@
 
 > All is file philosophy (*tout est fichier*)
 
-Série continue de bytes. La tailel est connue et peut être aggrandie / rétrécie dynamiquement.
+Série continue de bytes. La taille est connue et peut être aggrandie / rétrécie dynamiquement.
 
 Droits d'accès : `r` read `w` write `x` execute
 
