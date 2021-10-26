@@ -16,6 +16,7 @@ Accessibilité, Héritage, Rédefinition, Surcharge, Polymorphisme, classes abst
 création d'exceptions, utilisation
 
 ## [Interfaces](poo-4.md)
-interfaces, implémentation par des classes, utilisation, extension
+interfaces, implémentation par des classes, utilisation, extension, classes anonymes,lambda stream
 
 ## [Collections](poo-5.md)
+List, Set, Map
