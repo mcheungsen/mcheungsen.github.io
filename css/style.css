@@ -1,6 +1,6 @@
 
 :root{
-    background-color: black;
+    background-color: rgb(31, 26, 29);
 }
 
 * {
@@ -42,20 +42,19 @@ header{
 BODY
 */
 body{
-    color: rgb(233, 233, 233);
+    color: rgb(250, 242, 246);
     text-align: center;
 }
 
 section {
-    padding-top: 100px;
+    padding-top: 50px;
     height: 100vh;
     opacity: 0;
     transition : all 500ms ease-in;
 }
 
-#links{
-    height: auto;
-    padding: 5vh 0;
+section div{
+    padding-bottom: 100px;
 }
 
 .js-section-animate {
@@ -64,6 +63,11 @@ section {
 
 h2{
     font-size: 80px;
+}
+
+h3{
+    font-size: 50px;
+    padding: 10px 0;
 }
 
 p{
@@ -78,7 +82,7 @@ HOVER IMG
     position: relative;
     text-decoration:none;
     transition-duration: 0.2s;
-    width: 300px;
+    width: 600px;
     margin: 0 10px;
 }
 
@@ -92,7 +96,7 @@ HOVER IMG
 /*
 800 px
 */
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1600px){
     .fullname-title{
         font-size: 25px;
         padding-top: 40vh;
@@ -103,12 +107,16 @@ HOVER IMG
         margin: 0 10px;
     }
 
+    .img-hover{
+        width: 350px;
+    }
+
   }
 
   /*
   500px
   */
-  @media screen and (max-width: 1400px){
+  @media screen and (max-width: 1250px){
     .fullname-title{
         font-size: 20px;
         padding-top: 50vh;
@@ -121,12 +129,11 @@ HOVER IMG
     }
 
     .img-hover{
-        width: 200px;
-        padding-top: 20vh;
+        width: 90%;
+        margin: 10px;
     }
 
     #links{
         height: 100vh;
-        padding: 5vh 0;
     }
   }
