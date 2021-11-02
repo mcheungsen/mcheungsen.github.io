@@ -19,3 +19,19 @@ int pipe(int fildes[2]);
 `fildes[1]` : writing
 
 Pas de lseek
+
+Les `pipes` permettant la communication entre les processus.
+
+Pipes : Anonymes
+
+## Concept de `pipe`
+
+Lorsque les deux parties du `pipe` sont ouverts :
+- `read` bloque si le pipe est **vide**.
+- `write` bloque si le pipe est **rempli**.
+
+`Pipe` fermé sur la partie écriture :
+- `read` retourn 0 (fin fichier)
+
+`Pipe` fermé sur la partie lecture :
+- `write` lève une exception "Broken pipe"
