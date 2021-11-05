@@ -7,3 +7,4 @@
 ---
 
 ## [Cours 1](graphes-1.md)
+Définitions, connexité, sous-graphe, orienté, non orienté, cheminement, étiquetage, théorèmes
