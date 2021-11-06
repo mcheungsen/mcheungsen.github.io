@@ -133,7 +133,7 @@ Soit G un graphe de $$S \subseteq V(G).$$ Le sous-graphe de G induit par S noté
 
 **Cycle** $$C_n$$: graphe simple constitué d'un cycle à n sommets.
 
-## Représebtation des graphes
+## Représentation des graphes
 Matrice G : n sommets et m arêtes.
 
 ### Matrice d'adjacence

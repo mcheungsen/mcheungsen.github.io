@@ -11,17 +11,17 @@
 
 ### Grand "O" 
 
-$$O(g(n) = f(n) | \exist c \in \mathbf{R}^+, \exist n_0 \in \mathbf{N}, \forall n \geq n_0, 0 \leq f(n) \leq c \times g(n)$$
+$$O(g(n) = f(n) | \exists c \in \mathbf{R}^+, \exists n_0 \in \mathbf{N}, \forall n \geq n_0, 0 \leq f(n) \leq c \times g(n)$$
 
 *3n² + 2n + 3 = O(n²)*
 
 ### Notation $$\Omega$$
 
-$$\Omega (g(n)) = f(n) | \exist c \in \mathbf{R}^+, \exist n_0 \in \mathbf{N}, \forall n \geq n_0, 0 \leq c \times g(n) \leq f(n)$$
+$$\Omega (g(n)) = f(n) | \exists c \in \mathbf{R}^+, \exists n_0 \in \mathbf{N}, \forall n \geq n_0, 0 \leq c \times g(n) \leq f(n)$$
 
 ### Notation $$\Theta$$
 
-$$\Theta(g(n)) = f(n)|\exist c_1, c_2 \in \mathbf{R}^+, \exists n_0 \in \mathbf{N}, \forall n \geq n_0, 0 \leq c_1 \times g(n) \leq f(n) \leq c_2 \times g(n)$$
+$$\Theta(g(n)) = f(n)|\exists c_1, c_2 \in \mathbf{R}^+, \exists n_0 \in \mathbf{N}, \forall n \geq n_0, 0 \leq c_1 \times g(n) \leq f(n) \leq c_2 \times g(n)$$
 
 ## Taille mémoire selon la représentation
 
