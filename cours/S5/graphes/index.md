@@ -8,3 +8,6 @@
 
 ## [Cours 1](graphes-1.md)
 Définitions, connexité, sous-graphe, orienté, non orienté, cheminement, étiquetage, théorèmes
+
+## [Cours 2](graphes-2.md)
+Notations asymptotiques, taille mémoire selon le représentation, complexité, Parcours en largeur, graphe biparti
