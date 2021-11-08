@@ -87,3 +87,5 @@ int raise(int sig);
 int kill(pid_t pid, int sig);
 // send signal sig to process pid
 ```
+
+## Manipulation de signal
