@@ -54,4 +54,4 @@ pthread_create(&pid, NULL, function, "hello");
 pthread_join(pid, NULL);
 // attendre que le thread soit terminé avant de poursuivre
 ```
-
+s
