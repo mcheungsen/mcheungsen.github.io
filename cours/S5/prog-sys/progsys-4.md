@@ -22,9 +22,11 @@ Pas de lseek
 
 Les `pipes` permettant la communication entre les processus.
 
-Pipes : Anonymes
+Pipes : Anonymes : Il n'y a pas moyen de partager le nom.
 
 ## Concept de `pipe`
+
+Les `pipe` permettent la communication entre les processus.
 
 Lorsque les deux parties du `pipe` sont ouverts :
 - `read` bloque si le pipe est **vide**.
