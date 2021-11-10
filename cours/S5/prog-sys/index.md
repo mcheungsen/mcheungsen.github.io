@@ -19,6 +19,6 @@ processus, espace d'adressage, contexte d'exécution, création de processus
 Pipe, Communication entre les processus
 
 ## [Signaux](progsys-5.md)
-concept, 
+
 
 ## [Threads](progsys-6.md)
