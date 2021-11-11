@@ -16,3 +16,4 @@ Notations asymptotiques, taille mémoire selon le représentation, complexité, 
 Parcours en profondeur, tri topologique, Composantes fortement connexes
 
 ## [cours 4](graphes-4.md)
+Lemmes composantes fortement connexe, Arbres, Arbre couvrant de poids minimum, Kruskal
