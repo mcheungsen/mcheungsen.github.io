@@ -14,3 +14,5 @@ Notations asymptotiques, taille mémoire selon le représentation, complexité, 
 
 ## [Cours 3](graphes-3.md)
 Parcours en profondeur, tri topologique, Composantes fortement connexes
+
+## [cours 4](graphes-4.md)
