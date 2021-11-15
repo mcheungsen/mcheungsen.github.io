@@ -57,9 +57,11 @@ $$\frac{\Gamma \vdash A \wedge B; \Gamma, A, B\vdash C}{\Gamma \vdash C}{\wedge 
 ### Règles dérivées
 
 **Commutativité :**
+
 $$\frac{\Gamma \vdash A \wedge B}{\Gamma \vdash B \wedge A}$$
 
 **Elimination alternative :**
+
 $$\frac{\Gamma, A, B \vdash C}{\Gamma, A \wedge B \vdash C}{\wedge '_e}$$
 
 ## Disjonction v
@@ -82,7 +84,7 @@ Deux façons pour prouver $$A \vee B$$ :
 
 $$\frac{\Gamma \vdash A}{\Gamma \vdash A \vee B}{V _{i,1}}$$
 
- $\frac{\Gamma \vdash B}{\Gamma \vdash A \vee B}{V _{i,2}}$$
+$$\frac{\Gamma \vdash B}{\Gamma \vdash A \vee B}{V _{i,2}}$$
 
 ### Règle d'élimination
 
