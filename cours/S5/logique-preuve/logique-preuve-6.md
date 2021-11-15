@@ -130,5 +130,18 @@ $$\Gamma \vdash J A$$
 Le séquent $$\vdash A \leftrightarrow A$$ est prouvable en logique intuitionniste
 $$A \equiv j B$$
 
+------
+
+On a maintenant un système qui permet de prouver des séquents faisant intervenir tous les connecteurs. ($$\rightarrow, \vee, \wedge, \sim$$)
+
+Mais cela reste incomplet : certains céquents valides ne sont pas prouvables.
+
+En particulier, le raisonnement par **l'absurde** ne "marche" que dans un sens : pour prouver $$\sim A$$, on suppose $$A$$ et on en déduit une contradiction. Mais si on suppose $$\sim A$$ et qu'on obtient une contradiction, on ne peux en déduire que $$\sim \sim A$$ et non $$A$$.
+
+Séquents valides non prouvables :
+- Formule de Peirce $$\vdash ((P \rightarrow Q) \rightarrow P) \rightarrow P$$
+- Élimination de la double négation $$\sim \sim P \vdash P$$
+- Tiers exclu $$\vdash P \vee \sim P$$
+
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

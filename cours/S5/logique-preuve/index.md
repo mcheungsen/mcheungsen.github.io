@@ -25,3 +25,6 @@ Peirce, sous-formule, incomplétudes
 
 ## [Logique intuitionniste, Conjonction et Disjonction](logique-preuve-6.md)
 Conjonction, Disjonction, logique propositionnelle intuitionniste, elimination, introduction, notations de jugements
+
+## [Logique classique](logique-preuve-7.md)
+tiers exclu, notations de jugements, double négation en logique classique, formule de Peirce, Règles de Morgan, Théorèmes, Règles dérivées, complétude
