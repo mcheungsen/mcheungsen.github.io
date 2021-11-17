@@ -20,3 +20,6 @@ interfaces, implémentation par des classes, utilisation, extension, classes ano
 
 ## [Collections](poo-5.md)
 List, Set, Map
+
+## [Fichiers](poo-6.md)
+fichiers

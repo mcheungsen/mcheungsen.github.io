@@ -8,9 +8,14 @@
 ---
 
 ## Logique classique
+La logique propositionnelle intuitionniste ne permet pas de rouver tous les séquents.
+
+**La logique classique s'obtient en ajoutant à la logique intuitionniste la règle du tiers exclu**
+
+$$\frac{}{\Gamma \vdash A \vee \sim A}{exm}$$
 
 ### Logique classique vs intuitionniste
-
+ 
 Les formules et les séquents sont les mêmes.
 Le changement se fait au niveau de **ce qu'on peut prouver**. La logique classique a une règle d'inférence de plus.
 
@@ -20,23 +25,23 @@ La logique de `coq` est par défaut intuitionniste. (Bibliothèque `classical` p
 
 "Le séquent $$\Gamma \vdash A$$ est valide" : $$\Gamma \models A $$
 
-"Le séquent $$\Gamma \vdash A est prouvable en logique intuitionniste$$" : $$\Gamma \vdash_J A$$
+"Le séquent $$\Gamma \vdash A$$ est prouvable en logique intuitionniste" : $$\Gamma \vdash_J A$$
 
-"Le séquent $$\Gamma \vdash A est prouvable en logique classique$$" : $$\Gamma \vdash_K A$$
+"Le séquent $$\Gamma \vdash A$$ est prouvable en logique classique" : $$\Gamma \vdash_K A$$
 
 "A et B on la même table de vérité" : $$A \equiv B, A \equiv_J B, A \equiv_K B$$
 
-### Double négation en logique classique
+#### Double négation en logique classique
 En logique classique on peut supprimer la double négation.
 
-### Formule de Peirce
+#### Formule de Peirce
 $$((P \rightarrow Q) \rightarrow P) \rightarrow P$$
 
 On a prouvé (TD négation) $$\vdash \sim \sim F$$
 
 On prouve $$\vdash F$$ en classique (tableau).
 
-### Règles de Morgan
+#### Règles de Morgan
 Règle de Morgan non prouvable en logique intuitionniste : $$\sim (A \wedge B) \equiv \sim A \vee \sim B$$
 
 L'implication $$(\sim A \vee \sim B) \rightarrow \sim(A \wedge B)$$ est facile (en intuitionniste).
@@ -52,12 +57,15 @@ On admet le théorème essentiel : La logique propositionnelle classique est **c
 (valables seulement en logique classique)
 
 Elimination du tiers exclu :
+
 $$\frac{\Gamma, A \vdash B; \Gamma, \sim A \vdash B}{\Gamma \vdash B}{exm_e}$$
 
 Absurde classique :
+
 $$\frac{\Gamma, \sim A \vdash \bot }{\Gamma \vdash A}{abs_k}$$
 
 Elimination de la double négation :
+
 $$\frac{}{\sim \sim A \vdash A}{dn_e}$$
 
 ## Complétude de la logique classique

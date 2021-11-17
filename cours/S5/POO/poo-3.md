@@ -18,10 +18,24 @@ try{
     //traitement de l'exception
 } catch(ClassException e){
     //traitement de l'exception
+} catch(MyException1 | MyException2 e){
+    // Traitement de l'exception
+    e.getMessage(); // renvoie string message.
+    e.stackTrace(); // Chaine qui décrit les frames immédiates de la pile des appels.
+} finally {
+    // Code executé dans tous les cas avec ou sans exception
+}
+
+g() throws MonException{
+    // ...
+
+    throw new MonException("erreur");
 }
 ```
 
 **Unchecked exceptions** : Pas besoin de vérifier si elles sont levées, pas besoin de les écrire. L'exception est levée automatiquement (*Nullpointer / out of bounds / ...*).
+
+Si on définit une classe avec des unchecked exceptions, la classe aura un comportement différent qu'avec une classe `Exception`.
 
 ### Création d'une exception
 
@@ -30,3 +44,10 @@ Class MonException extends Exception{
     
 }
 ```
+
+## Hiérarchie des exceptions
+
+`Trowable`
+- `Error`
+- `Exception`
+    - `RunTimeException`
