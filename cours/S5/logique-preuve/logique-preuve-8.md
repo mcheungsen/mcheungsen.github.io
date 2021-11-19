@@ -37,7 +37,7 @@ Si on sait que **tout T a la propriété P**, alors on peut prendre n'importe qu
 
 "il a la propriété P" P[x/t]
 
-$$\frac{\Gamma \vdash \forall x : T, P; \Gamma \vdash t : T}{\Gamma \vdash P \[ x/t \] }{\forall_{ei}t}$$
+$$\frac{\Gamma \vdash \forall x : T, P; \Gamma \vdash t : T}{\Gamma \vdash P [ x/t ] }{\forall_{ei}t}$$
 
 P[x/t] désigne la proposition P, dans laquelle chaque occurrence libre de x est remplacée par le terme t.
 
