@@ -52,5 +52,13 @@ Elimination : `apply`, `destruct`, `specialize`
 
 "Il existe au moins un T qui a la propriété P" : exhiber un terme t de type T.
 
+$$\frac{\Gamma \vdash t : T; \Gamma \vdash P [ x/t ]}{\Gamma \vdash \exists x : T, P}{\exists_it}$$
+
+La difficulté est de trouver "un bon t".
+
+## Elimination du $$\exists$$
+
+
+
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
