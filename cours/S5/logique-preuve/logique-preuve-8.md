@@ -58,7 +58,64 @@ La difficulté est de trouver "un bon t".
 
 ## Elimination du $$\exists$$
 
+"Il existe au moins un T qui a la propriété P" : On peut s'en fournir un et le nommer.
 
+Il faut lui donner une variable qui n'est pas déjà utilisé.
+
+$$\frac{\Gamma \vdash \exists x : T,P; \Gamma;y:T ; P[ x/y ] \vdash A}{\Gamma \vdash A}{\exists_e}$$
+
+**Condition d'utilisation** : La variable y utilisée ne doit pas apparaître comme variable libre dans le contexte $$\Gamma$$. Sinon on est en train d'ajouter l'hypothèse qu'un individu sur lequel on avait supposé des choses, satisfait en plus le propriété P.
+
+### Quantificateur existenciel en Coq
+
+`exists x:T, R x /\ R (p(p x))`
+
+**tactique d'introduction** : `exists`
+
+**Tactique d'élimination** : `destruct` (Coq introduuit une variable du bon type, et ajoute l'hypothèse pour cette variable).
+
+## L'égalité
+Souvent besoin d'exprimer le fait que deux termes désignent le même individu.
+
+Introduction : *t est égal à t*
+
+$$\frac{}{\Gamma \vdash t = t}{=_i}$$
+
+### L'égalité en coq
+
+=
+
+**Introduction** : `reflexivity` (prouve une égalité t=t)
+
+**Elimination** : `rewrite` utiliser une hypothèses sous la forme d'une égalité
+
+### Calcul des prédicats en Coq
+
+Coq se charge de vérifier les conditions d'application.
+
+**Introduction de l'universel** : `intro`
+
+**Elimination de l'universel** : `specialize H with t` remplacer une hypothèse universelle H par son application à un terme t
+
+**Introduction de l'existenciel** : `exists t` On fournit le témoin, il faudra prouver la propriété
+
+**Elimination de l'existenciel** : `destruct H`
+
+### Séquents valides
+
+En logique propositionnelle, on a la notion de **séquent valide**, via la notation de **valuation**.
+
+En calcul des prédicats, on passe par la notion de **modèle** qui remplace celle de valuation.
+
+Un séquent valide, c'est un séquent dont la conclusion "est vraie" dans tout modèle.
+
+-----
+
+On parle de **calcul des prédicats** ou de **logique du premier ordre**.
+
+"Premier ordre" fait référence au fait qu'on ne fait porter les quantificateurs que sur des objets des types de base.
+
+La logique de coq est d'ordre supérieur. au-delà du premier ordre.
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
