@@ -30,3 +30,5 @@ Conjonction, Disjonction, logique propositionnelle intuitionniste, elimination, 
 tiers exclu, notations de jugements, double négation en logique classique, formule de Peirce, Règles de Morgan, Théorèmes, Règles dérivées, complétude
 
 ## [Preuves en logique du premier ordre](logique-preuve-8.md)
+
+## [Traduction de formules](logique-preuve-9.md)
