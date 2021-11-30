@@ -117,5 +117,101 @@ On parle de **calcul des prédicats** ou de **logique du premier ordre**.
 
 La logique de coq est d'ordre supérieur. au-delà du premier ordre.
 
+------
+
+Un séquent $$\Gamma \vdash A$$ est valide si **tout modèle de $$\Gamma$$ est également un modèle de** $$\Gamma \cup$$ {A}
+
+Si un environnement $$\Gamma$$ n'a **aucun modèle**
+
+### Modèle pour un environnement
+
+Dans la description d'un univers (des types de base, des symboles de fonctions, de prédicats et de relatioons), on n'impose pas une interprétatioon de ce que représente chaque type et chaque symbole.
+
+Un **modèle** pour un univers et des hypothèses, c'est la description de :
+
+- Pour chaque type de base $$T$$, un ensemble $$[[T]]$$
+
+- Pour chaque symbole de fonction $$f : T \rightarrow T'$$, une fonction totale $$[[f]]$$ de $$[[T]]$$ dans $$[[T']]$$
+
+- Pour chaque symbole de prédicat $$P$$ sur un type de base $$T$$, une fonction $$[[P]]$$ de $$[[T]]$$ vers {`true`, `false`}
+
+- Pour chaque variable $$x : T$$ qui est libre dans une hypothèse, un élément $$[[x]] \in [[T]]$$
+
+- Pour chaque symbole de relation binaire $$R$$ sur deux types de base $$T$$ et $$T'$$, une fonction $$[[R]]$$ de $$[[T]] \times [[T']]$$ vers {`true`, `false`}
+
+- Chaque connecteur s'interprète de manière "naturelle" (table de vérité, sens des quantificateurs)
+
+- De telle sorte que **chaque hypothèse** s'évalue en `true` à travers cette "interprétation".
+
+## Traduction de formules
+
+**Modélisation** : Traduction d'une affirmation du langage naturel vers une formulation en calcul de prédicats
+
+**Interprétation** : face à une formule de calcul des prédicats, il faut "comprendre" ce qu'elle dit.
+
+On attribut un sens aux types, relation de base, et on doit être capable de faire la traduction depuis et vers le langage naturel.
+
+### Exemple: Asterix
+
+Un seul type de base: `P` personnes
+
+Quelques prédicats: `G` Gaulois, `R` Romain, `B` Barde, `L` Légionnaire
+
+Une relation binaire : `A` "est ami de"
+
+"Tout personnage est romain ou gaulois" : $$\forall x : P, R(x) \vee G(x)$$
+
+"Aucun personnage n'est à la fois romain et Gaulois" : $$\forall x : P, \sim (T(x) \wedge G(x))$$
+
+"Tous les bardes sont gaulois" : $$\forall x : P, B(x) \rightarrow G(x)$$
+
+"Tous les Gaulois ne sont pas bardes" : $$\sim (\forall x : P, G(x) \rightarrow B(x))$$
+
+"Aucun Gaulois n'est barde" : $$\forall x : P, G(x) \rightarrow \sim B(x)$$ ou $$\forall x : P, \sim (G(x) \wedge B(x))$$
+
+"Il existe un Gaulois qui n'est que des amis Gaulois" : $$\exists x : P, G(x) \wedge (\forall y: P, A(x,y) \rightarrow G(y))$$
+
+## Existence et unicité
+
+En Mathématiques on utilise parfois un quantificateur $$\exists!$$ : "Il existe un et un seul"
+
+En calcul des prédicats **on n'a pas de tel quantificateur**, mais on peut le simuler si on a un symbole d'égalité :
+
+"Il existe un x qui a la propriété P et tel que tout y qui a la propriété P est égal à x".
+$$\exists x : T, (P(x) \wedge \forall y : T, P(y) \rightarrow y = x)$$
+
+"Il existe **au plus un** x qui a la propriété p"
+$$\forall x : P, \forall y : P, P(x) \rightarrow P(y) \rightarrow x = y$$
+
+### Vers le langage naturel
+
+Souvent, pour interpréter une formule complexe en langage naturel, il est bon de travailler sous-formule par sous-formule.
+
+$$\forall x : P, G(x) \rightarrow \sim(\forall y : P, G(y) \rightarrow A(x,y))$$
+
+"S'il est gaulois, alors y est un ami de x" : $$G(y) \rightarrow A(x,y)$$
+
+"Tout gaulois est un ami de x" : $$\forall y : P, G(y) \rightarrow A(x,y))$$
+
+"Il n'estpas vrai que tout Gaulois est un ami de x" : 
+$$\sim(\forall y : P, G(y) \rightarrow A(x,y))$$
+
+"Si x est Gaulois, alors il n'est pas vrai que tout Gaulois est un ami de x" : 
+$$G(x) \rightarrow \sim(\forall y : P, G(y) \rightarrow A(x,y))$$
+
+"Pour tout Gaulois, il n'est pas vrai que tous Gaulois est son ami" (aucun Gaulois n'a tous les Gaulois pour amis).
+
+## Une difficulté: Quantification et prédicat
+
+On a souent besoin de dire quelque chose comme "tous les X sont des Y", ou "il existe un X qui est un Y"..
+
+Mais parfois X et Y ne sont pas des types de base mais définis par des prédicats sur le même type de base.
+
+Après un quantificateur **universel** la condition devient la prémisse d'une implication ($$\rightarrow$$). Pour un quantificateur **existenciel**, c'est une branche d'une conjonction ($$\wedge$$)
+
+"Tous les bardes sont gaulois" : $$\forall x : P, B(x) \rightarrow G(x)$$
+
+"Il existe un légionnaire Gaulois" : $$\exists x : P, L(x) \wedge G(x)$$
+
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

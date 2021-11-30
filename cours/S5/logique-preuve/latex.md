@@ -18,6 +18,7 @@ Ajouter $$ au lieu de $
 
 |Nom|  | Code |
 |---|--|------|
+|Fois|$$\times$$|\times|
 |Implication|$$\rightarrow$$|\rightarrow|
 |Bottom / Contradiction|$$\bot$$|\bot
 |Negation|$$\neg$$|\neg|

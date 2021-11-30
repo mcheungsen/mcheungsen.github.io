@@ -53,20 +53,20 @@ Extension de la logique minimale.
 
 **Valuation** : $$v(\bot) = f$$
  
- Ainsi, $$\bot$$ est une variable propositionnelle qui serait toujours fausse.
+Ainsi, $$\bot$$ est une variable propositionnelle qui serait toujours fausse.
 
- Il existe maintenant des séquent dont aucune valuation ne satisfait toutes les hypothèses : Un séquent **contradictoire**, et il est automatiquement **valide**.
+Il existe maintenant des séquent dont aucune valuation ne satisfait toutes les hypothèses : Un séquent **contradictoire**, et il est automatiquement **valide**.
  $$P \rightarrow Q, P, Q \rightarrow \bot \vdash R $$ 
  est valide : aucune valuation ne peut rendre vraies simultanément les trois hypothèses.
 
- ### Ex falso quodlibet / Sequitur / Elimination de la contradiction
- *Du faux, il découle ce que l'on veut*
+### Ex falso quodlibet / Sequitur / Elimination de la contradiction
+*Du faux, il découle ce que l'on veut*
 
- $$\frac{\Gamma \vdash \bot}{\Gamma \vdash A}{\bot _e}$$
+$$\frac{\Gamma \vdash \bot}{\Gamma \vdash A}{\bot _e}$$
 
- Prouver un séquent : Montrer que ses hypothèses entrainent une contradiction.
+Prouver un séquent : Montrer que ses hypothèses entrainent une contradiction.
 
- ## Négation
+## Négation
  Connecteur ~
 
 $$\sim A$$ 
