@@ -89,3 +89,120 @@ int kill(pid_t pid, int sig);
 ```
 
 ## Manipulation de signal
+
+Le Noyau maintiens une table de manipulation de signal par processus.
+
+`SIG_DFL` : Comportement par défault
+
+`SIG_IGN` : ignore
+
+`void(*func)(int)` : user-level handler
+
+### Changer le comportement associé à un signal :
+
+`sigaction` syscall.
+
+```c
+struct sigaction sa, old;
+
+sa.sa_flags = 0;
+sigemptyset(&sa.sa_mask);
+
+sa.sa_handler = my_func;
+
+sigaction(SIGINT, &sa, &old);
+```
+
+Prise temporaire de signaux :
+```c
+catch(SIGINT);
+sleep(5);
+uncatch(SIGINT);
+sleep(5);
+```
+
+## Signaux en attente
+
+La distribution des signaux est **asynchrone**.
+
+*Le kernel envoie un bit "en attente" dans la table. Le signal est délivré dès que possible.*
+
+Si deux signaux sont envoyés presque en même temps, un signal peut être perdu.
+
+## Bloquer les signaux
+
+Parfois l'envoie d'un signal est indésirable. *update d'une structure de donnée complexe / processus pas prêt pour récuperer les signaux.*
+
+On peut donc mettre "en attente" des signaux.
+
+```c
+int sigprocmask(int how, sigset_t *set, sigset_t *oset);
+```
+
+1. Construire un mask (set) dans l'espace user.
+2.  `sigprocmask` :
+    - `SIG_SETMASK` replace
+    - `SIG_BLOCK` bloque les signaux marqués avec un 1.
+    - `SIG_UNBLOCK` débloque le ssignaux marqués avec un 1.
+
+```c
+//Exemple : Bloquer SIGQUIT
+sigset_t s;
+sigenptyset(&s):
+sigaddset(&s, SIGQUIT); // attribut 1. marqué.
+
+sigprocmask(SIG_SETMASK, &s, NULL); // remplace toute la table
+
+sigprocmask(SIG_BLOCK, &s, NULL); // remplace uniquement SIGQUIT
+```
+
+## Manipuler les exceptions
+Lorsqu'il y a des exceptions, le kernel envoie un signal au processus courant :
+`SIGSEGV`, `SIGILL`, `SIGFPE`
+
+Si on souhaite manipuler ces signaux et que l'erreur n'est pas géré, il y aura une boucle infini.
+
+```c
+int *ptr = NULL;
+
+void my_sig_handler(int sig) {
+	printf("I receive a signal %d\n", sig);
+}
+
+int main(int argc, char const *argv[]) {
+	struct sigaction sa;
+
+	sigaction(SIGSEGV, my_sig_handler);
+	*ptr = 12;
+	return 0;
+}
+
+```
+
+## Saut non-local
+*Sauvegarder l'état du processeursur certains points.*
+
+*Retourner à ce point plus tard en restaurant l'état du processeur.*
+
+```c
+typedef struct {
+    // space to save registers, etc...
+} jmp_buf [1];
+
+jmp_buf my_buf;
+```
+
+```c
+jmp_buf my_buf;
+int r = setjmp(my_buf);
+```
+Premier appel : sauvegarde registers dans `my_buf`.
+
+Retours suivants : téléportation
+
+```c
+longjmp (my_buf, val);
+```
+
+Restaure tous les registres stockés dans `my_buf`
+
