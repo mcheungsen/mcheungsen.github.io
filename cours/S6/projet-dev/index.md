@@ -1,11 +1,11 @@
-# Techniques Algorithmiques et Programmation
+# Projet de Développement Logiciel
 
 
 [Retour Licence 3](https://mcheungsen.github.io/cours/ "Licence 3")
 
-[Site web Prof](https://dept-info.labri.fr/~gavoille/UE-TAP/)
+[TP](https://lstinfo.emi.u-bordeaux.fr/pdl/)
 
-[pdf complet](https://dept-info.labri.fr/~gavoille/UE-TAP/cours.pdf)
+[Cours](https://lstinfo.emi.u-bordeaux.fr/pdl/cours/)
 
 ---
 
