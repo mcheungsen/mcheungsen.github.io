@@ -284,6 +284,59 @@ async function maFonctionSynchrone() {
     alert("Résultat disponible dans la console"); 
 }
 ```
+## Requête asynchrone au serveur
+Deux solutions :
+- **Asynchronous JavaScript And XML (AJAX)** : Mécanisme d'`events` et `callbacks` / transfet de donnée en XML via 
+    - un objet `XMLHttpRequest` Mozilla
+    - un contrôle ActiveX `XMLHTTP` Internet Explorer
+    
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+- **Fetch API** : 
+    - Primitives de plus haut niveau que `XmlHttpRequest`
+    - Récuperer du texte ou du JSON
+    - Encapsulation dans des promesses
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+### FETCH API
+Un seul paramètre obligatoire : URL
+
+Options dans un objet JSON
+```js
+fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8'
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+}
+```
+
+Renvoie une réponse
+
+Erreur levée en cas de 
+- problème réseau
+- réponse non conforme au résultat attendu (parsing JSON)
+
+Pas d'erreur HTTP -> Vérifier `Responsestatus` à la main
+
+```js
+async function fetchData(url) {
+  let response = await fetch(url);
+
+  if (response.ok) { // if HTTP-status is 200-299
+    let json = await response.json();
+  } else {
+    console.error("HTTP-Error: " + response.status);
+  }
+}
+```
 ______
 
 [4](projet-dev-4.md) - [6](projet-dev-6.md)
