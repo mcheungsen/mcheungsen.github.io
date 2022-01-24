@@ -9,5 +9,13 @@
 
 ---
 
-## [Cours 1](projet-dev-1.md)
-Modèle Client, Protocole HTTP, Prog serveur java, servlets, JSP, MVC
+## Client Serveur
+### [Le modèle client - Serveur](projet-dev-1.md)
+
+### [Protocole HTTP](projet-dev-2.md)
+
+### [Programmation côté serveur en java](projet-dev-3.md)
+
+### [REST - Representational State Transfer](projet-dev-4.md)
+
+### [Programmation côté serveur en JavaScript](projet-dev-5.md)
