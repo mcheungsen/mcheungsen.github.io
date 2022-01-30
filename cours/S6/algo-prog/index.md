@@ -8,3 +8,5 @@
 
 _____
 
+## [Introduction](algo-prog-1.md)
+Tchisla, formule close, indécidabilité, instance, problème, recherche exhaustive, notation asymptotique, complexité, fonction logarithme, série géométrique
