@@ -19,3 +19,7 @@
 ### [REST - Representational State Transfer](projet-dev-4.md)
 
 ### [Programmation côté serveur en JavaScript](projet-dev-5.md)
+
+### [Frameworks côté client](projet-dev-6.md)
+
+## [Traitement d'images](projet-dev-7.md)
