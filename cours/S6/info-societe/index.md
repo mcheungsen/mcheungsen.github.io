@@ -12,3 +12,5 @@ _____
 ## [Liberté à l'ère Numérique](info-societe-2.md)
 
 ## [Données à caractère personnel](info-societe-3.md)
+
+## [Traitements algorithmiques et mégadonnées](info-societe-4.md)

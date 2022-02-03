@@ -4,8 +4,7 @@
 
 [Retour Informatique et Société](index.md)
 
-_____
-
+# Liberté à l'ère Numérique
 _____
 [Cours précédent - Données à caractère personnel](info-societe-1.md)
 

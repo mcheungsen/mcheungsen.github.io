@@ -143,4 +143,4 @@ Logiciels de peer-to-peer
 
 Réseaux sociaux
 
-[Cours suivant](info-societe-2.md)
+[Cours suivant - Liberté à l'ère Numérique](info-societe-2.md)
