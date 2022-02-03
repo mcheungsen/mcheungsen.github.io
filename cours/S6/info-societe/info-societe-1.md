@@ -142,3 +142,5 @@ Logiciels de peer-to-peer
 - Partage de ressources : espace disque
 
 Réseaux sociaux
+
+[Cours suivant](info-societe-2.md)
