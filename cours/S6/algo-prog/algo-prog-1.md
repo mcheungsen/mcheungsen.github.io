@@ -135,6 +135,107 @@ int tchisla2(int c,int n){
 ```
 
 ## 4. Rappels sur la complexité
+Il faut distinguer deux concepts :
+- la complexité
+- les notations asymptotiques.
+
+> **complexité** : mesure qui s'applique à un algorithme, voir à un programme, et qui s'exprimme en fonction de la taille des entrées.
+
+En général, on s'intéresse à mesurer une certaine ressource consommée par l'algorithme lorsqu'il s'exécute, comme le nombre d'instructions, l'espace mémoire, le nombre de comparaisons...
+
+> **complexité en temps** : Nombre d'opérations élémentaires maximum exécutées par l'algorithme pour toute entrée. (pire des cas).
+
+> **complexité en espace** : Nombre de mots mémoires maximum utilsés durant l'exécution de l'algorithme pour toute entrée. (pire des cas).
+
+**mot mémoire** / **registre** : zone consécutive de mémoire coportant un nombre de bits suffisant pour au moins contenir un pointeur sur les données (entrée).
+
+La complexité mesure généralement le nombre d'opérations élémentaires exécutées ou le nombre de mots mémoire utilisées par l'algorithme. On s'intéresse surtout à sa valeur asymptotique (lorsque n tend vers l'infini)
+
+## 5. Notations asymptotiques
+
+les notations $$\mathcal{O}, \Omega, \Theta$$ servent à exprimer les valeurs asymptotiques.
+
+Cela n'a rien à voir avec la complexité. En algorithme on est intéressé à exprimer des valeurs asymptotiques pour les complexités.
+
+> On dit que "f(n) est en grand-O de g(n)", et on le note $$f(n) = \mathcal{O}(g(n))$$ si $$\exists n_0 \in \mathbf{N}, \exists c > 0, \forall n \geq n_0, f(n) \leq c.g(n)$$
+
+Asymptotiquement et à une constante multiplicative près, f(n) est "au plus grand" g(n).
+
+> On dit que "f(n) est en $$\Omega$$(g(n))", et on le note $$f(n)=\Omega(g(n))$$ si $$g(n)=\mathcal{O}(f(n))$$
+
+Asymptotiquement et à une constante multiplicative près, f(n) est "au moins" g(n).
+
+> On dit que "f(n) est en $$\Theta$$(g(n))" et on le note $$f(n)=\Theta(g(n))$$ si $$f(n)= \mathcal{O}(g(n))$$ et $$f(n) = \Omega(g(n))$$
+
+Il s'agit ici de notation dont le but est de simplifier les énoncés.
+
+## Morale
+> En informatique les problèmes sont définis par la relation entre les entrées (on
+parle aussi d’instances) et les sorties (décrites généralement sous la forme d’une
+question). Attention! Si un programme peut boucler sur certaines entrées, un algorithme ne peut pas (par définition) boucler sur certaines instances.
+
+> Les algorithmes résolvent des problèmes, tandis que les programmes en donnent
+une implémentation. Une instance particulière peut être résolue par un programme sans qu’un algorithme existe pour le problème. Par exemple, le problème
+de la Halte n’a pas d’algorithme. Pourtant, on connaît la réponse pour beaucoup
+de ses instances.
+
+> Quand on programme en C un algorithme qui résout un problème donné, les entrées et sorties du problème (en fait leurs domaines de valeurs possibles) sont
+partiellement capturées par le prototype de la fonction qui implémente cet algorithme. Par exemple, double sqrt(double) est le prototype de la fonction de la
+librairie standard C calculant le réel positif √
+x pour tout réel positif x. Ici un « réel
+positif » est seulement partiellement capturé par le type double.
+
+> Pour certains problèmes on peut essayer de trouver une formule close liant les
+paramètres d’entrées aux sorties, comme par exemple la formule liant les coefficients a,b, c d’un polynôme de degré deux à ses deux racines. On peut aussi tenter
+la recherche exhaustive (ou brute-force), une technique qui consiste à essayer tous
+les résultats possibles.
+
+> Mais pour la plupart des problèmes intéressants il n’existe pas de telles formules.
+Et pour certains on ne peut envisager non plus de recherche exhaustive, car, par
+exemple, l’ensemble de tous les résultats envisageables n’est pas de taille bornée. Pour certains problèmes il n’existe
+carrément pas d’algorithmes de résolution. Et ce n’est pas parce qu’on ne les a pas
+trouvés. C’est parce qu’on peut démontrer qu’il n’existe pas de tels algorithmes.
+Inutile alors d’essayer de trouver une fonction C, un programme ou une IA les
+résolvant. Ces problèmes là sont indécidables, comme par exemple le problème
+de la Halte.
+
+> Les problèmes de décisions très simples ne servent pas forcément à résoudre des
+problèmes pratiques (les problèmes pratiques sont souvent bien plus complexes).
+Ils servent en revanche à montrer que le problème réel qui nous intéresse est
+bien trop difficile, car il contient un problème d’école (de décision) réputé difficile
+comme cas particulier.
+
+> La complexité est une mesure qui sert à comparer les algorithmes entres eux. Elle
+permet d’écarter rapidement un algorithme qui serait, quelle que soit son implémentation, une perte de temps car de complexité (en temps ou en espace) trop
+importante. Ainsi, un programme qui serait amené à exécuter 10^18 opérations
+élémentaires sur processeur 1 GHz n’a aucun intérêt, car il prendrait plus de 30
+ans. En pratique, un programme de complexité en temps trop importante aura le
+même comportement qu’un programme qui boucle (et donc erroné).
+
+> L’analyse de complexité, aussi précise soit-elle, ne change en rien l’efficacité d’un
+programme. Cette analyse, si elle est fine, sert à comprendre où et comment
+est utilisée la ressource mesurée (temps ou espace). Il y des programmes qui
+« marchent » sans que l’on sache pourquoi, faute de savoir les analyser.
+
+> La complexité s’exprime toujours en fonction de la taille des entrées (généralement n). C’est un nombre qui n’a pas d’unité. Il s’agit d’un nombre d’opérations
+élémentaires (=temps) ou de mots mémoires (=espace). Certaines instructions de
+certains langages, comme printf(), memcpy() ou calloc() de la librairie standard
+C, ne sont pas élémentaires.
+
+> Il n’y a pas de notation dédiée à la complexité en temps ou en espace. Les notations O,Ω,Θ n’ont pas de rapport direct avec la complexité. Ce sont des notations pour alléger les expressions mathématiques portant sur des valeurs asymptotiques. Elles évitent d’écrire ∃n0 ∈ N,∀c > 0,∀n > n0
+,...
+
+> Il est difficile de calculer la complexité de manière exacte. On utilise plutôt des
+ordres de grandeurs et on l’évalue lorsque la taille n est « suffisamment grande »
+(n → +∞). On utilise alors souvent les notations asymptotiques pour simplifier
+l’écriture, notamment O,Ω,Θ. Ces notations sont parfois sources de pièges qu’il
+est bon de connaître.
+
+> Le logarithme en base b de n (=logb
+n) est une fonction à connaître, surtout lorsque
+b = 2, car elle est omniprésente en algorithmique.
+
+
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
