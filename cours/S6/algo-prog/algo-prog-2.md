@@ -142,7 +142,7 @@ viz.renderSVGElement(`
     }
 `).then(elem => document.getElementById("graphe").appendChild(elem)).catch(error=> console.log(error));
 </script>
-allo
+
 _____
 
 [1 - Introdution](algo-prog-1.md)
@@ -150,6 +150,11 @@ _____
 --
 
 [2 - Voyageur de commerce](#)
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+<script>var viz = new Viz();</script>
+
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
