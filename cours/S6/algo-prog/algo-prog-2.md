@@ -138,7 +138,7 @@ viz.renderSVGElement(`
         (7,3) -> (6,2)[label="+"];
         (7,3) ->(4,3);
         
-        {  }
+        { rank=same; (7,3) (6,2) (4,3)}
     }
 `).then(elem => document.getElementById("graphe").appendChild(elem)).catch(error=> console.log(error));
 </script>
