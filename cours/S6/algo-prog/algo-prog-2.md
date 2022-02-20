@@ -142,6 +142,7 @@ viz.renderSVGElement(`
     }
 `).then(elem => document.getElementById("graphe").appendChild(elem)).catch(error=> console.log(error));
 </script>
+allo
 _____
 
 [1 - Introdution](algo-prog-1.md)
