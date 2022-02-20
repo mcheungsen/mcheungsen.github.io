@@ -154,6 +154,21 @@ La programmation dynamique consiste donc à trouver un algorithme sur une récur
 
 ![](../../../img/tableau-memorisation-dynamique.png)
 
+```c
+long p_prog_dyn(int n){
+long P[n+1][n+1],s=0; // indices 0,1,...,n
+int i,k;
+for(i=1;i<=n;i++){ // pour chaque ligne i
+    P[i][1]=1; // cas 1
+    for(k=2;k<=i;k++) P[i][k] = P[i-1][k-1]; // cas 2 & début cas 3
+    for(k=2;k<=i/2;k++) P[i][k] += P[i-k][k]; // fin cas 3
+}
+for(k=1;k<=n;k++) s += P[n][k]; // calcule la somme
+return s;
+}
+```
+
+
 
 _____
 
