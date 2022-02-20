@@ -132,6 +132,7 @@ Pour analyser les peformances de la fonction `p_rec()` on utilise l'arbre des ap
 *L'arbre des appels d'une fonction est un arbre enraciné dont les noeuds représentent les paramètres d'appels et les fils les différents appels (éventuellement récursifs et/ou composés) lancés par la fonction. L'exécution de la fonction correspond à un parcours en profondeur de l'arbre depuis sa racine qui représente les paramètres du premier appel.*
 
 <div id="graphe"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
 <script>
 viz.renderSVGElement(` 
     digraph Graphe {
@@ -151,7 +152,7 @@ _____
 
 [2 - Voyageur de commerce](#)
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
 <script>var viz = new Viz();</script>
 
