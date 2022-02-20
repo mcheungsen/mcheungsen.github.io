@@ -131,20 +131,32 @@ Pour analyser les peformances de la fonction `p_rec()` on utilise l'arbre des ap
 
 *L'arbre des appels d'une fonction est un arbre enraciné dont les noeuds représentent les paramètres d'appels et les fils les différents appels (éventuellement récursifs et/ou composés) lancés par la fonction. L'exécution de la fonction correspond à un parcours en profondeur de l'arbre depuis sa racine qui représente les paramètres du premier appel.*
 
-<div id="graphe"></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
-<script>
-viz.renderSVGElement(` 
-    digraph Graphe {
-        (7,3) -> (6,2)[label="+"];
-        (7,3) ->(4,3);
-        
-        { rank=same; (7,3) (6,2) (4,3)}
-    }
-`).then(elem => document.getElementById("graphe").appendChild(elem)).catch(error=> console.log(error));
-</script>
+![](../../../img/arbreappel.png)
+
+![](../../../img/recarbreappel.png)
+
+**Complexité en temps**
+
+La complexité est proportionnelle aux nombres de noeuds dans l'arbre des appels. Lors de l'exécution, le programme passe un temps constant par noeud. Ce nombre d'appels vaut 1 (racine) plus la somme des noeuds des arbres d'appels pour $$p(n,1),p(n,2),...,p(n,n)$$.
+
+Trois types de noeuds :
+- 2 fils
+- 1 fils
+- pas de fils
+
+$$2p(n)-1+(2p(n)-1).(n-2) \lt 2n.p(n) = 2^{\Theta(\sqrt{n})}$$
+
+## 5. Programmation dynamique
+
+> **Programmation dynamique :** implémentation améliorée de la version récursive d'un algorithme. Au lieu de faire des appels récursifs, on utilise la **mémorisation** qui économise ainsi des calcul au détriment de l'espace mémoire.
+
+La programmation dynamique consiste donc à trouver un algorithme sur une récurrence puis de l'implémenter en utilisant la technique de mémorisation pour supprimer les calculs inutiles.
+
+![](../../../img/tableau-memorisation-dynamique.png)
+
 
 _____
+
 
 [1 - Introdution](algo-prog-1.md)
 
