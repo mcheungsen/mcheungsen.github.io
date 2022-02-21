@@ -168,6 +168,61 @@ return s;
 }
 ```
 
+## 6. Mémorisation paresseuse
+
+Dans une fonction récursive, on peut toujours éviter les calculs redondant avec de la **mémoire supplémentaire**. (**Programmation dynamique**)
+
+> On stocke au fur et à mesure le résultat de chaque appel (ainsi que l'appel lui-même) sans se soucier de l'ordre dans lequel ils se produisent. Si un appel avec les mêmes paramètres apparait, alors on extrait sa valeur de la table sans refaire de calculs.
+
+L'idée est donc de modifier le moins possible la fonction d"origine en utilisant une mémorisation avec le moins d'efforts possibles.
+
+**Exemple : Fibonacci**
+
+> 0 1 1 2 3 5 8 13 21 34
+
+```C
+long fibo(int n){ // version d’origine
+    if(n<2) return n; // fibo(0)=0, fibo(1)=1
+    return fibo(n-1)+fibo(n-2);
+}
+
+long fibo_mem(int n){ // version mémoïsée
+    static long F[]={[0 ... 99]=-1}; // initialisation en gcc
+    if(n<2) return n;
+    if(F[n]<0) F[n]=fibo_mem(n-1)+fibo_mem(n-2); // déjà calculée?
+    return F[n];
+}
+```
+
+## 7. Morale
+
+> La récursivité à l’aide de formules de récurrence permettent d’obtenir des programmes concis, rapide à développer et dont la validité est facile à vérifier.
+
+> La complexité peut être catastrophique si l’arbre des appels contient des parties communes. On passe alors son temps à recalculer des parties portant sur les
+mêmes paramètres (c’est-à-dire les mêmes appels). C’est le cas lorsque la taille de
+l’arbre (son nombre total de nœuds) est beaucoup plus grand que le nombre d’appels différents (le nombre de nœuds qui sont différents). Pour le calcul du nombre
+de partitions de $$n$$, il y a $$2^{Θ(
+√
+n)}$$ nœuds dans l’arbre, alors qu’il y a seulement $$n²$$ appels différents possibles. Pour la récurrence de Fibonacci, il y a $$2^{Θ(n)}$$ nœuds dans
+l’arbre pour seulement $$n$$ appels différents.
+
+> La mémorisation permet d’éviter le calcul redondant des sous-arbres communs.
+Plus généralement, la programmation dynamique utilise des récurrences à travers
+une table globale indexée par les divers paramètres des appels.
+
+> La programmation dynamique permet alors d’économiser du temps par rapport à
+l’approche récursive naïve. L’inconvénient est l’usage de mémoire supplémentaire
+(tables) qui, en cas de pénurie, peut être problématique. Car concrètement, en
+cas de pénurie, il faut soit repenser l’algorithme soit modifier la machine en lui
+ajoutant de la mémoire. Le manque de temps est peut être plus simple à gérer en
+pratique puisqu’il suffit d’attendre.
+
+> Une difficulté dans la programmation dynamique, outre l’établissement des récurrences qui peut être complexe, est qu’il faut souvent réfléchir un peu plus, par
+rapport à la version récursive, quant au parcours de la table pour être certain de
+remplir une case en fonction des cases déjà remplies. On peut y remédier grâce à la mémorisation
+paresseuse, qui combine l’approche récursive et la mémorisation : on fait le calcul
+et les appels récursifs seulement si l’appel n’est pas déjà en mémoire.
+
 
 
 _____
