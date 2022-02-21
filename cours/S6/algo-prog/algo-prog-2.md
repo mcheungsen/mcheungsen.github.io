@@ -232,7 +232,7 @@ _____
 
 --
 
-[2 - Voyageur de commerce](#)
+[3 - Voyageur de commerce](algo-prog-3.md)
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
