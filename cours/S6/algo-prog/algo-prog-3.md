@@ -50,7 +50,135 @@ Formule close ? le nombre de paramètres n'est pas borné, il n'y aura donc pas 
 
 Mettre à jour et retenir le minimum prend un temps constant. Au final, la complexité en temps de l'algorithme *brute-force* est : $$O(n-n!$$.
 
+## 3. Programmation dynamique
 
+> Algorithme de **Held-Karp** découvert par Bellman. résout le problème du *Voyageur du Commerce* avec la plus basse complexité en temps connue. Fonctionne même si $$d$$ ne vérifie pas **l'inégalité triangulaire** et/ou la symétrie. L'algorithme *Brute-force* fonctionne aussi sans symétrie ni inégalité triangulaire.
+
+L'algorithme de *brute-force* teste inutilement de noubreux cas. 
+
+Supposons que parmi toutes les tournées possibles, on s'intéresse à toutes celles qui passent pas $$v_1, S1,v_2, S_2, v_4, S_4, v_5$$ où les $$S_i$$ sont des ensembles de points. Elles doivent passer par $$v_1, v_2, v_3, v_4, v_5$$ mais sont libres de circuler dans chaque $$S_i$$ par le point du haut ou du bas. Comme chaque $$S_i$$ possède deux points, le nombre de chemins possibles est donc $$2.2.2.2 = 2^4 = 16$$. L'approche *brute-force* va donc tester ces 16 chemins.
+
+Si on avait commencé par résoudre le problème du meilleur des deux chemins allant de $$v_i$$ à $$v_{i+1}$$ et passant par $$S_i$$, pour chacun des 4 ensembles, on aurait eut à tester $$2+2+2+2 = 2.4 = 8$$ chemins contre 16.
+
+### La variable
+
+> Soit $$V = {v_0,...,v_{n-1}}$$ l'ensemble des points. On supposera que la tournée commence et termine au point $$v_{n-1}$$. On note $$V^* = V$$\ $${v_{n-1}}$$
+
+L'algorithme de programmation dynamique repose sur la variable $$D(t,S) = $$ la longueur minimum d'un chemin allant de $$v_{n-2}$$ à $$t$$ et qui visite tous les points de $$S$$.
+
+$$_{OPT}(V,d) = min {D(t,V^*) + d(t,v_{n-1})}$$
+
+### Calcul du min
+
+Plus petite valeur possible de la fonction $$f(x)$$ lorsque x parcoure l'ensemble $$E$$.
+
+$$min f(x) = min(f(x_1),f(x_2),...,f(x_k))$$
+
+### Formule de récurrence
+
+$$D(t,S) = \left\{
+\begin{array}{rcr}
+d(v_{n-1},t)\\
+min_{x\in S \backslash \{t\}}\{ D(x,S \backslash \{t\} + d(x,t)\}
+\end{array}
+\right.$$
+
+1 - si |S| = 1
+2 - si |S| > 1
+
+|S| représente la cardinalité de S (son nombre d'éléments). 
+"|S| = 1 est équivalente à S = {t}"
+
+### Implémentation récursive
+
+```C
+double D_rec(int t, set S) {
+    if(set_card(S) == 1) return d(V[n-1], V[t]);
+    double w = DBL_MAX; // w=+∞ pour calcul du min
+    set T=set_minus(S,t); // crée T = S \ {t}
+    for(int x = 0; x < n-1; x++) {
+        if(set_in(x,T))
+            w=fmin(w, D_rec(x,T) + d(V[x], V[t])); // minx∈T {D(x, T ) + d(x, t)}
+    }
+    set_free(T);
+    return w;
+}
+
+double tsp_rec(){ // TSP récursif via D(t, S)
+    double w=DBL_MAX; // w=+∞ pour calcul du min
+    set S=set_create(n-1); // crée S = {0,...,n − 2} = V∗
+    for(int t=0;t< n-1 ;t++) // opt(V , d) = mint∈V ∗ {D(t,V ∗) + d(t, vn−1)}
+        w=fmin(w,D_rec(t,S)+d(V[t],V[n-1]));
+    set_free(S);
+    return w;
+}
+
+```
+
+Cette implémentation est inefficace. Ce n'est pas parce qu'on a trouvé une formulation par récurrence que l'algorithme résultant est efficace.
+
+Le nombre total de noeuds est au moins le nombre de feuilles de cet arbre qui vaut donc $$(n-1)(n-2)(n-3)...=(n-1)!$$
+
+### Implémentation récursive
+L'algorithme passe son temps à recalculer les mêmes sous-problèmes.
+
+### Mémorisation
+On utilise une table `D[t][S]` pour stocker les valeurs $$D(t,S)$$ et éviter de les recalculer.
+
+S un sous-ensemble. Si S = {$$v_3, v_2, v_0$$} et $$n=5$$ :
+
+| |$$v_4$$|$$v_3$$|$$v_2$$|$$v_1$$|$$v_0$$|
+|-|-|-|-|-|-|
+|S|0|1|1|0|1|
+
+Les lignes de la table `D[t][S]` représentent les points `t` et les colonnes les sous-ensembles `S`.
+
+|  |  | **{$$v_0$$}** | **{$$v_1$$}** | **{$$v_1,v_0$$}** | **{$$v_2$$}** | **{$$v_2,v_0$$}** | **{$$v_2,v_1$$}** | **{$$v_2,v_1,v_0$$}** | **{$$v_3$$}** | **{$$v_3,v_0$$}** | **{$$v_3,v_1$$}** | **{$$v_3, v_1, v_0$$}** | **{$$v_3, v_2$$}** | **{$$v_3,v_2,v_0$$}** | **{$$v_3,v_2,v_1$$}** | **$$V^*$$** |  |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|  | **`S`** | **0001** | **0010** | **0011** | **0100** | **0101** | **0110** | **0111** | **1000** | **1001** | **1010** | **1011** | **1100** | **1101** | **1110** | **1111** |  |
+|  | **`t`** | **1** | **2** | **3** | **4** | **5** | **6** | **7** | **8** | **9** | **10** | **11** | **12** | **13** | **14** | **15** |  |
+|  | $$v_0$$ |  | / |  | / |  | / |  | / |  | / |  | / |  | / |  |  |
+|  | $$v_1$$ | / |  |  | / | / |  |  | / | / |  |  | / | / |  |  |  |
+|  | $$v_2$$ | / | / | / |  |  |  |  | / | / | / | / |  |  |  |  |  |
+|  | $$v_3$$ | / | / | / | / | / | / | / |  |  |  |  |  |  |  |  |  |
+
+Il faut remplir d'abord les colonnes 1, 2, 4, 8 (taille 1), pour pouvoir remplir 3, 5, 6, 9, 10, 12 (taille 2).
+
+## 4. Approximation
+
+Le meilleur algorithme qui résout le *Le voyageur du commerce* prend un temps exponentielle en le nombre de points.
+
+Une façon de calculer rapidement : **algorithme dit du "point le plus proche"** : On ajoute au chemin le point le plus proche. au dernier point, on revient au premier point.
+
+Le résultt ne donne pas nécessairement la tournée de longueur minimale, mais l'algorithme est rapide avec une complexité de $$O(n²)$$.
+
+### 4.1. Algorithme glouton : un principe général
+
+> **algorithme glouton - *greedy*** : stratégie algorithmique qui consiste à former une solution en prenant à chaque étape le meilleur choix sans faire de *backtracking* : sans jamais remettre en cause les choix précédents.
+
+**Problème de *bin packing*** : ranger des objets pour remplir le mieux possible une boite de capacité donnée.
+
+*glouton : essayer de ranger en priorité les objets les plus gros.*
+
+> **Algorithme de Kruskal** : même principe : essayer d'ajouter en priorité les arêtes de plus petit poids.
+
+**Voyageur du commerce et Glouton** : construire la tournée à partir d'un chemin grandissant en ajoutant à chaque fois, parmi les points restant, celui le plus proche du dernier point sélectionné.
+
+### 4.2. Problème d'optimisation
+
+Les problèmes d'optimisation sont soit des minimisations soit des maximisations.
+
+Un algorithme d'approximation a pour vocation de produire une solution de valeur "relativement proche" de l'optimal.
+
+> **$$\alpha$$-approximation** : $$\alpha > 0$$ et problème d'optimisation $$\Pi$$ donnés : Algorithme polynomial A qui donne une solution pour toute instance $$I \in \Pi$$ telle que : 
+- minimisation : $$A(I) \leq \alpha.OPT_\Pi(I)$$
+- maximisation : $$A(I) \geq \alpha.OPT_\Pi(I)$$
+
+La valeur $$\alpha$$ est le facteur d'approximation de l'algorithme A.
+
+L'algorithme Glouton n'est pas une $$\alpha$$-approximation mais heuristique.
+
+> **Heuristique** : tout algorithme supposé efficace en pratique qui conduit un résultat sans garantie de qualité par rapport à la solution optimale.
 
 
 _____
