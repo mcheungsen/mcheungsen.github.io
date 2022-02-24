@@ -219,7 +219,95 @@ On parle parfois de schéma d'approximation polynomial.
 2. La tournée est définie pr l'ordre de visite des sommets selon un parcours en profondeur d'abord de T.
 
 ### 4.7. *Union-Find*
+Problème de structure de données. Il y a deux types d'objets : des *éléments* et des *ensembles*. L'objectif est de :
+- Fusionner deux ensembles données - *Union*
+- Trouver l'ensemble contenant un élément donné - *Find*
 
+Les éléments sont les sommets et les ensembles les composantes connexes.
+
+**Algorithme de Kruskal (G,w)**
+
+**Entrée** : Un graphe arête-valué ($$G, w$$)
+
+**Sortie** : Un arbre couvrant de poids minimum (une forêt si G c'est pas connexe)
+
+1. Initialiser $$T := (V(G),\empty)$$
+2. Pour chaque arête $$uv$$ de $$G$$ prise dans l'ordre croissante de leur poids $$w$$ :
+    - trouver la composante $$C$$ de $$u$$ de la composnte $$C'$$ de $$v$$
+    - Si $$C \neq C'$$, ajouter $$uv$$ à $$T$$ et Fusionner $$C$$ et $$C'$$.
+3. Renvoyer $$T$$
+
+La structure de données qui supporte ces opérations s'appelle *Union-Find*. 
+
+```C
+// Initialisation Union-Find (v1)
+int parent[n];
+for(u=0; u<n; u++) parent[u]=u;
+```
+```C
+// Union-Find (v1)
+void Union(int x, int y){
+parent[y]=x;
+}
+int Find(int u){
+while(u!=parent[u]) u=parent[u];
+return u;
+}
+```
+On fait la fusion d'ensembles et pas d'éléments. Pour fusionner l'ensemble, il faut chercher leurs racines :
+```C
+Union(Find(u),Find(v));
+```
+
+`Union()` prend un temps constant et `Find(u)` prend un temps proportionnel à la profondeur de `u`
+
+#### Première optimisation
+
+Fusionner le plus petit arbre avec le plus grand en terme de hauteur.
+
+```C
+// Initialisation Union-Find (v2)
+int parent[n], rank[n];
+for(u=0; u<n; u++) parent[u]=u, rank[u]=0;
+```
+```C
+// Union (v2)
+void Union(int x, int y){
+if(rank[x]>rank[y]) parent[y]=x; // y → x
+else{ parent[x]=y; // x → y
+    if(rank[x]==rank[y]) rank[y]++;
+    }
+}
+```
+
+#### Deuxième optimisation
+
+Compression de chemin. Lors du `Find()` sur un élément `u` qui a pour effet de parcourir le chemin de `u` vers sa racine. On en profite pour connecter directement à la racine chaque élément du chemin prcouru.
+
+C'est comme si le chemin de `u` à sa racine avait été compressé en une seule arête ramenant tous les sous-arbres acrochés à ce chemin comme fils de la racine.
+
+```C
+// Find (v2)
+int Find(int u){
+    if(u!=parent[u]) parent[u]=Find(parent[u]);
+    return parent[u];
+}
+
+```
+
+### 4.8. Algorithme de Christofides
+Variante de l'algorithme précédent. 1.5-approximation. Actuellement le meilleur algorithme d'approximation pour le TSP métrique.
+
+**Entrée** : Une instance $$(V,d)$$ du Voyageur de Commerce (métrique)
+
+**Sortie** : Une tournée. Un ordre sur les points de $$V$$
+
+1. Calculer un arbre couvran de poids minimum $$T$$ sur le graphe complet défini par $$V$$et les arêtes valuées par $$d$$.
+2. Calculer l'ensemble $$I$$ des sommets de $$T$$ de degré impair.
+3. Calculer un couplage parfait de poids minimum $$F$$ pour le graphe induit par $$I$$.
+4. La tournée est définie par un circuit eulérien du multi-graphe $$T \cup F$$ dans lequel on ignore les sommets déjà visités.
+
+>**circuit eulérien d'un multi-graphe** : grapge possédan éventuellement plusieurs arêtes entre deux sommets : circuit permettant de visiter une et une fois chacune des arêtes d'un graphe. Possible si tous les sommets du graphe sont de degrés pairs.
 
 ## 5. Morale
 
