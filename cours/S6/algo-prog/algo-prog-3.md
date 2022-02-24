@@ -180,7 +180,65 @@ L'algorithme Glouton n'est pas une $$\alpha$$-approximation mais heuristique.
 
 > **Heuristique** : tout algorithme supposé efficace en pratique qui conduit un résultat sans garantie de qualité par rapport à la solution optimale.
 
+### 4.3. Autres heuristiques
 
+Il existe de nombreuses autres heuristiques.
+
+> famille des *optimisations locales* : on part d'une solution (un tournée), et on cherche dans son proche voiinage s'il n'y a pas une meilleure solution. On recommence tant qu'il y a un gain. **Base des méthodes de descente en gradient**
+
+Le voyageur de Commerce correspond aux heuristiques **2-Opt** ou **3-Opt** : Flipper 2 ou 3 arêtes.
+
+> Famille des "*économies / savings*" : Construire $$n-1$$ tournées qui partent de $$v_0$$ et qui sont $$v_0-v_i-v_0$$ pour tout $$v_i \in V^*$$. Puis, $$n-2$$ fois on fusionne deux tournées en une plus grande tournée. On fusionne en priorité la paire de tournées qui économisent le plus de distance.
+
+> Famille des "*insertions aléatoires / random insertion*" : On considère une tournée avec un seul point choisi aléatoirement. Puis $$n-1$$ fois on étend la tournée courante en insérant un point $$w$$ choisi aléatoirement hors de la tournée à la place de l'arête $$u-v$$ qui minimise l'accroissement de distance $$d(u,w)+d(w,v)-d(u,v)$$.
+
+> 2-approximation  alternative où on choisit $$w$$ comme celui qui minimise l'accroissement. On se ramène au calcul de l'arbre de poids minimum par l'algorithme de Prim suivi d'un parcours en profondeur.
+
+### 4.4. Inapproximabilité
+
+Le problème du Voyageur du Commerce est difficiler à résoudre et difficile à approximer.
+
+Aucun algorithme polynomial ne peut approximer à un facteur constant le problème du Voyageur de commerce dans toute sa généralité.
+
+### 4.5. Cas euclidien
+
+Lorsque des points sont pris dans un espace euclidien de dimension $$\delta$$, ($$V \subset \mathbf{R}^\delta$$), et que $$d$$ correspond à la distance euclidienne, il existe un algorithme d'approximation réalisant le compris temps $$vs$$.
+
+> **Théorème** : Pour tout $$\epsilon > 0$$, il existe une ($$1+\epsilon$$)-approximation pour le problème du *Voyageur de Commerce* qui a pour complexité en temps $$n.(log n)^{O(\frac{1}{\epsilon}\sqrt{\delta}^{\delta-1})}$$
+
+On parle parfois de schéma d'approximation polynomial.
+
+### 4.6. Une 2-approximation
+> MST - *Minimum Spanning Tree* : Arbre couvrant de poids minimum.
+
+**Entrée** : Une instance $$(V,d)$$ du Voyageur de Commerce (métrique)
+
+**Sortie** : Une tournée, un ordre sur les points de V.
+
+1. Calculer un algorithme couvrant de poids minimum T sur le graphe complet défini par V et les arêtes valuées par d.
+2. La tournée est définie pr l'ordre de visite des sommets selon un parcours en profondeur d'abord de T.
+
+### 4.7. *Union-Find*
+
+
+## 5. Morale
+
+> Le problème du Voyageur de commerce (TSP) est un problème difficile, c’està-dire qu’on ne sait pas le résoudre en temps polynomial. Il est aussi difficile à approximer dans sa version générale, mais pas lorsque la fonction de distance d vérifie l’inégalité triangulaire.
+
+> Il peut-être résolu de manière exacte par programmation dynamique, mais cela
+requière un temps exponentiel en le nombre de points.
+
+> Lorsque la méthode exacte ne suffit pas (car par exemple n est trop grand) on cherche des heuristiques ou des algorithmes d’approximation censés être bien plus rapides, au moins en pratique.
+
+> Il existe de nombreuses heuristiques qui tentent de résoudre le TSP. L’algorithme du « point le plus proche » (qui est un algorithme glouton) et l’algorithme 2-Opt (qui est un algorithme d’optimisation locale) en sont deux exemples. Il en existe beaucoup d’autres.
+
+> Un algorithme glouton n’est pas un algorithme qui consome plus de ressources que nécessaire. Cette stratégie algorithmique consiste plutôt à progresser tant que possible sans remettre en question ses choix. En quelque sorte un algorithme glouton avance sans trop réfléchir.
+
+> Les algorithmes d’approximation sont de complexité polynomiale et donnent des garanties sur la qualité de la solution grâce au facteur d’approximation, contrairement aux heuristiques qui ne garantissent ni la complexité polynomiale ni un facteur d’approximation constant. Le meilleur connu pour le TSP métrique, c’està-dire lorsque d vérifie l’inégalité triangulaire, a un facteur d’approximation de 1.5, à l’aide une variante astucieuse de l’algorithme basé sur le DFS d’un arbre couvrant de poids minimum (MST).
+
+> Pour être efficace, les algorithmes doivent parfois mettre en œuvre des structures* de données efficaces, comme Union-Find qui permet de maintenir les composantes connexes d’un graphe en temps linéaire en pratique.
+
+> On peut parfois optimiser les structures de données, et donc les algorithmes, en augmentant l’espace de travail, en utilisant des tables auxiliaires pour permettre, par exemple, l’optimisation du rang dans Union-Find. Le prix à payer est le coût du maintient de ces structures auxiliaires. De manière générale, il y a un compromis entre la taille, le temps de mise à jour de la structure de données et le temps de requête. Augmenter l’espace implique des mises à jour de cet espace, mais permet de réduire le temps de requêtes.
 _____
 
 
