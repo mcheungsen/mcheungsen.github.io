@@ -1,33 +1,32 @@
-# Compilation
+# [Compilation](index.md)
 
+[Accueil](/index.html)
 
-[Retour Cours](https://mcheungsen.github.io/cours/ "Licence 3")
-
-[Retour Compilation](index.md)
-
+____
 # Introduction
 
-> **Compilateur** : logiciel de traduction d'un document depuis un langage **source** vers un langage **cible**.
+>**compilateur** : Logiciel de traduction d'un document depuis un langage **source** vers un langage **cible**.
 
-Programme évolué (Java, C, C++, ...) permettant à un développeur d'implémenter un programme en utilisant des notions abstraites.
+*Langage source* : langage de programmation évolué (java, C, c++,...).
 
-Le langage cible est un code machine prévu pour programmer un ordinateur.
+*Langage cible* : Code machine prévu pour programmer un ordinateur en particulier.
 
-Compilateur contient plusieurs modules : 
+Un compilateur contient plusieurs modules :
 - Analyseur lexical
-- Analyseur syntaxique
-- Analyseur sémantique
+- analiseur syntaxique
+- analyseur sémantique
 - Générateur de code intermédiaire
 - Optimiseur de code
 - Générateur de code
 
-Gère une ou plusieurs tables de symboles qui donnent au développeur la possibilité de déclarer des variables, des fonctions, des procédures, les types, ...
+Il gère une ou plusieurs tables de symboles qui donnent au développeur la possibilité de déclarer des variables, des fonctions, des procédures, des types,... .
 
-Détecte et signale un ensemble d'erreurs à chaque niveau d'analyse (*Utilisation d'une variable non déclarée, incompatibilié de type, utilisation d'une procédure avec de mauvais paramètres, ...*).
+Détecte et signale un ensemble d'erreurs à chaque niveau d'analyse *(Variable non déclarée, incompatibilité de type, utilisation d'une procédure avec de mauvais paramètres, ...)*.
+
+> Le compilateur fait partie d'un ensemble d'outils permettant l'implémentation de logiciels.
 
 Produit le code final, en corrigeant les erreurs.
 
-Le compilateur fait partie d'un ensemble d'outils permettant l'implémentation de logiciels.
 
 Préprocesseur $$\rightarrow$$ Compilateur $$\rightarrow$$ Assembleur $$\rightarrow$$ Lieur $$\rightarrow$$ Chargeur
 
