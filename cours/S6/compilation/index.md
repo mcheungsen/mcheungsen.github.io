@@ -6,6 +6,7 @@
 
 _____
 
+<<<<<<< HEAD
 ## [1. Introduction](compilation-1.md)
 
 ## [2. Analyse lexicale](compilation-2.md)
@@ -26,3 +27,11 @@ Arbres canoniques (Andrew Appel)
 _____
 
 *Source : https://moodle1.u-bordeaux.fr/pluginfile.php/953131/mod_resource/content/24/cours.pdf* 
+=======
+ ## [1. Introduction](compilation-1.md)
+
+ ## [2. Analyse lxicale - *Tokenization*](compilation-2.md)
+
+ ## [3. Analyse syntaxique (*parsing*)](compilation-3.md)
+
+>>>>>>> 2576e86ebd7484351017d6b75e10fdc580b98b38

@@ -260,6 +260,63 @@ $$h1=\begin{pmatrix}
 
 >Il existe d'autres filtres plus sophistiqués donnant de meilleus résultats. *Filtre de Cany, filtre de Deriche, filtre de Shen-Castan*
 
+## Filtre médian
+
+Pour atténuer le bruit dans une image, on peut utiliser le filtre **médian**.
+
+> Filtre non-linéaire, qui ne peut pas s'implémenter comme une convolution.
+
+On remplace la valeur d'un pixel par la valeur médiane dans son voisinage $$(2n+1) (2n+1)$$
+
+*exemple*
+
+$$\begin{matrix}
+30 && 10 && 20 \\
+10 && 250 && 20 \\
+25 && 10 && 30
+\end{matrix}$$
+
+Moyenne = 45
+
+10, 10, 10, **20(médiane)**, 25, 30, 30, 250(bruit)
+
+# Un peu de couleurs
+
+## Espace RGB
+> trois canaux rouge, vert, bleu. 1 octet pour chaque canal = 3 octets par pixel $$2^{24}$$ couleurs > 16 millions
+
+## Image couleur - Boofcv
+
+classe `Planar`
+
+> Image composée de plusieurs images en niveaux de gris (les canaux), par exemple `Planar<GrayU8>` a 3 canaux
+- accès à un canal : `getBand(int band)`
+- accès à la valeur du canal R pour le pixel (x,y) : `img.getBand(0).get(x,y)`
+- Filtrer l'image en utilisant un filtre NG sur chaque canal :
+```java
+for(int i = 0; i < input.getNumBands(); ++i)
+    processGray(img.getBand(i));
+```
+
+Cette généralisation d'un filtre en niveau de gris à son équivalent en couleur ne fonctionne pas toujours.
+
+## Cube RGB
+
+![](../../../img/cubeRGB.png)
+
+> Synthèse additive (0, 0, 0) noir, (255, 255, 255) blanc, (255, 0, 0) rouge, (255, 255, 0) jaune, ...
+
+Diagonale des gris R = G = B
+
+## Grise une image en couleur
+
+`0.3R + 0.59G+ 0.11B` vs `max(R, G, B)`
+
+## Un autre espace de couleurs : l'espace HSV
+
+**Teinte - Hue** : perception de la couleur (lavande, orange) intervalle [0, 360] en degrés ou [0, 2pi] en radians
+
+**Saturation** : Pureté de la couleur (plus ou moins délavée) intervalle [0, 1] ou [0, 100] ou [0, 255]
 
 ______
 
