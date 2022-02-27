@@ -6,9 +6,9 @@
 
 _____
 
- ## [1. Introduction](compilation-1.md)
+## [1. Introduction](compilation-1.md)
 
- ## [2. Analyse lxicale - *Tokenization*](compilation-2.md)
+## [2. Analyse lxicale - *Tokenization*](compilation-2.md)
 
- ## [3. Analyse syntaxique (*parsing*)](compilation-3.md)
+## [3. Analyse syntaxique (*parsing*)](compilation-3.md)
 

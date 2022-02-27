@@ -90,8 +90,43 @@ A tout automate à nombre fini d'états `A` correspond un utomate déterministe 
 Permet de construire un automatisme déterministe pour reconnaitre un langage dénote par une expression régulière. Automatisme de complexité linéaire en fonction de la longueur de l'*input*.
 
 ## 3. JFlex
+
+`JFlex` est un logiciel écrit en Jav qui contient principalement deux choses :
+- Un programme qui permet de traduire des expressions régulières en automate à nombre fini d'états.
+- Un programme qui permet de parcourir un automate à nombre fini d'états.
+
+L'utilisateur peut choisir d'ajouter du code `Java` qui sera exécuté :
+- Avant le parcours de l'automate
+- Après
+- Alors qu'un état final est reconnu pendant l'analyse de l'*input*.
+
 ## 4. Entités lexicales (token)
+
+`JFlex` est conçu pour transformer des expressions régulières en automate, et pour associer du code `Java` aux états finaux de cet automate.
+
+Cependant, les limites sont imposées par la programmation **impérative** et non celle des expressions régulières.
+
+Il est techniquement possible de construire tout type de programmes dont des compilateurs entiers grâce à `JFlex` mais il n'est pas vraiment adapté à cet usage et d'autres logiciels seront utilisés en complément de `FLex`.
+
+> **Token** : Mots reconnus par un *tokenizer* : mots d'un **langage rationnel**.
+
+Nous savons que $$a^nb^n$$ n'est pas rationnel.
+
+Les langages parenthésées (expressions logiques, arithmétiques, algébriques, ...)  ne seront pas des tokens et ne seront pas définis grâce à `JFlex`. Nous utiliserons un analyseur syntaxique en complément de l'analyseur lexical.
+
 ## 5. États de l'automate
+
+`JFlex` permet de déclarer des états de l'automate en plus de l'état initial et de programmer des sauts d'un état à un autre.
+
+*Exemples*
+
+1. Commentaires
+
+*réaliser un état `COMMENT` qui rend explicite le contexte d'analyse du commentaire.*
+
+2. Chaînes de caractères
+
+*Les chaînes de caractères contiennent des caractères dit échappés (saut de ligne, epace,...), ainsi que des variables non nommées permettant des substitutions (`%s`, `%d`, ...). Ces caractères doivent être analysés, alors que les autres éléments du langage (mots clefs, littéraux, ...) ignorés. état `STRING` pour distinguer ce contexte.*
 ____
 
 [1 - Introduction](compilation-1.md)
