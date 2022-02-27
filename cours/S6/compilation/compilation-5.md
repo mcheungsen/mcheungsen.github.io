@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-# [Compilation](index.md)
-
-[Accueil](/index.html)
-
-____
-# Génération de code intermédiaire
-____
-[Cours précédent - Types, vérification de type](compilation-4.md)
-
---
-
-[Cours Suivant - Code intermédiaire optimisé](compilation-6.md)
-=======
 # Compilation
 
 [Retour Cours](https://mcheungsen.github.io/cours/ "Licence 3")
@@ -29,4 +15,3 @@ ____
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
->>>>>>> 2576e86ebd7484351017d6b75e10fdc580b98b38
