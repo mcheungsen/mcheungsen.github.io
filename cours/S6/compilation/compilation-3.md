@@ -76,7 +76,215 @@ avec $$A,B \in N$$ et $$a \in \sum$$
 
 **Grammaires non contraintes / récursivement énumérables** : seule contrainte = avoir une séquence non vide en partie gauche
 
-## 3.
+## 3. Analyse Cocke-Younger-Kasami
+
+> **Algorithme CYK** : algorithme tabulaire, qui traite le non-déterminisme par une analyse parallèle des différentes alternatives. 
+
+L"algorithme **original** s'applique à des **grammaires normales de Chomky** : grammaires indépendantes du contexte où la partie droite de chaque règle est composée d'au plus deux symboles.
+
+> **Principe de l'algorithme :** remplacer les termes deux-à-deux à chaque fois qu'une règle de la grammaire le permet, jusqu'au symbole initial.
+
+*On part des mots pour les remplacer progressivement par des termes en appliquant les règles de la grammaire.*
+
+On utilise un tableau : 
+- colonnes : nombre de lettres analysées de gauche à droite 
+- lignes : nombre de lettres rassemblées
+
+*Exemple :*
+
+Soit la grammaire $$G = (\sum, N, R, S)$$ :
+
+1- $$\sum$$ = {`PLUS`,`MINUS`, `TIMES`, `DIV`, `LPAR`, `RPAR`, `NUMBER`}
+
+2- $$N =$$ {E, E', T, T', F}
+
+3- $$R =$$ {
+
+`E` $$\rightarrow$$ `EE'`
+
+`E'` $$\rightarrow $$ `PLUS T`
+
+`E'` $$\rightarrow $$ `MINUS T`
+
+`E` $$\rightarrow$$ `T`
+
+`T` $$\rightarrow$$ `TT'`
+
+`T'` $$\rightarrow$$ `TIMES F`
+
+`T'` $$\rightarrow$$ `DIV F`
+
+`T` $$\rightarrow$$ `F`
+
+`F` $$\rightarrow$$ `LPAR F'`
+
+`F'` $$\rightarrow$$ `E RPAR`
+
+`F` $$\rightarrow$$ `NUMBER`
+}
+
+4- $$S = E$$
+
+Prenons $$3*(5+7)$$
+
+| `NUMBER`  `F`  `T`  `E` | `TIMES` | `LPAR`      | `NUMBER`  `F`  `T`  `E` | `PLUS` | `NUMBER`  `F`  `T`  `E` | `RPAR` |
+|-------------------------|---------|-------------|-------------------------|--------|-------------------------|--------|
+|                         |         |             |                         | `E'`   | `F'`                    |        |
+|                         |         |             | `E`                     |        |                         |        |
+|                         |         |             | `F'`                    |        |                         |        |
+|                         |         | `F` `T` `E` |                         |        |                         |        |
+|                         | `T'`    |             |                         |        |                         |        |
+| `T` `E`                 |         |             |                         |        |                         |        |
+
+
+### Implémentation en C
+
+`cyk.c`
+
+```c
+#include <s t d l i b . h>
+#include <s t d i o . h>
+#include <s t r i n g . h>
+struct Regle {
+    char ∗lhs ; /∗ partie gauche d’une regle ∗/
+    char ∗rhs[2] ; /∗ partie droite d’une regle ∗/
+};
+
+struct Regle regles [] = {
+    {"E" , {"E" , "E'" }},
+    {"E'" , {"+" , "T" }},
+    {"E'" , {"−" , "T" }},
+    {"E" , {"T" }},
+    {"T" , {"T" , "T'" }},
+    {"T'" , {"∗" , "F" }},
+    {"T'" , {"/" , "F" }},
+    {"T" , {"F" }},
+    {"F" , {"(" , "F'" }},
+    {"F'" , {"E" , ")" }},
+    {"F" , {"N" }},
+    {NULL, NULL}
+};
+/∗ LG : longueur de la phrase ∗/
+/∗ N: nombre de termes qu’on peut mettre au maximum dans une cellule ∗/
+#define LG 7
+#define N 5
+
+char ∗phrase[LG]={"N" , "∗" , "(" , "N" , "+" , "N" , ")" };
+char ∗tableau [LG][LG][N];
+// Affiche une regle de la grammaire
+
+void afficherRegle(struct Regle regle) {
+    fprintf(stdout, "%s −> %s %s \n" , regle.lhs, regle.rhs[0] , regle.rhs[1]?regle.rhs[1]:"") ;
+}
+
+/∗ Affiche la table d’analyse ∗/
+void afficherTableau()
+{
+    int ligne, colonne;
+    for (ligne = 0; ligne < LG; ligne ++){
+        for (colonne = 0; colonne < LG − ligne; colonne++){
+            char ∗∗c = tableau[ligne][colonne];
+            int tab = 10;
+            char sep=' ';
+            while (∗c) {
+                printf("%c%s" ,sep ,∗c);
+                sep = '|';
+                tab −= strlen(∗c)+1;
+                c++;
+            }
+            while (tab−−>0)
+                putc(' ', stdout);
+        }
+        putc('\n', stdout);
+    }
+}
+
+// Vrai si str se trouve dans la cellule[ligne, colonne]
+int inCell(int ligne, int colonne, char ∗ str) {
+    char ∗∗ c = tableau[ligne][colonn e];
+    while (∗c)
+        if(strcmp(∗ c++, str)==0)
+            return 1 ;
+    return 0 ;
+}
+
+// Ajoute str dans la cellule [ligne, colonne]
+void addCell(int ligne, int colonne, char ∗ str) {
+    char ∗∗ oldc;
+    char ∗∗ c = oldc = tableau[ligne][colonne];
+    while (∗ c++)
+        oldc = c;
+    ∗ oldc = str;
+    ∗( oldc+1) = NULL;
+}
+/∗ La fonction principale du programme ∗/
+int main ( int argn , char ∗∗ argv )
+{
+    int ligne, colonne ,k;
+
+    /∗ Initialisation : on met NULL dans toutes les cases du tableau ∗/
+    for ( ligne = 0; ligne < LG; ligne++)
+    for ( colonne = 0; colonne < LG; colonne++) {
+        tableau[ligne][colonne][0] = NULL;
+    }
+
+    /∗ Initialisation : on remplit la premiere ligne ∗/
+    for ( colonne = 0; colonne < LG; colonne++ ) {
+        tableau[0][colonne][0] = phrase[colonne];
+        tableau[0][colonne][1] = NULL;
+    }
+
+    /∗ On parcourt tout le tableau ∗/
+    for (ligne = 0; ligne < LG; ligne++){
+        for ( colonne = 0; colonne < LG − ligne; colonne++){
+            /∗ Tant qu’il y a de modifications, on poursuit ∗/
+            int modif = 1;
+            while (modif) {
+                modif = 0;
+                struct Regle ∗ regle = regles;
+                while (( ∗ regle).lhs) {
+                    /∗ Regle de type A −> B ∗/
+                    /∗ On compare la partie droite de la regle avec[ligne, colonne] ∗/
+                    if (regle->rhs[0]!= NULL
+                        && regle−>rhs[1]== NULL
+                        && inCell(ligne, colonne, regle−>rhs[0])) {
+                        if (!inCell(ligne, colonne, regle−>lhs)) {
+                            addCell (ligne, colonne, regle−>lhs);
+                            modif = 1;
+                        }
+                    }
+                    /∗ Regle de type A −> B C ∗/
+                    if ( ligne > 0) {
+                        for ( k=0; k < ligne; k++){
+                            /∗ si il existe une regle A −> B C avec
+                            B dans [ k , c olonne ] et
+                            C dans [ ligne − k−1 , colonne +k+1] ∗/
+                            if ( regle−>rhs[0] != NULL
+                                && regle−>rhs[1] != NULL
+                                && inCell(k, colonne, regle−>rhs[0])
+                                && inCell(ligne−k−1, colonne+k+1, regle−>rhs[1])) {
+                                if ( !inCell(ligne, colonne, regle−>lhs)) {
+                                    addCell(ligne, colonne, regle−>lhs);
+                                    modif = 1;
+                                }
+                            }
+                        }
+                    }
+                    regle++;
+                }
+            }
+        }
+    }
+    printf("\n");
+    afficherTableau();
+    if(inCell (LG−1, 0 , "E"))
+        puts("reconnaissance de la sequence");
+    else
+        puts("sequence non reconnue") ;
+    return 0;
+}
+```
+
 ## 4.
 ## 5.
 ## 6.
