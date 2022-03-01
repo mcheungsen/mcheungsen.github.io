@@ -28,7 +28,7 @@ Un système de réécriture est définit par le quadruplet ($$\sum, N, R, S$$) o
 - **Symboles terminaux** : $$\sum$$ alphabet fini
 - **Symboles non terminaux** : $$N$$ ensemble fini de symboles
 - **Le termine initial de la grammaire** : $$S$$ élément distingué de $$N$$
-- **Relation de réécriture** : $$\R$$ $$\{(\alpha,\beta)\}$$, où $$\alpha \in (\sum \cup N)^* - \{\epsilon\}$$, et $$\{\epsilon\} \in (\sum \cup N)^*$$. On écrit $$\alpha \rightarrow \beta$$
+- **Relation de réécriture** : $$R$$ $$\{(\alpha,\beta)\}$$, où $$\alpha \in (\sum \cup N)^* - \{\epsilon\}$$, et $$\{\epsilon\} \in (\sum \cup N)^*$$. On écrit $$\alpha \rightarrow \beta$$
 
 > **Grammaire formelle** : permet de définir un langage sur le monoïde libre $$(\sum)^*$$.
 
