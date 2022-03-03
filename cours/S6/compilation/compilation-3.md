@@ -285,8 +285,44 @@ int main ( int argn , char ∗∗ argv )
 }
 ```
 
-## 4.
-## 5.
+### Complexité
+
+Complexité de l'algorithme CYK par rapport à la longueur $$n$$ de la chaine d'entrée : $$O(n²)$$ cellules
+
+Le remplissage de chaque cellule [i,j] avec $$A$$ se fait à l'aide de la règle $$A_{[i,j]} \rightarrow X_{1[i,k_1]} X_{2[k_1,k_2]} X_{3[k_2,k_3]} ... X_{k[k_n,j]}$$ qui met en jeu $$k-1$$ indices pour régler la taille de chaque intervalle $$[k_\alpha,k_\beta]$$.
+
+Comme il y a $$n(n-1)/2$$ cellules, la complexité est $$O(n².n^{k-1})$$, c'est-à-dire $$O(n^{k+1})$$ où $$k$$ est la longueur maximum d'une partie droite des règles.
+
+Coût en mémoire du tableau : $$O(n²)$$
+
+## 4. Propriété du préfixe valide
+
+L'item $$A \rightarrow \alpha \bullet \beta$$ est valide sur $$[i,j]$$ s'il existe $$\gamma \delta$$ tels que 
+
+$$S \Rightarrow^* \gamma A \delta $$
+
+$$\gamma \Rightarrow^* a_1 ... a_i$$
+
+$$\alpha \Rightarrow^* a_{i+1}... a_j$$
+
+## 5. Analyse Earley
+
+Algorithme qui traite en parallèle les alternatives. Toutes les bonnes alternatives, celles qui mèneront à une analyse correcte, sont prédites dès que possible et non après un éventuel échec d'analyse. On parle d'analyse tabulaire plutôt que d'analyse déterministe.
+
+### Algorithme
+
+Le principe de l'algorithme consiste à regrouper tous les items valides dans des ensembles $$I_i$$ où $$i$$ est le niveau d'avancement de la lecture de gauche à droite de la chaîne $$a_1 ... a_i ... a_k $$.
+
+
+- Init : $$\frac{}{(S \rightarrow \bullet \alpha,0)\in I_0}{\exists S \rightarrow \alpha \in R}$$
+
+- Close : $$\frac{A \rightarrow \alpha \bullet B \beta, i) \in I_j}{(B \rightarrow\bullet\gamma,j)\in I_j)}{\exists B \rightarrow \gamma \in R}$$
+
+- Shift : $$\frac{(A \rightarrow \alpha \bullet a\beta,i)\in I_j}{(A \rightarrow \alpha a \bullet \beta, i)\in I_{j+1}}{a = a_j}$$
+
+- Reduce : $$\frac{A \rightarrow \alpha \bullet B \beta, i) \in I_j, (B \rightarrow \rightarrow \delta \bullet,j)\in I_k}{(A \rightarrow \alpha B \bullet \beta, i)\in I_k}$$
+
+
 ## 6.
 ## 7.
 ____

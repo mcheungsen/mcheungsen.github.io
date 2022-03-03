@@ -86,8 +86,7 @@ min_{x\in S \backslash \{t\}}\{ D(x,S \backslash \{t\} + d(x,t)\}
 1 - si |S| = 1
 2 - si |S| > 1
 
-|S| représente la cardinalité de S (son nombre d'éléments). 
-"|S| = 1 est équivalente à S = {t}"
+Ici, $$|S|$$ représente la cardinalité de S (son nombre d'éléments). "$$|S| = 1$$ est équivalente à S = {t}"
 
 ### Implémentation récursive
 
