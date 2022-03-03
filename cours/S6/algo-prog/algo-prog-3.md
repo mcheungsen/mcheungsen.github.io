@@ -230,7 +230,7 @@ Les éléments sont les sommets et les ensembles les composantes connexes.
 
 **Sortie** : Un arbre couvrant de poids minimum (une forêt si G c'est pas connexe)
 
-1. Initialiser $$T := (V(G),\empty)$$
+1. Initialiser $$T := (V(G),\emptyset)$$
 2. Pour chaque arête $$uv$$ de $$G$$ prise dans l'ordre croissante de leur poids $$w$$ :
     - trouver la composante $$C$$ de $$u$$ de la composnte $$C'$$ de $$v$$
     - Si $$C \neq C'$$, ajouter $$uv$$ à $$T$$ et Fusionner $$C$$ et $$C'$$.
