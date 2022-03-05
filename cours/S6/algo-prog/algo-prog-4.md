@@ -39,14 +39,64 @@ Nombreux algorithmes qui gèrent la navigation :
 
 Soit $$G$$ un graphe, pas forcément symétrique, arête-valué pat une fonction de poid $$w$$ (pondération). $$w(e)$$ peut correspondre à la longueur de l'arête $$e$$, la distance euclidienne séparant ses extrémités.
 
-Dans un graphe général, on parle plutôt de poids pour éviter la confusion avec la notion de longueur propre au graphes géométriques.
+Dans un graphe général, on parle plutôt de poids pour éviter la confusion avec la notion de longueur propre aux graphes géométriques.
 
-> Le coput d'un chemin $$C$$ allant de $$u$$ à $$v$$ dans $$G$$ est la somme des poids de ses arêtes : $$\sum_{e\in E(C)}w(e)$$.
+> Le coût d'un chemin $$C$$ allant de $$u$$ à $$v$$ dans $$G$$ est la somme des poids de ses arêtes : $$\sum_{e\in E(C)}w(e)$$.
 
 On dit que C est un **chemin de coût minimum** si son coût est le plus petit parmi tous les chemins allant de $$u$$ à $$v$$ dans $$G$$.
 
 La distance, notée dist$$_G(u,v)$$ est le coût d'un plus court chemin allant de $$u$$ à $$v$$
 ## 2. L'algorithme de Dijkstra
+
+L'algorithme de Dijkstra calcule un plus court chemin entre un sommet source et tous les autres accessibles dans un graphe G.
+
+L'algorithme suppose des poids positifs ou nuls, mais pas forcément symétrique.
+
+> **Principe** : On fait croitre un sous-arbre du graphe depuis la source en ajoutant progressivement les feuilles. La prochaine feuille est choisie parmi le voisinage de l'arbre de sorte qu'elle minimise le cout du nouveau chemin.
+
+L'algorithme peut être vu comme un algorithme **glouton**. On selectionne le sommet le plus proche, et on ne remet jamais en question ce choix.
+
+P : ensemble des sommets de l'arbre
+
+Q : frontière de P, ensemble des sommets en cours d'exploration qui sont aussi des voisins de P.
+
+### 2.1 Propriétés
+Deux choses différentes :
+- Coût[$$u$$] : valeur d'une table pour le sommet $$u$$ calculée par l'algorithme.
+- Coût d'un chemin C : somme des poids et de ses arêtes.
+
+> **Propriété** : S'il existe un chemin de $$s$$ à $$t$$ dans $$G$$, alors l'algorithme le trouve.
+
+> **Propriété** : Si $$u \in P \cup Q$$, le coût du chemin $$u \rightarrow$$ parent[$$u$$] $$\rightarrow$$ parent[parent[$$u$$]] ... $$\rightarrow s$$ vaut coût[$$u$$]. De plus tous les sommets du chemin, saut peut-être $$u$$ sont dans $$P$$.
+
+### 2.2 Implémentation et complexité
+
+#### File de priorité
+On implémente l'ensemble $$Q$$ par une **file de priorité (*priority queue*)**.
+
+>**file de priorité :**  Structure de données qui permet de gérer certaines opérations sur les ensembles
+
+- Créer une file vide
+- Ajouter à la file un élément et sa priorité
+- Extraire de la file l'élément de plus haute priorité
+
+Une *clé c* est associée à chaque élément $$v$$ permettant de déterminer la priorité de l'élément.
+
+Dans `Dijkstra`, on :
+- Parcourt chaque arc au plus une fois : $$O(m)$$
+- Extrait de $$Q$$ au plus une fois chacun des sommets : $$O(n.t_{min})$$
+- Ajoute au plus chacun des sommets à $$Q$$ : $$O(n.t_{add}(n))$$
+- Modifie les coûts au plus autant de fois qu'il y a d'arcs : $$O(m.t_{des}(n))$$
+
+Donc au total :
+$$O(m+n.t_{min}(n)+n.t_{add}(n)+m.t_{dec}(n))$$
+
+#### Mise à jour paresseuse
+On peut se passer d'implémenter la décrémentation de clé. On peut faire une mise à jour de manière paresseuse : on ajoute à la file un nouveau couple $$(v, c')$$.
+
+#### Implémentation par tas
+Une façon simple d'implémenter un file de priorité : Utiliser un tas (*heap*).Implémenté par un arbre binaire quasi-complet (qui est lui-même un simple tableau).
+
 ## 3. L'algorithme A*
 ## 4. Morale
 _____

@@ -313,7 +313,6 @@ Algorithme qui traite en parallèle les alternatives. Toutes les bonnes alternat
 
 Le principe de l'algorithme consiste à regrouper tous les items valides dans des ensembles $$I_i$$ où $$i$$ est le niveau d'avancement de la lecture de gauche à droite de la chaîne $$a_1 ... a_i ... a_k $$.
 
-
 - Init : $$\frac{}{(S \rightarrow \bullet \alpha,0)\in I_0}{\exists S \rightarrow \alpha \in R}$$
 
 - Close : $$\frac{A \rightarrow \alpha \bullet B \beta, i) \in I_j}{(B \rightarrow\bullet\gamma,j)\in I_j)}{\exists B \rightarrow \gamma \in R}$$
@@ -322,6 +321,20 @@ Le principe de l'algorithme consiste à regrouper tous les items valides dans de
 
 - Reduce : $$\frac{A \rightarrow \alpha \bullet B \beta, i) \in I_j, (B \rightarrow \rightarrow \delta \bullet,j)\in I_k}{(A \rightarrow \alpha B \bullet \beta, i)\in I_k}$$
 
+
+#### Algorithme de reconnaissance Early
+
+Initialiser avec $$I_0 = \{S' \rightarrow \bullet S,0) \in I_0\}$$
+
+Répéter pour $$i$$ allant de 1 à $$k$$ {
+    Pour tout $$(A \rightarrow \alpha \bullet a_i\beta,n)$$ à $$I_{i-1}$$ {
+        ajouter $$(A \rightarrow \alpha a_i \bullet \beta,n)$$ à $$I_i$$
+    }
+
+    Appliquer les règles 1 et 2 sur $$I_i$$ tant qu'elels ajoutent un item
+}
+
+Si $$I_k$$ contient l'item $$(S' \rightarrow S \bullet,0)$$ alors la chaîne $$a_1 ... a_k$$ est reconnue sinon non.
 
 ## 6.
 ## 7.
