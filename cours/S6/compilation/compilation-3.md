@@ -336,6 +336,16 @@ Répéter pour $$i$$ allant de 1 à $$k$$ {
 
 Si $$I_k$$ contient l'item $$(S' \rightarrow S \bullet,0)$$ alors la chaîne $$a_1 ... a_k$$ est reconnue sinon non.
 
+#### Algorithme d'analyse Early
+
+On ajoute à chaque item une liste de règles.
+
+Un item se note $$(A \rightarrow \alpha \bullet \beta, i(µ_1µ_2µ_3...µ_k))$$ où $$µ_n$$ est une règle et l'on peut déduire de $$µ_1µ_2µ_3...µ_k$$ une dérivation droite.
+
+    Initialiser avec $$I_0 = \{(S' \rightarrow \bullet S,0),()\} \in I_0$$ et faire en tous points comme dans l'algorithme de reconnaissance.
+
+
+
 ## 6.
 ## 7.
 ____
