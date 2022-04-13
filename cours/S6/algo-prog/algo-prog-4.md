@@ -98,6 +98,48 @@ On peut se passer d'implémenter la décrémentation de clé. On peut faire une 
 Une façon simple d'implémenter un file de priorité : Utiliser un tas (*heap*).Implémenté par un arbre binaire quasi-complet (qui est lui-même un simple tableau).
 
 ## 3. L'algorithme A*
+Extension de l'algorithme de Dijkstra. Plusieurs versions :
+- A1
+- A2
+- A*
+
+> **Principe** : Identique à celui de Dijkstra (croissance d'un arbre de racine $$s$$, la source, par ajout de feuilles) sinon que le choix du sommet $$u$$ se fait selon `score[u]`, une valeur qui tient compte de `cout[u]` (cout du chemain de $$s$$ à $$u$$) mais aussi d'une estimation de la distance entre $$u$$ et la cible $$t$$.
+
+Algorithme paramétré par l'estimation de distance qui va guider la recherche du meilleur chemin : `h(x,t)` heuristique sur la distance entre un sommet quelconque $$x$$ et la cible $$t$$.
+
+Une heuristique ne donne pas de garantie sur ce qu'elle est censée calculer.
+
+#### **Entrée**
+- Un graphe $$G$$, potentiellement asymétrique, arête-valué par une fonction de poids $$w$$ positive ou nulle, $$s$$, $$t \in V(G)$$
+- une heuristique $$h(x,t)$$ estimant la distance entre les sommets $$x$$ et $$t$$ dans $$G$$
+
+#### **Sortie**
+Un chemin entre $$s$$ et $$t$$ dans $$G$$, une erreur s'il n'a pas été trouvé.
+
+1. Poser $$P:=\empty, Q:=\{s\},$$cout[s]:=0, parent[s]:=$$\bot$$, score[s]:=cout[s]+h(s,t)
+2. Tant que $$Q \neq \empty$$ :
+    - Choisir $$u \in Q$$ tel que `score[u]` est minimum et le supprime de $$Q$$
+    - Si $$u = t$$, alors renvoyer le chemin de $$s$$ à $$t$$ grâce à la relation `parent[u]` : $$t \rightarrow$$ `parent[t]` $$\rightarrow$$ `parent[parent[t]]` $$\rightarrow$$ ... $$\rightarrow$$ s
+    - Ajouter $$u$$ à $$P$$
+    -Pour tout voisin $$v \notin P$$ de $$u$$ :
+        - Poser c := `cout[u] + w(u,v)`
+        - Si $$v \notin Q$$, ajouter $$v$$ à $$Q$$
+        - Sinon, si $$c \geq$$ `cout[v]` continuer la boucle
+        - `cout[v] := c`, `parent[v] := u`, `score[v] := c + h(v,t)`
+3. Renvoyer l'erreur : "le chemin n'a pas été trouvé" 
+
+Dans A*, le choix du sommet $$u$$ est déterminé par son `score[u]`.
+
+- Si un chemin de $$s$$ à $$t$$ existe, A* le trouvera
+- le cout du chemin $$u \rightarrow$$ `parent[u]` $$\rightarrow$$ `parent[parent[u]]`$$\rightarrow$$ ... $$\rightarrow s$$ vaut `cout[u]` pour tout $$u \in P \cup Q$$.
+
+### 3.1 Propriétés
+### 3.2 Implémentation et complexité
+### 3.3 Plus sur A*
+
+
+
+
 ## 4. Morale
 _____
 
