@@ -1,0 +1,119 @@
+
+::selection {
+    background-color: rgba(84, 205, 221, 0.486);
+}
+
+
+:root {
+    --main-txt-color : rgb(224, 224, 224);
+    --main-bg-color : rgb(31, 26, 29);
+    background-color: var(--main-bg-color);
+}
+
+* {
+    margin: 0;
+}
+
+/*
+HEADER
+*/
+
+.fullname-title {
+    font-size: 25px;
+    padding-top: 40vh;
+}
+
+.pseudo-title {
+    font-size: 100px;
+}
+
+
+header {
+    background-image: url(../img/back.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Times New Roman', serif;
+    color: rgb(250, 242, 246);
+    text-align: center;
+}
+
+.pseudo-title,
+.fullname-title {
+    opacity: 1;
+}
+
+/*
+NAV
+*/
+
+nav ul {
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(31, 26, 29);
+}
+
+nav ul li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#center-nav {
+    display: flex;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 20px 50px 20px 50px;
+    color: rgb(224, 224, 224);
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 15pt;
+    transition-duration: 0.5s;
+}
+
+nav ul li a:hover {
+    transition:all 0.5s;
+    background-color: rgba(103, 92, 98, 0.523);
+}
+
+/*
+RESPONSIVE
+*/
+
+/*
+800 px
+*/
+@media screen and (max-width: 1600px){
+    .fullname-title{
+        font-size: 25px;
+        padding-top: 40vh;
+    }
+    
+    .pseudo-title{
+        font-size: 60px;
+        margin: 0 10px;
+    }
+
+  }
+
+  /*
+  500px
+  */
+  @media screen and (max-width: 1250px){
+    .fullname-title{
+        font-size: 20px;
+        padding-top: 50vh;
+        margin: 0 10px;
+    }
+    
+    .pseudo-title{
+        font-size: 40px;
+        margin: 20px 10px;
+    }
+  }

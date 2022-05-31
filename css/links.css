@@ -1,0 +1,47 @@
+/*
+BODY
+*/
+body{
+    text-align: center;
+}
+
+/*
+HOVER IMG
+*/
+.img-hover{
+    position: relative;
+    text-decoration:none;
+    transition-duration: 0.2s;
+    width: 600px;
+    margin: 5px;
+}
+
+.img-hover:hover{
+    transition:all 0.5s;
+    filter: blur(3px);
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+/*
+max 1600 px
+*/
+@media screen and (max-width: 1600px){
+
+
+  }
+
+  /*
+  max 1250 px
+  */
+  @media screen and (max-width: 1250px){
+      
+    .img-hover{
+        width: 90%;
+        margin: 10px;
+    }
+
+    #links{
+        height: 100vh;
+    }
+  }

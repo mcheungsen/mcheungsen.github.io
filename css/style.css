@@ -1,56 +1,11 @@
-
-:root{
-    background-color: rgb(31, 26, 29);
-}
-
-* {
-    margin: 0;
-}
-
-::selection{
-    background-color: rgba(84, 205, 221, 0.486);
-}
-
 /*
-HEADER
+Affichage sections
 */
-.fullname-title{
-    font-size: 25px;
-    padding-top: 40vh;
-}
-
-.pseudo-title{
-    font-size: 100px;
-}
-
-
-header{
-    background-image: url(../img/back.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    font-family: 'Times New Roman', serif;
-}
-
-.pseudo-title, .fullname-title {
-    opacity: 1;
-}
-
-/*
-BODY
-*/
-body{
-    color: rgb(250, 242, 246);
-    text-align: center;
-}
-
 section {
     padding-top: 50px;
     height: 100vh;
     opacity: 0;
-    transition : all 500ms ease-in;
+    transition : all 1000ms ease-in;
 }
 
 section div{
@@ -60,80 +15,3 @@ section div{
 .js-section-animate {
     opacity: 1;
 }
-
-h2{
-    font-size: 80px;
-}
-
-h3{
-    font-size: 50px;
-    padding: 10px 0;
-}
-
-p{
-    padding-top : 60px;
-    padding-left: 25px;
-}
-
-/*
-HOVER IMG
-*/
-.img-hover{
-    position: relative;
-    text-decoration:none;
-    transition-duration: 0.2s;
-    width: 600px;
-    margin: 0 10px;
-}
-
-.img-hover:hover{
-    transition:all 0.5s;
-    filter: blur(3px);
-    opacity: 0.5;
-    overflow: hidden;
-}
-
-/*
-800 px
-*/
-@media screen and (max-width: 1600px){
-    .fullname-title{
-        font-size: 25px;
-        padding-top: 40vh;
-    }
-    
-    .pseudo-title{
-        font-size: 60px;
-        margin: 0 10px;
-    }
-
-    .img-hover{
-        width: 350px;
-    }
-
-  }
-
-  /*
-  500px
-  */
-  @media screen and (max-width: 1250px){
-    .fullname-title{
-        font-size: 20px;
-        padding-top: 50vh;
-        margin: 0 10px;
-    }
-    
-    .pseudo-title{
-        font-size: 40px;
-        margin: 20px 10px;
-    }
-
-    .img-hover{
-        width: 90%;
-        margin: 10px;
-    }
-
-    #links{
-        height: 100vh;
-    }
-  }
