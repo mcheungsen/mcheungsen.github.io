@@ -8,10 +8,6 @@ section {
     transition : all 1000ms ease-in;
 }
 
-section div{
-    padding-bottom: 100px;
-}
-
 .js-section-animate {
     opacity: 1;
 }

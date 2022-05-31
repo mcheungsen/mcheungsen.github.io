@@ -13,7 +13,8 @@ HOVER IMG
     text-decoration:none;
     transition-duration: 0.2s;
     width: 600px;
-    margin: 5px;
+    border-radius: 25px;
+    margin: 10px;
 }
 
 .img-hover:hover{
@@ -38,7 +39,6 @@ max 1600 px
       
     .img-hover{
         width: 90%;
-        margin: 10px;
     }
 
     #links{
