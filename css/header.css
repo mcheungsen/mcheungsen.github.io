@@ -1,12 +1,11 @@
-
 ::selection {
     background-color: rgba(84, 205, 221, 0.486);
 }
 
 
 :root {
-    --main-txt-color : rgb(224, 224, 224);
-    --main-bg-color : rgb(31, 26, 29);
+    --main-txt-color: rgb(224, 224, 224);
+    --main-bg-color: rgb(31, 26, 29);
     background-color: var(--main-bg-color);
 }
 
@@ -78,7 +77,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    transition:all 0.5s;
+    transition: all 0.5s;
     background-color: rgba(103, 92, 98, 0.523);
 }
 
@@ -87,33 +86,50 @@ RESPONSIVE
 */
 
 /*
-800 px
+Tablet - 601x962 -> 1280x800
 */
-@media screen and (max-width: 1600px){
-    .fullname-title{
+@media screen and (max-width: 1280px){
+    .fullname-title {
         font-size: 25px;
         padding-top: 40vh;
     }
-    
-    .pseudo-title{
+
+    .pseudo-title {
         font-size: 60px;
         margin: 0 10px;
     }
 
-  }
+}
 
-  /*
-  500px
-  */
-  @media screen and (max-width: 1250px){
-    .fullname-title{
+/*
+Phone - 360x640 - 414x896
+*/
+@media screen and (max-width: 500px) {
+    .fullname-title {
         font-size: 20px;
         padding-top: 50vh;
         margin: 0 10px;
     }
-    
-    .pseudo-title{
+
+    .pseudo-title {
         font-size: 40px;
         margin: 20px 10px;
     }
-  }
+
+    nav ul {
+        text-align: center;
+    }
+
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    #center-nav {
+        display: inline-block;
+    }
+
+    nav ul li a {
+        transition-duration: 0.5s;
+    }
+}
