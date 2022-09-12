@@ -134,13 +134,54 @@ Dans A*, le choix du sommet $$u$$ est déterminé par son `score[u]`.
 - le cout du chemin $$u \rightarrow$$ `parent[u]` $$\rightarrow$$ `parent[parent[u]]`$$\rightarrow$$ ... $$\rightarrow s$$ vaut `cout[u]` pour tout $$u \in P \cup Q$$.
 
 ### 3.1 Propriétés
+> si $$h(x,t) = 0$$, alors *A\** est équivalent à l'algorithme Dijkstra, et donc calcule un plus court chemin entre *s* et *t*.
+
+Si $h(x,t) = 0$, `score[u] = cout[u]`.
+
+> Tout algorithme qui calcule un chemin de *s* à *t*, sur la base de la même heuristique monotone *h*, visite au moins autant de sommets que *A\**.
+
+> Si h est monotone, alors le chemin trouvé par *A\** est un plus court chemin pour cette heuristique.
+
+L'heuristique h est monotone si $h(x,t) \leq w(x,y)+h(y,t)$ pour tout sommet $x$ et voisin $y$ de $x$. Elle sous-estime la distance si $h(x,y) \leq dist_G(x,y)$ pour toutes les paires de sommets $x,y$ où $h$ est définie.
 ### 3.2 Implémentation et complexité
-### 3.3 Plus sur A*
 
+Complexité et implémentation d'A* similaires à celle de Dijkstra, sinon qu'on implémente $Q$ par un tas minimum pour la valeur $score[]$ au lieu de $cout[]$.
 
+**Tenir compte du temps de calcul de h**. L'heuristique $h$ est considérée comme une opération élémentaire. Prend u ntemps constant par rapport à la taille du graphe.
 
+**Complexoté de A*** : $O(m.log n)$
 
 ## 4. Morale
+> Les navigation meshes sont des graphes issus de maillage de terrains 2D ou 3D
+pour simplifier les déplacements possibles des personnages artificiels (et autres
+bots) animés par des IA qui sont infine pilotée par des algorithmes exécutés par
+une machine. La requête principale est celle de recherche du meilleur chemin ou
+d’un chemin court entre deux points du navigation mesh.
+
+> Les notions de « chemin court » ou de « meilleur chemin » sont relatives à la valuation des arêtes du graphe, ou plus généralement des arcs si le graphe est orienté.
+On parle plutôt de « longueur » dans le cas de graphe géométrique (lié à une distance entre les extrémités de l’arête), de « poids » si la valeur est positive ou nulle,
+ou de « coût » pour une valeur générale (positive ou négative donc). Pour les algorithmes Dijkstra ou A*, le terme approprié est celui de poids.
+
+> On peut faire mieux que Dijkstra en pratique en tenant compte de la cible, car
+les choix qu’il prend sont indépendants de la destination. Au contraire, A* profite
+d’informations sur la destination encodée par une heuristique qui peut être plus
+ou moins précise. C’est évidemment général : toute information supplémentaire
+peut être exploitée par l’algorithme pour être plus performant.
+
+> Il faut distinguer le problème que résout un algorithme, et l’implémentation de
+l’algorithme. Il y a plusieurs implémentations possibles de Dijkstra, pas toutes
+équivalentes en termes de complexité. L’implémentation de Dijkstra présentée
+dans le cours, à l’aide d’un tas binaire, a une complexité de O(mlogn), et la complexité la plus faible possible atteint Θ(m+nlogn). Cette borne est suffisante grâce
+aux tas de Fibonacci, et elle est nécessaire à cause du parcours des sommets par
+ordre croissant de distance depuis la source. Cependant, ce n’est pas la meilleure
+complexité pour le problème! Il existe un algorithme en O(m + n) qui calcule les
+distances d’une source vers tous les autres, et c’est la meilleure possible.
+
+> La ressource critique pour les algorithmes de recherche de chemin, comme beaucoup d’autres en fait, est la mémoire utilisée, ce qui correspond au nombre de
+sommets visités. Pour chaque heuristique fixée, A* est l’algorithme de recherche
+de chemin qui visite le moins de sommets possibles.
+
+> On peut se servir de A* pour approximer la distance avec une garantie sur le facteur d’approximation avec un choix judicieux de l’heuristique h.
 _____
 
 
