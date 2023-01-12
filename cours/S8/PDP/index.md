@@ -1,5 +1,4 @@
 # Projet de Programmation
 
-[Site web](https://dept-info.labri.fr/~narbel/PdP)
-
+[Site Web](https://dept-info.labri.fr/~narbel/PdP/)
 
