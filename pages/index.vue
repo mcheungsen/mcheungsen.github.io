@@ -9,7 +9,9 @@
             <li><UIcon name="material-symbols:settings-outline" class="w-5 h-5" /> Configuration de la page web     <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
             <li><UIcon name="simple-icons:nuxtdotjs" class="w-5 h-5" /> Ajout du Framework Nuxt     <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
             <li><UIcon name="bxl:tailwind-css" class="w-5 h-5" /> Tailwind et Nuxt UI     <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
-            <li><UIcon name="material-symbols-light:deployed-code-update-outline-rounded" class="w-5 h-5" /> Déploiement sur Github Pages... <UIcon name="svg-spinners:90-ring" class="w-5 h-5 bg-yellow-500" /></li>
+            <li><UIcon name="material-symbols-light:deployed-code-update-outline-rounded" class="w-5 h-5" /> Déploiement sur Github Pages <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
+            <li><UIcon name="ri:brush-3-line" class="w-5 h-5" /> Site en cours de peinture... <UIcon name="svg-spinners:90-ring" class="w-5 h-5 bg-yellow-500" /></li>
+
         </ul>
     </div>
 
