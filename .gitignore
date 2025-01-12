@@ -1,0 +1,60 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Node modules
+/node_modules/
+
+# Nuxt build output
+/.nuxt/
+/dist/
+
+# TypeScript build output
+*.tsbuildinfo
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Vercel / Netlify / Other hosting services
+.vercel/
+.netlify/
+
+# Environment variables
+.env
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package-lock / pnpm-lock
+package-lock.json
+pnpm-lock.yaml
