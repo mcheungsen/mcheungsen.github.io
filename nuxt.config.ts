@@ -8,6 +8,6 @@ export default defineNuxtConfig({
     buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
   },
   colorMode: {
-    preference: 'dark'
+    preference: 'light'
   }
 })

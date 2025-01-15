@@ -1,18 +1,35 @@
 <script setup lang="ts"></script>
+
 <template>
-    <div class="h-screen flex items-center justify-center flex-col space-y-8">
-        <div class="text-center font-light">
-            <h1 class="font-serif text-4xl">Maeva Cheung-Sen</h1>
-            <h2 class="text-gray-700 tracking-wide text-xl">Apodis Phoenix</h2>
+  <div class="bg-stone-100">
+    <div
+      class="min-h-screen flex flex-col items-center "
+    >
+      <div class="
+      relative h-screen w-full flex items-center justify-center">
+        <span
+          class="
+          text-right tracking-widest leading-[15vw] absolute inset-0 flex text-[15vw] font-bold select-none
+        bg-gradient-to-r from-[#a47764]/30 to-[#E4C7B8]/60 text-transparent
+        bg-clip-text"
+        >
+          MAEVA CHEUNG-SEN
+        </span>
+
+        <div
+          class="animate-fade select-none relative z-10 text-center flex flex-col space-y-14 items-center"
+        >
+          <h1 class="text-9xl text-[#56453F] font-light italic">
+            Maeva Cheung-Sen
+          </h1>
+          <h2 class="text-5xl text-[#6a554e] font-extralight tracking-widest ">
+            APODIS PHOENIX
+          </h2>
+          <hr class="w-32 rounded-full border-stone-400 border-2" />
         </div>
-        <ul class="space-y-5 border p-10">
-            <li><UIcon name="material-symbols:settings-outline" class="w-5 h-5" /> Configuration de la page web     <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
-            <li><UIcon name="simple-icons:nuxtdotjs" class="w-5 h-5" /> Ajout du Framework Nuxt     <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
-            <li><UIcon name="bxl:tailwind-css" class="w-5 h-5" /> Tailwind et Nuxt UI     <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
-            <li><UIcon name="material-symbols-light:deployed-code-update-outline-rounded" class="w-5 h-5" /> Déploiement sur Github Pages <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
-            <li><UIcon name="ri:brush-3-line" class="w-5 h-5" /> Site en cours de peinture... <UIcon name="svg-spinners:90-ring" class="w-5 h-5 bg-yellow-500" /></li>
-
-        </ul>
+      </div>
     </div>
-
+    
+    <div class="h-screen"></div>
+  </div>
 </template>
