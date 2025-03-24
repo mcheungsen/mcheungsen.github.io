@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
@@ -9,9 +10,9 @@ export default defineNuxtConfig({
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-        { 
-          rel: 'stylesheet', 
-          href: 'https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap' 
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap'
         }
       ]
     }
@@ -20,6 +21,6 @@ export default defineNuxtConfig({
     preference: 'light'
   },
   ui: {
-    safelistColors : ['toast', 'kabul', 'just-right', 'sandrift']
+    safelistColors: ['toast', 'kabul', 'just-right', 'sandrift']
   }
 })

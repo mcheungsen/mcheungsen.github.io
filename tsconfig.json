@@ -1,13 +1,9 @@
 {
   "extends": "./.nuxt/tsconfig.json",  // Étend le tsconfig généré par Nuxt
   "compilerOptions": {
-    "typeRoots": [
-      "./node_modules/@types", 
-      "./types"  // Ajoute le dossier types ici pour que les types soient automatiquement reconnus
-    ],
+    "types": ["nuxt","node"],
     "allowJs": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "strict":true,
   },
 
 }
