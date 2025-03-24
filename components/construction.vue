@@ -11,7 +11,7 @@
             <li><UIcon name="bxl:tailwind-css" class="w-5 h-5" /> Tailwind et Nuxt UI     <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
             <li><UIcon name="material-symbols-light:deployed-code-update-outline-rounded" class="w-5 h-5" /> Déploiement sur Github Pages <UIcon name="fluent-color:checkmark-circle-16" class="w-5 h-5" /></li>
             <li><UIcon name="ri:brush-3-line" class="w-5 h-5" /> Site en cours de peinture... <UIcon name="svg-spinners:90-ring" class="w-5 h-5 bg-yellow-500" /></li>
-
+            <li><UButton trailing-icon="i-lucide-arrow-right" size="md" to="/changelogs">Changelogs</UButton></li>
         </ul>
     </div>
 

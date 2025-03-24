@@ -1,4 +1,13 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
+  "extends": "./.nuxt/tsconfig.json",  // Étend le tsconfig généré par Nuxt
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types", 
+      "./types"  // Ajoute le dossier types ici pour que les types soient automatiquement reconnus
+    ],
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+  },
+
 }

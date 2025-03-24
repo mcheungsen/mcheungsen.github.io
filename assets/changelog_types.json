@@ -1,0 +1,37 @@
+{
+  "added": {
+    "label": "Ajouté",
+    "color": "bg-green-400",
+    "icon": "fluent-emoji-flat:sparkles"
+  },
+  "improved": {
+    "label": "Amélioré",
+    "color": "bg-blue-500",
+    "icon": "fluent-emoji-flat:artist-palette"
+  },
+  "fixed": {
+    "label": "Corrigé",
+    "color": "bg-red-500",
+    "icon": "fluent-emoji-flat:bug"
+  },
+  "changed": {
+    "label": "Modifié",
+    "color": "bg-yellow-500",
+    "icon": "fluent-emoji-flat:magic-wand"
+  },
+  "removed": {
+    "label": "Supprimé",
+    "color": "bg-pink-500",
+    "icon": "fluent-emoji-flat:fire"
+  },
+  "security": {
+    "label": "Sécurité",
+    "color": "bg-sandrift-500",
+    "icon": "fluent-emoji-flat:chains"
+  },
+  "setup": {
+    "label": "Configuration",
+    "color": "bg-kabul-500",
+    "icon": "fluent-emoji-flat:wrench"
+  }
+}
