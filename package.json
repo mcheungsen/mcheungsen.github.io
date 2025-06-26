@@ -11,7 +11,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@nuxt/content": "^3.3.0",
     "@nuxt/ui": "2.20.0",
+    "gh-pages": "^6.3.0",
     "nuxt": "^3.15.1",
     "ui": "^0.2.4",
     "vue": "latest",

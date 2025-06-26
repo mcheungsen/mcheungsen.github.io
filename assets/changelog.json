@@ -1,0 +1,42 @@
+[
+  {
+    "releaseDate": "2024-01-12",
+    "changes": [
+      {
+        "date": "2024-01-12",
+        "type": "removed",
+        "description": "Migration complète du site vers une branche \"archive\""
+      },
+      {
+        "date": "2024-01-12",
+        "type": "setup",
+        "description": "Configuration Nuxt, Tailwind CSS et Nuxt UI"
+      },
+      {
+        "date": "2024-01-12",
+        "type": "added",
+        "description": "Home Page et Page de \"construction\""
+      },
+      {
+        "date": "2024-01-12",
+        "type": "setup",
+        "description": "Premier déploiement site web avec gh-pages"
+      }
+    ]
+  },
+  {
+    "releaseDate": "Soon",
+    "changes":[
+      {
+        "date": "2024-03-18",
+        "type" : "setup",
+        "description": "Ajout des types"
+      },
+      {
+        "date": "2024-03-18",
+        "type" : "setup",
+        "description": "Création des changelogs"
+      }
+    ]
+  }
+]
