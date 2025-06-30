@@ -1,55 +1,29 @@
 <script setup lang="ts">
-
-// --- Fetch des deux JSON ----
-const { data: technologies, status: loadingTech } =
-    await useFetch<Technology[]>('/data/technologies.json', { server: true })
-
-const { data: projects, status: loadingProj } =
-    await useFetch<Project[]>('/data/projects.json', { server: true })
-
-// --- Table projet[id] -> Project (mise à jour auto quand projects.value change) ----
-const projectMap = computed(() =>
-    new Map((projects.value ?? []).map(p => [p.id, p] as const))
-)
-
-// --- Helper pour récupérer les techno d’un projet via son id ----
-function techFor(id: string): Technology[] {
-    const project = projectMap.value.get(id)
-    if (!project || !technologies.value) return []
-
-    return project.technologies
-        .map(tid => technologies.value!.find(t => t.id === tid))
-        .filter((t): t is Technology => !!t)
-}
+const tech_versioning: string[] = ["NUXT.svg", "symfony.png", "apiplatform.svg", "MySQL.svg", "doctrine.svg", "TAILWIND.svg", "HTML5.png", "TS.svg"]
 </script>
 
 
 <template>
-    <ClientOnly>
-        <div class="min-h-screen p-10">
-            <h1 class="text-5xl uppercase text-just-right-800 font-light tracking-widest
+    <div class="min-h-screen p-10">
+        <h1 class="text-5xl uppercase text-just-right-800 font-light tracking-widest
         text-center mb-5
         ">Projets</h1>
 
-            <div class="text-justify text-balance">
-                <div id="project-athome-solution" class="p-3 m-5 flex flex-col gap-y-5">
-                    <!--Titre-->
-                    <div>
-                        <h2 class="text-3xl font-extralight">Outil de Gestion Interne - Versioning</h2>
-                    </div>
-                    <!-- Logos -->
-                    <div v-if="loadingProj === 'pending' || loadingTech === 'pending'">
-                        Chargement des données...
-                    </div>
-                    <div v-else>
-                        <div class="flex gap-5 flex-wrap justify-center">
-                            <img v-for="tech in techFor('versioning')" :key="tech.id"
-                                :src="`/img/technologies_logo/${tech.image}`" :alt="tech.name"
-                                class="w-12 h-12 object-contain" />
-                        </div>
-                    </div>
-                    <!--Texte Présentation-->
-                    <div class="indent-5 leading-7 flex flex-col gap-y-3">
+        <div class="text-kabul-950 text-justify text-balance xl:px-60 md:text-xl py-10
+        indent-5 [&_p]:leading-8">
+            <div id="project-athome-solution" class="p-3 m-5 flex flex-col gap-y-5">
+                <!--Titre-->
+                <div>
+                    <h2 class="text-3xl font-extralight">Outil de Gestion Interne - Versioning</h2>
+                </div>
+                <!-- Logos -->
+                <div class="flex gap-5 flex-row flex-wrap justify-center xl:justify-start">
+                    <img v-for="img in tech_versioning" :src="'/img/technologies_logo/' + img"
+                        class="w-10 hover:grayscale" />
+                </div>
+                <!--Texte Présentation-->
+                <div class="flex flex-col gap-20 lg:flex-row items-center">
+                    <div class="flex flex-col gap-y-3 basis-3/5">
                         <p class="">
                             Dans le cadre de mon stage de fin d'études chez Athome Solution,
                             j’ai développé une application web
@@ -87,12 +61,19 @@ function techFor(id: string): Technology[] {
                                 besoin métier réel</span>.
                         </p>
                     </div>
+                    <div class="basis-2/5">
+                            <img src="/img/projects/versioning.png" alt="illustration projet versioning"
+                                class="transition duration-300 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] 
+                    hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+                    <span class="text-xs italic text-just-right-300">Confidentialité : Illustration fictive</span>
 
+                    </div>
                 </div>
-                <div id="Project-Euler"></div>
-                <div id="Project-portfolio"></div>
-            </div>
 
+            </div>
+            <div id="Project-Euler"></div>
+            <div id="Project-portfolio"></div>
         </div>
-    </ClientOnly>
+
+    </div>
 </template>

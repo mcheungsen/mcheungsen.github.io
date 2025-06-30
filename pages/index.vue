@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import NameSection from '~/components/NameSection.vue';
 import ProfileSection from '~/components/ProfileSection.vue';
+import ProjectsSection from '~/components/ProjectsSection.vue';
 import TechnoSection from '~/components/technoSection.vue';
 
 
@@ -11,5 +13,6 @@ import TechnoSection from '~/components/technoSection.vue';
     <NameSection/>
     <ProfileSection/>
     <TechnoSection/>
+    <ProjectsSection/>
   </div>
 </template>
