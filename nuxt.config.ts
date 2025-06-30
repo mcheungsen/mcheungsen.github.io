@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
   app: {
-    baseURL: isProd ?  '/mcheungsen.github.io/' : '/', // baseURL: '/<repository>/'
+    baseURL: '/mcheungsen.github.io/', // baseURL: '/<repository>/'
     buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
     head: {
       link: [
