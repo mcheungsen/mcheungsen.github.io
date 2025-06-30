@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-    <div>
+    <div class="">
         <div class="min-h-screen flex flex-col items-center ">
             <div class="
       relative h-screen w-full flex items-center justify-center  group">
@@ -20,7 +20,7 @@
                     md:text-9xl">
                         Maeva Cheung-Sen
                     </h1>
-                    <h2 class="max:2xl:text-5xl text-just-right-800 font-extralight tracking-widest 
+                    <h2 class="text-5xl text-just-right-800 font-extralight tracking-widest
                     ">
                         APODIS PHOENIX
                         <span

@@ -19,14 +19,16 @@ onMounted(() => {
 })
 </script>
 <template>
-    <div class="min-h-screen h-auto rounded-sm bg-just-right-900/70 flex flex-col items-center
+    <div class=" min-h-screen h-auto rounded-sm bg-just-right-900/70 flex flex-col items-center
     ">
         <div class="items-center flex flex-col w-full p-5 gap-y-5
-            md:gap-x-32 md:p-48 md:justify-evenly
-
+            md:gap-x-32 md:p-10 md:justify-evenly
+            lg:flex-row lg:p-5
+            xl:p-48
             ">
-            <div class="md:indent-5 text-just-right-100 text-justify  md:leading-9 self-center md:text-2xl w-2/3 space-y-4
-            text-base indent-2 leading-2">
+            <div class="indent-10 text-just-right-100 text-justify  md:leading-8 self-center md:text-2xl w-2/3 space-y-4
+            text-base
+            lg:text-xl lg:leading-8">
                 <p><span class="lg:text-8xl font-extralight font-delius md:text-5xl text-5xl">H</span>ello ! Je m'appelle <span
                         class="underline">Maeva</span> et je suis diplômée d’un master en informatique,
                     spécialité Génie Logiciel.

@@ -1,9 +1,14 @@
 {
-  "extends": "./.nuxt/tsconfig.json",  // Étend le tsconfig généré par Nuxt
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "types": ["nuxt","node"],
+    "types": ["nuxt", "node"],
     "allowJs": true,
-    "strict":true,
+    "strict": true
   },
-
+  "include": [
+    "types/**/*.d.ts", // ← pour tes types globaux
+    "env.d.ts",         // ← si tu as un fichier d'env typé
+    "**/*.ts",
+    "**/*.vue"
+  ]
 }

@@ -1,0 +1,15 @@
+[
+  { "id": "css3", "name": "CSS3", "image": "CSS3.png" },
+  { "id": "html5", "name": "HTML5", "image": "HTML5.png" },
+  { "id": "js", "name": "JavaScript", "image": "JS.png" },
+  { "id": "ts", "name": "TypeScript", "image": "TS.svg" },
+  { "id": "nuxt", "name": "Nuxt.js", "image": "NUXT.svg" },
+  { "id": "vue", "name": "Vue.js", "image": "VUE.png" },
+  { "id": "tailwind", "name": "Tailwind CSS", "image": "TAILWIND.svg" },
+  { "id": "php", "name": "PHP", "image": "php.svg" },
+  { "id": "apiplatform", "name": "API Platform", "image": "apiplatform.svg" },
+  { "id": "doctrine", "name": "Doctrine ORM", "image": "doctrine.svg" },
+  { "id": "symfony", "name": "Symfony", "image": "symfony.png" },
+  { "id": "github", "name": "GitHub", "image": "github.svg" },
+    { "id": "mysql", "name": "MySQL", "image": "MySQL.svg" }
+]

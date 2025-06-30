@@ -1,10 +1,13 @@
-export default defineNuxtConfig({
+const isProd = process.env.NODE_ENV === 'production'
 
+export default defineNuxtConfig({
+  ssr: false,
+  imports:{ dirs: []},
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
   app: {
-    baseURL: '/mcheungsen.github.io/', // baseURL: '/<repository>/'
+    baseURL: isProd ?  '/mcheungsen.github.io/' : '/', // baseURL: '/<repository>/'
     buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
     head: {
       link: [

@@ -7,7 +7,7 @@ module.exports = {
 			  },
 			animation: {
 				fade: 'fadeIn 2s ease-in-out',
-				'infinite-scroll': 'infinite-scroll 15s linear infinite',
+				'infinite-scroll': 'infinite-scroll 30s linear infinite',
 			},
 			keyframes: {
 				fadeIn: {

@@ -14,12 +14,15 @@
     "@nuxt/content": "^3.3.0",
     "@nuxt/ui": "2.20.0",
     "gh-pages": "^6.3.0",
-    "nuxt": "^3.15.1",
+    "nuxi": "^3.25.1",
+    "nuxt": "^3.17.5",
     "ui": "^0.2.4",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2"
+    "@nuxt/eslint-config": "^1.4.1",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "eslint": "^9.30.0"
   }
 }

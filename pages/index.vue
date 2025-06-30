@@ -4,7 +4,10 @@
 </script>
 
 <template>
-  <div class="bg-stone-100">
-    <construction/>
+  <div class="bg-stone-100 cursor-default">
+    <NameSection/>
+    <ProfileSection/>
+    <TechnoSection/>
+    <ProjectsSection/>
   </div>
 </template>
