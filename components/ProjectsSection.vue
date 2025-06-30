@@ -62,7 +62,7 @@ const tech_versioning: string[] = ["NUXT.svg", "symfony.png", "apiplatform.svg",
                         </p>
                     </div>
                     <div class="basis-2/5">
-                            <img src="/img/projects/versioning.png" alt="illustration projet versioning"
+                            <img :src="'/img/projects/versioning.png'" alt="illustration projet versioning"
                                 class="transition duration-300 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] 
                     hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
                     <span class="text-xs italic text-just-right-300">Confidentialité : Illustration fictive</span>

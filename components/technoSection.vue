@@ -11,14 +11,14 @@ const logos = Object.keys(images).map((key) => key.replace("/public", ""))
             class="m-auto items-center w-2/3 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
             <ul
                 class="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-infinite-scroll">
-                <li v-for="logo in logos" class="mx-3">
-                    <img :src=logo alt="" draggable="false" class="select-none grayscale hover:grayscale-0 w-[40px] md:w-[100px]">
+                <li v-for="logo in logos" class="xl:mx-7 mx-5">
+                    <img :src=logo alt="" draggable="false" class="select-none grayscale hover:grayscale-0 w-[40px] md:w-[70px] xl:w-[50px]">
                 </li>
             </ul>
             <ul class="flex items-center justify-center md:justify-start [&_img]:max-w-none animate-infinite-scroll"
                 aria-hidden="true">
-                <li v-for="logo in logos" class="mx-3">
-                    <img :src=logo alt="" class="select-none grayscale hover:grayscale-0 w-[40px] md:w-[100px]" draggable="false">
+                <li v-for="logo in logos" class="xl:mx-7 mx-5">
+                    <img :src=logo alt="" class="select-none grayscale hover:grayscale-0 w-[40px] md:w-[70px] xl:w-[50px]" draggable="false">
                 </li>
             </ul>
         </div>
