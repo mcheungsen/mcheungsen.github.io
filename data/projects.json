@@ -1,0 +1,27 @@
+[
+  {
+    "id": "versioning",
+    "name": "Versioning Project",
+    "technologies": [
+      "nuxt",
+      "tailwind",
+      "symfony",
+      "apiplatform",
+      "doctrine",
+      "mysql"
+    ]
+  },
+  {
+    "id": "portfolio",
+    "name": "Portfolio",
+    "technologies": [
+      "css3",
+      "nuxt",
+      "vue",
+      "html5",
+      "tailwind",
+      "js",
+      "ts"
+    ]
+  }
+]
