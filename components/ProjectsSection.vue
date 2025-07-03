@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const tech_versioning: string[] = ["NUXT.svg", "symfony.png", "apiplatform.svg", "MySQL.svg", "doctrine.svg", "TAILWIND.svg", "HTML5.png", "TS.svg"]
+
+const tech_portfolio: string[] = ["NUXT.svg", "TAILWIND.svg", "HTML5.png", "TS.svg"]
+
 </script>
 
 
@@ -62,17 +65,47 @@ const tech_versioning: string[] = ["NUXT.svg", "symfony.png", "apiplatform.svg",
                         </p>
                     </div>
                     <div class="basis-2/5">
-                            <img :src="'/img/projects/versioning.png'" alt="illustration projet versioning"
-                                class="transition duration-300 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] 
+                        <img :src="'/img/projects/versioning.png'" alt="illustration projet versioning"
+                            class="transition duration-300 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] 
                     hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
-                    <span class="text-xs italic text-just-right-300">Confidentialité : Illustration fictive</span>
+                        <span class="text-xs italic text-just-right-300">Confidentialité : Illustration fictive</span>
 
                     </div>
                 </div>
+            </div>
+            <div id="Project-portfolio" class="p-3 m-5 flex flex-col gap-y-5">
+                <!--Titre-->
+                <div>
+                    <h2 class="text-3xl font-extralight">Portfolio</h2>
+                </div>
+                <!-- Logos -->
+                <div class="flex gap-5 flex-row flex-wrap justify-center xl:justify-start">
+                    <img v-for="img in tech_portfolio" :src="'/img/technologies_logo/' + img"
+                        class="w-10 hover:grayscale" />
+                </div>
+                <!--Texte Présentation-->
+                <div class="flex flex-col gap-20 lg:flex-row-reverse items-center">
+                    <div class="flex flex-col gap-y-3 basis-3/5">
+                        <p>Ce site est en lui-même un projet : mon <span class="span-highlight">portfolio
+                                personnel</span> conçu pour présenter mes réalisations, mon parcours et mes objectifs.
+                        </p>
+                        <p>J’ai développé ce site avec <span class="span-tech">Nuxt</span> et stylisé l’interface à
+                            l’aide de <span class="span-tech">Tailwind CSS</span> et des composants de <span
+                                class="span-tech">Nuxt UI</span>, dans le but de créer une vitrine à la fois moderne,
+                            responsive et claire de <span class="span-highlight">mes compétences</span>. Il
+                            évoluera au fil de mes projets et de mes apprentissages.</p>
+                    </div>
+                    <div class="basis-2/5">
+                        <img :src="'/img/projects/portfolio.png'" alt="Illustration Projet Portfolio"
+                            class="transition duration-300 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] 
+                    hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+                        <span class="text-xs italic text-just-right-300"></span>
 
+                    </div>
+                </div>
             </div>
             <div id="Project-Euler"></div>
-            <div id="Project-portfolio"></div>
+
         </div>
 
     </div>

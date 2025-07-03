@@ -1,0 +1,17 @@
+/* assets/css/main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Composants personnalisés --- */
+@layer components {
+  /* Mise en avant des technologies (ex. Nuxt, Symfony…) */
+  .span-tech {
+    @apply underline underline-offset-4 decoration-just-right-500;
+  }
+
+  /* Highlight générique dans le texte */
+  .span-highlight {
+    @apply text-just-right-900 font-semibold hover:text-just-right-500 transition duration-300;
+  }
+}

@@ -24,5 +24,6 @@ export default defineNuxtConfig({
   },
   ui: {
     safelistColors : ['toast', 'kabul', 'just-right', 'sandrift']
-  }
+  },
+  css: ['@/assets/css/main.css']
 })
