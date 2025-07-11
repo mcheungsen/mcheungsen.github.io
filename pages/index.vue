@@ -9,7 +9,7 @@ import TechnoSection from '~/components/technoSection.vue';
 </script>
 
 <template>
-  <div class="bg-stone-100 cursor-default">
+  <div class="cursor-default">
     <NameSection/>
     <ProfileSection/>
     <TechnoSection/>

@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
         { 
           rel: 'stylesheet', 
-          href: 'https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap' 
+          href: 'https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Fredericka+the+Great&display=swap' 
         }
       ]
     }

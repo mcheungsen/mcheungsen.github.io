@@ -4,6 +4,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				delius: ['Delius Swash Caps', 'cursive'],
+				'press-start': ['"Press Start 2P"', 'cursive'],
+				'fredericka': ['"Fredericka the Great"', 'sans'],
 			  },
 			animation: {
 				fade: 'fadeIn 2s ease-in-out',

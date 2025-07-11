@@ -1,0 +1,55 @@
+[
+  {
+    "id-num": "0",
+    "id-name": "versioning",
+    "title": "Versioning",
+    "icons": [
+      "simple-icons:nuxt",
+      "simple-icons:symfony",
+      "simple-icons:mysql",
+      "simple-icons:tailwindcss",
+      "simple-icons:typescript"
+    ],
+    "desc": "Un outil de gestion interne de packages",
+    "keywords": [
+      "Versioning",
+      "CVE",
+      "API REST",
+      "Outil interne"
+    ],
+    "type": "stage",
+    "img": "/img/projects/versioning.png"
+  },
+  {  
+    "id-num": "1",
+    "id-name": "portfolio",
+    "title": "Portfolio",
+    "icons": [
+      "simple-icons:nuxt",
+      "simple-icons:tailwindcss"
+    ],
+    "desc": "Site Web personnel hébérgé via github",
+    "keywords": [
+      "Frontend",
+      "Site Vitrine"
+    ],
+    "type": "perso",
+    "img": "/img/projects/portfolio.png"
+  },
+  {
+    "id-num": "2",
+    "id-name": "euler",
+    "title": "Project Euler",
+    "icons": [
+      "simple-icons:python"
+    ],
+    "desc": "Problèmes mathématiques résolus en python",
+    "keywords": [
+      "Logique Algorithmique",
+      "Résolution de Problèmes",
+      "Mathématiques"
+    ],
+    "type": "perso",
+    "img": ""
+  }
+]

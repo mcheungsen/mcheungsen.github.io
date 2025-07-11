@@ -14,4 +14,9 @@
   .span-highlight {
     @apply text-just-right-900 font-semibold hover:text-just-right-500 transition duration-300;
   }
+
+  /* Titre de sections white */
+  .title-section {
+    @apply font-fredericka text-6xl text-just-right-900 font-semibold
+  }
 }

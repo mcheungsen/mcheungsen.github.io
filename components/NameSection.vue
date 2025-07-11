@@ -15,7 +15,7 @@
 
                 <div class="animate-fade select-none relative z-10 text-center flex flex-col space-y-14 items-center
           transition duration-300 group">
-                    <h1 class="text-6xl text-kabul-800 font-light font-delius italic
+                    <h1 class="text-6xl text-kabul-800 font-semibold font-fredericka italic
                     text-md
                     md:text-9xl">
                         Maeva Cheung-Sen

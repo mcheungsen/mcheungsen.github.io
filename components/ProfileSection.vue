@@ -31,7 +31,7 @@ onMounted(() => {
             <div class="indent-10 text-just-right-100 text-justify  md:leading-8 self-center md:text-2xl w-2/3 space-y-4
             text-base
             lg:text-xl lg:leading-8">
-                <p><span class="lg:text-8xl font-extralight font-delius md:text-5xl text-5xl">H</span>ello ! Je
+                <p><span class="lg:text-7xl font-extralight font-fredericka-the-great-regular md:text-5xl text-5xl">H</span>ello ! Je
                     m'appelle <span class="underline">Maeva</span> et je suis diplômée d’un master en informatique,
                     spécialité Génie Logiciel.
                     Passionnée par le développement web, j’aime concevoir des applications modernes et ergonomiques en
