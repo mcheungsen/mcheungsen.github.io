@@ -1,1 +1,0 @@
-import{p as n}from"./CssAUrmD.js";import{e as a,c as e,o as t,F as s,r as o,f as l,t as c}from"./BL7I2xub.js";const f=a({__name:"test",setup(i){return(m,p)=>(t(),e("ul",null,[(t(!0),e(s,null,o(l(n),r=>(t(),e("li",{key:r["id-name"]},c(r.title),1))),128))]))}});export{f as default};
