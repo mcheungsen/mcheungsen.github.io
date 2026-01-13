@@ -9,7 +9,9 @@
       "apiplatform",
       "doctrine",
       "mysql"
-    ]
+    ],
+    "linkType":"internal",
+    "link":"projets/versioning"
   },
   {
     "id": "portfolio",

@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import projects from '~/data/projects.json' with { type: 'json' }
+import { ref } from 'vue'
+
+const items = ref<any[]>([
+  
+    { label: 'Guide', icon: 'i-lucide-book-open', to: '/getting-started' },
+    { label: 'Components', icon: 'i-lucide-box', to: '/components' }
+  
+])
 </script>
 
 <template>
-  <ul>
-    <li v-for="p in projects" :key="p['id-name']">{{ p.title }}</li>
-  </ul>
+  <UNavigationMenu :items="items" />
 </template>
+

@@ -14,7 +14,9 @@
       "application RH"
     ],
     "type": "mission",
-    "img": "/img/projects/timesheet.png"
+    "img": "/img/projects/timesheet.png",
+    "link": "/projects/timesheet",
+    "typeLink": "internal"
   },
   {
     "id-num": "0",
@@ -35,7 +37,9 @@
       "Outil interne"
     ],
     "type": "stage",
-    "img": "/img/projects/versioning.png"
+    "img": "/img/projects/versioning.png",
+    "link": "/projects/versioning",
+    "typeLink": "internal"
   },
   {
     "id-num": "1",
@@ -51,7 +55,9 @@
       "Site Vitrine"
     ],
     "type": "perso",
-    "img": "/img/projects/portfolio.png"
+    "img": "/img/projects/portfolio.png",
+    "link": "/projects/portfolio",
+    "typeLink": "internal"
   },
   {
     "id-num": "2",
@@ -67,6 +73,8 @@
       "Mathématiques"
     ],
     "type": "perso",
-    "img": ""
+    "img": "",
+    "link": "/projects/euler",
+    "typeLink": "internal"
   }
 ]

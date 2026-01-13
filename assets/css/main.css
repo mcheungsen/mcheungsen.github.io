@@ -20,3 +20,8 @@
     @apply font-fredericka text-6xl text-just-right-900 font-semibold
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
