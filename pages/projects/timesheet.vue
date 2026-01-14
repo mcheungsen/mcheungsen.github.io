@@ -51,7 +51,7 @@ const techs = [
         de consulter et valider les feuilles de temps, ainsi que de générer des exports CSV mensuels
         des temps par utilisateur, utilisés ensuite pour le calcul des salaires et des heures supplémentaires.
       </p>
-      <img src="/img/projects/timesheet.png" alt="">
+      <img :src="'/img/projects/timesheet.png'" alt="">
       <h2 class="title2-section">Stack Technique et architecture</h2>
       <p>
         Le Backend de l'application a été développé avec <span class="span-tech">Symfony</span>, qui constitue
