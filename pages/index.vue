@@ -24,6 +24,11 @@ const items = [
       icon: 'i-simple-icons-github',
       to: 'https://github.com/mcheungsen',
       target: '_blank'
+    },
+    {
+      icon:'mdi:linkedin',
+      to: 'https://www.linkedin.com/in/ma%C3%ABva-cheung-sen-2352621b9/',
+      target: '_blank'
     }
   ]
 ]
@@ -33,7 +38,7 @@ const items = [
 <template>
   <div class="cursor-default">
     <NameSection />
-    <UHorizontalNavigation :links="items" class="w-full px-32" :ui="{label:'truncate relative text-xl', base:'px-4'}"/>
+    <UHorizontalNavigation :links="items" class="w-full px-32" :ui="{label:'truncate relative text-xl', base:'px-3'}"/>
     <ProfileSection id="profile-section" />
     <TechnoSection />
     <ProjectsSection id="projects-section" />

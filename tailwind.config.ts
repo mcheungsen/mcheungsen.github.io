@@ -1,12 +1,15 @@
 module.exports = {
-	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './components/**/*.{vue,js,ts}',
+		'./layouts/**/*.{vue,js,ts}',
+		'./pages/**/*.{vue,js,ts}',
+		'./app.vue'],
 	theme: {
 		extend: {
 			fontFamily: {
 				delius: ['Delius Swash Caps', 'cursive'],
 				'press-start': ['"Press Start 2P"', 'cursive'],
 				'fredericka': ['"Fredericka the Great"', 'sans'],
-			  },
+			},
 			animation: {
 				fade: 'fadeIn 2s ease-in-out',
 				'infinite-scroll': 'infinite-scroll 30s linear infinite',

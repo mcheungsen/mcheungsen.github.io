@@ -19,6 +19,10 @@
   .title-section {
     @apply font-fredericka text-6xl text-just-right-900 font-semibold
   }
+
+  .title2-section {
+    @apply font-fredericka text-3xl text-just-right-900 font-semibold
+  }
 }
 
 
