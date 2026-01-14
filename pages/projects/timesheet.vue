@@ -1,10 +1,16 @@
 <script setup lang="ts">
+import { createPopper } from '#imports';
+
 const techs = [
   'mdi:symfony',
   'mdi:react',
   'mdi:language-typescript',
   'mdi:language-php',
   'simple-icons:mysql'
+]
+
+const imgs = [
+  '/img/projects/timesheet.png'
 ]
 </script>
 
@@ -51,7 +57,7 @@ const techs = [
         de consulter et valider les feuilles de temps, ainsi que de générer des exports CSV mensuels
         des temps par utilisateur, utilisés ensuite pour le calcul des salaires et des heures supplémentaires.
       </p>
-      <img :src="'/img/projects/timesheet.png'" alt="">
+      <img :src="imgs[0]" alt="">
       <h2 class="title2-section">Stack Technique et architecture</h2>
       <p>
         Le Backend de l'application a été développé avec <span class="span-tech">Symfony</span>, qui constitue
