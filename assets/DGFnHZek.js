@@ -1,1 +1,0 @@
-import{e as t,r as n,f as s,g as a,o as i}from"./2OYwmE2x.js";const p=t({__name:"test",setup(c){const e=n([{label:"Guide",icon:"i-lucide-book-open",to:"/getting-started"},{label:"Components",icon:"i-lucide-box",to:"/components"}]);return(l,r)=>{const o=s("UNavigationMenu");return i(),a(o,{items:e.value},null,8,["items"])}}});export{p as default};
